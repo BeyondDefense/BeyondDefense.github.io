@@ -12,4 +12,5 @@ permalink: /allnews.html
 <p>
     {{ article.date }} <br /> 
     {{ article.headline | markdownify | remove: '<p>' | remove: '</p>' }}
+</p>
 {% endfor %}
