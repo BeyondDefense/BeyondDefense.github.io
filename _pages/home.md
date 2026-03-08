@@ -72,12 +72,6 @@ To achieve these goals, we develop new quantum sensing and quantum imaging instr
 **We are looking for passionate new PhD students, and student summer interns to join the team** [(more info)](https://beyonddefense.github.io/vacancies) **!**
 
 
-<!-- News -->
-{% include news.html %}
-
-<!-- Research -->
-{% include research.html %}
-
 
 
 <figure class="fifth">

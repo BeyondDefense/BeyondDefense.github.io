@@ -36,7 +36,8 @@ We conduct regular security audits of mobile applications and web services, iden
 For more details on our publications, visit our [publications page]({{ site.url }}{{ site.baseurl }}/publications/).
 
 
-{% include research.html %}
+<!-- {% include research.html %} -->
+
 <!-- ![]({{ site.url }}{{ site.baseurl }}/images/respic/SciPost.png){: style="width: 70%; float: center; margin: 0px"} -->
 
 
