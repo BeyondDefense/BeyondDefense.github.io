@@ -1,4 +1,4 @@
-- name: Afsah Anwar
+- name: <a href="https://afsah.org/">Afsah Anwar</a>
   photo: Afsah.png
   info: Assistant Professor
   email: afsah@unm.edu
@@ -7,6 +7,15 @@
   education2: MS University of Central Florida with <a href="https://davidmohaisen.github.io/">David Mohaisen</a>
   education3: BS Jamia Millia Islamia, India
   education4: Postdoc Northeastern University with <a href="https://www.khoury.northeastern.edu/home/alina/">Alina Oprea</a>
+
+- name: <a href="https://www.cs.unm.edu/~gcroman/">Gruia-Catalin Roman</a>
+  photo: Catalin.png
+  info: Professor
+  email: gcroman@unm.edu
+  number_educ: 5
+  education1: PhD University of Pennsylvania
+  education2: MS University of Pennsylvania
+  education3: BS University of Pennsylvania
 
 - name: Enrique Sobrados
   photo: Enrique.png
