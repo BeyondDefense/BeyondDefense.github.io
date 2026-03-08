@@ -33,7 +33,7 @@
   headline: NSF SaTC Medium (#2452884) awarded with Profs. Roya Ensafi (UMich) and Jed Crandall (ASU). This will support our upcoming works on VPNs.
 
 - date: August 2025
-  headline: Paper on <a href="https://esobrados.com/files/papers/mvpnalyzer.pdf">"MVPNalyzer: An Investigative Framework for Auditing the Security & Privacy of Mobile VPNs"</a> accepted at NDSS 2026 on mobile VPNs. Congrats Wayne, Aaron, and Enrique!
+  headline: Paper on <a href="https://esobrados.com/files/papers/mvpnalyzer.pdf">"MVPNalyzer An Investigative Framework for Auditing the Security & Privacy of Mobile VPNs"</a> accepted at NDSS 2026 on mobile VPNs. Congrats Wayne, Aaron, and Enrique!
 
 - date: July 2025
   headline: Paper accepted at The 47th IEE Aerospace Conference 2026 on supply chain-based malware threats to small satellites. Congrats Jack!
@@ -51,7 +51,7 @@
   headline: Paper accepted at ACM Web Science (WebSci 2025) on Russian Censorship through the Lens of Time Series Analysis. Congrats Dheeman!
 
 - date: May 2025
-  headline: Paper accepted at The 5th Intelligent Cybersecurity Conference (ICSC 2025) on LLaVul: A Multimodal LLM for Interpretable Vulnerability Reasoning about Source Code. Congrats Ala and Mike!
+  headline: "Paper accepted at The 5th Intelligent Cybersecurity Conference (ICSC 2025) on \"LLaVul: A Multimodal LLM for Interpretable Vulnerability Reasoning about Source Code\". Congrats Ala and Mike!"
 
 - date: April 2025
   headline: Dr. Abusnaina (Meta) visited and shared his experiences his experiences with us at <a href="https://beyonddefense.github.io/">Beyond Defense Lab</a>.
@@ -72,7 +72,7 @@
   headline: Attended USENIX Security 2024 in Philadelphia.
 
 - date: July 2024
-  headline: Joined NSF CyberCorps: Scholarship for Service (SFS) program at UNM as a Co-PI.
+  headline: "Joined NSF \"CyberCorps: Scholarship for Service (SFS)\" program at UNM as a Co-PI."
 
 - date: June 2024
   headline: We started a CTF club in the Department of Computer Science at the University of New Mexico.
@@ -81,8 +81,8 @@
   headline: Hosted <a href="https://www.sazzadur.com/">Dr. Sazzadur Rahaman</a> at UNM. Dr. Rahaman delivered a keynote at the CS students' conference @ UNM.
 
 - date: February 2024
-  headline: <a href="https://www.bhupendraacharya.com/">Dr. Bhupendra Acharya</a> from CISPA Helmholtz Center for Information Security, gave a talk on "Cloak and Scam: Creating Honeypots to Measure Present Day Internet Defense Mechanisms Against Social Engineering Attacks" at UNM as part of NSF SFS security lecture series.
-
+  headline: "<a href=\"https://www.bhupendraacharya.com/\">Dr. Bhupendra Acharya</a> from CISPA Helmholtz Center for Information Security, gave a talk on \"Cloak and Scam: Creating Honeypots to Measure Present Day Internet Defense Mechanisms Against Social Engineering Attacks\" at UNM as part of NSF SFS security lecture series."
+  
 - date: November 2023
   headline: Gave a talk at Computer Science colloquium at The University of New Mexico.
 
