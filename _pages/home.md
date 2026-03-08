@@ -75,7 +75,7 @@ To achieve these goals, we develop new quantum sensing and quantum imaging instr
 
 
 <figure class="fifth">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/new-cs-logo.png" style="width: 130px">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/NSF.png" style="width: 100px">
+  <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/new-cs-logo.png" style="width: 150px">
+  <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/NSF.png" style="width: 90px">
   <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/OTF.png" style="width: 120px">
 </figure>
