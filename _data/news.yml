@@ -5,6 +5,9 @@
 - date: February 2026
   headline: Enrique, Ramsha, and Afsah will be attending NDSS in San Diego. We will be presenting our work on <a href="https://esobrados.com/files/papers/mvpnalyzer.pdf">auditing the security and privacy of mobile VPNs</a>. Please reach out if you want to meet us there!
 
+- date: February 2026
+  headline: We hosted Dr. Kevin Butler (University of Florida) at UNM. Dr. Butler delivered a talk on "Exploring Unanticipated Functionality in the Mobile Ecosystem and Beyond".
+
 - date: January 2026
   headline: Congratulations Enrique and Ramsha for receiving the NDSS Fellowship!
 
@@ -82,7 +85,7 @@
 
 - date: February 2024
   headline: "<a href=\"https://www.bhupendraacharya.com/\">Dr. Bhupendra Acharya</a> from CISPA Helmholtz Center for Information Security, gave a talk on \"Cloak and Scam: Creating Honeypots to Measure Present Day Internet Defense Mechanisms Against Social Engineering Attacks\" at UNM as part of NSF SFS security lecture series."
-  
+
 - date: November 2023
   headline: Gave a talk at Computer Science colloquium at The University of New Mexico.
 
