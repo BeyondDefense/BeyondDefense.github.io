@@ -1,11 +1,11 @@
 - title: "Private Links, Public Leaks: Consequences of Frictionless User Experience on the Security and Privacy Posture of SMS-Delivered URLs"
   authors: Muhammad Danish, Enrique Sobrados, Priya Kaushik, Bhupendra Acharya, Muhammad Saad, Abdullah Mueen, Sazzadur Rahaman, and Afsah Anwar
   link:
-    url: https://beyonddefense.github.io/
+    url: https://arxiv.org/pdf/2601.09232
     display: Arxiv
   highlight: 1
-  news1: <a style="color:#FF0000; text-decoration:underline" href="https://beyonddefense.github.io/">Ars Technica</a> and <a style="color:#FF0000; text-decoration:underline" href="https://beyonddefense.github.io/">Help Net Security</a>
-  news2: <a style="color:#FF0000; text-decoration:underline">Multiple Vulnerability Disclosures</a>
+  news1: <a style="color:#FF0000; text-decoration:underline">Multiple Vulnerability Disclosures</a>
+  news2: <a style="color:#FF0000; text-decoration:underline" href="https://arstechnica.com/security/2026/01/millions-of-people-imperiled-through-sign-in-links-sent-by-sms">Ars Technica</a> and <a style="color:#FF0000; text-decoration:underline" href="https://www.helpnetsecurity.com/2026/01/23/sms-private-urls-data-exposure-study/">Help Net Security</a>
 
 - title: "Silent Subversion: Sensor Spoofing Attacks via Supply Chain Implants in Satellite Systems"
   authors: Jack Vanlyssel, Catalin Roman, and Afsah Anwar
@@ -13,22 +13,21 @@
     url: https://beyonddefense.github.io/
     display: Arxiv
   highlight: 1
-  news1: <a style="color:#FF0000; text-decoration:underline" href="https://beyonddefense.github.io/">SecurityAffairs</a> and <a style="color:#FF0000; text-decoration:underline" href="https://beyonddefense.github.io/">SCWorld</a>
   news2: <a style="color:#FF0000; text-decoration:underline">Multiple Vulnerability Disclosures</a>
 
-- title: "Trusted Software, Hidden Threats: Multi-Vector Supply Chain Attacks Using Coordinated and Independent Components in Small Satellite"
+- title: "SpyChain: Multi-Vector Supply Chain Attacks on Small Satellite Systems"
   authors: Jack Vanlyssel, Enrique Sobrados, Ramsha Anwar, Catalin Roman, and Afsah Anwar
   link:
-    url: https://beyonddefense.github.io/
+    url: https://arxiv.org/pdf/2510.06535
     display: In The 47th IEEE Aerospace Conference (2026)
   highlight: 1
-  news1: <a style="color:#FF0000; text-decoration:underline">Vulnerability Disclosure</a>
-  news2: <a style="color:#FF0000; text-decoration:underline">Novel Attack Vector for Satellites (SPARTA)</a>
+  news1: <a style="color:#FF0000; text-decoration:underline">Novel Attack Vector for Satellites (SPARTA)</a>
+  news2: <a style="color:#FF0000; text-decoration:underline" href="https://securityaffairs.com/183303/hacking/unverified-cots-hardware-enables-persistent-attacks-in-small-satellites-via-spychain.html">SecurityAffairs</a> and <a style="color:#FF0000; text-decoration:underline" href="https://www.scworld.com/brief/spychain-exposes-stealth-attacks-in-small-satellites">SCWorld</a>
 
 - title: "MVPNalyzer: An Investigative Framework for the Security & Privacy Audit of Mobile VPNs"
   authors: Wayne Wang*, Aaron Ortwein*, Enrique Sobrados*, Robert Stanley, Piyush Kumar, Afsah Anwar, and Roya Ensafi
   link:
-    url: https://beyonddefense.github.io/
+    url: https://esobrados.com/files/papers/mvpnalyzer.pdf
     display: In The Network and Distributed System Security (NDSS) Symposium (2026)
   highlight: 1
   news1: <a style="color:#FF0000; text-decoration:underline">Multiple Vulnerability Disclosures</a>
