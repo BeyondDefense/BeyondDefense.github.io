@@ -1,3 +1,68 @@
-_site
-.sass-cache
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
 .jekyll-metadata
+
+# Bundler
+.bundle/
+vendor/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Logs
+*.log
+
+# Environment variables
+.env
+.env.*
+
+# Node.js (if used)
+node_modules/
+npm-debug.log*
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*~
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Backup files
+*.bak
+*.backup
+
+# Secrets and keys (prevent accidental leaks)
+*.key
+*.pem
+*.p12
+*.pfx
+id_*
+*secret*
+secrets.*
+config/secrets.*
+passwords.*
+api_keys.*
+credentials.*
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Sensitive research data (if applicable)
+data/private/*
+research/private/*

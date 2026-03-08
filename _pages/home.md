@@ -1,18 +1,25 @@
 ---
-title: "Allan Lab - Home"
+title: "Beyond Defense Lab - Home"
 layout: homelay
-excerpt: "Allan Lab at Leiden University &rarr; LMU."
+excerpt: "Beyond Defense Lab at University of New Mexico."
 sitemap: false
 permalink: /
 ---
 
-**News: Our group moved to the University of Munich (LMU)!** Join us! 
+**News: We are attending the 47th IEEE Aerospace Conference in Big Sky, Montana!** Come, say hi! 
 
-We are a dynamic research group at [LMU physics](https://www.physik.lmu.de/en/index.html) and at the [Leiden Institute of Physics](http://www.physics.leidenuniv.nl/). 
+We are a dynamic research group in the [Department of Computer Science](https://www.cs.unm.edu/) at the [University of New Mexico](https://www.unm.edu/). We focus on advancing cybersecurity and privacy in digital ecosystems.
 
-We have two overarching goals: first, 
-**to understand quantum materials**, including strange metals, high-temperature superconductors, and quantum critical electron matter. Second, **to make novel and useful materials** that never existed before, like possible room-temperature superconductors. 
-To achieve these goals, we develop new quantum sensing and quantum imaging instrumentation to obtain the key quantum mechanical degrees of freedom. We want to build the perfect instruments to answer the scientific questions we deem most important. 
+Our primary goal is to understand malicious activity on the Internet and its societal impact. We envision facilitating secure technology adoption by defending against malicious applications, enabling safe use of privacy-assuring tools, establishing informed trust in digital systems, and ensuring secure adoption of emerging communication technologies. To achieve this, we leverage malware analysis, vulnerability management, and threat intelligence to identify system weaknesses, develop new threat models, and build robust defense systems against evolving attack vectors.
+
+Our research spans mobile, web, and space systems, contributing to the security and privacy of critical infrastructures. 
+
+Our students also organize the [LoboSec CTF group](https://www.cs.unm.edu/), fostering hands-on cybersecurity skills through capture-the-flag competitions.
+
+
+<!-- We have two overarching goals: first,  -->
+<!-- **to understand quantum materials**, including strange metals, high-temperature superconductors, and quantum critical electron matter. Second, **to make novel and useful materials** that never existed before, like possible room-temperature superconductors. 
+To achieve these goals, we develop new quantum sensing and quantum imaging instrumentation to obtain the key quantum mechanical degrees of freedom. We want to build the perfect instruments to answer the scientific questions we deem most important.  -->
 
 <div markdown="0" id="carousel" class="carousel slide" data-ride="carousel" data-interval="4000" data-pause="hover" >
     <!-- Menu -->
@@ -29,22 +36,25 @@ To achieve these goals, we develop new quantum sensing and quantum imaging instr
     <!-- Items -->
     <div class="carousel-inner" markdown="0">
         <div class="item active">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/QPI_Rh.jpg" alt="Slide 1" />
+            <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Slide1.jpg" alt="Slide 1" />
         </div>
         <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/SmartTipSide.jpg" alt="Slide 2" />
+            <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Slide2.jpg" alt="Slide 2" />
         </div>
         <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/SaphireSTM2.jpg" alt="Slide 3" />
+            <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Slide3.jpg" alt="Slide 3" />
         </div>
         <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/lab.jpg" alt="Slide 4" />
+            <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Slide4.jpg" alt="Slide 4" />
         </div>
         <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Fig_Science_Web.jpg" alt="Slide 5" />
+            <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Slide5.jpg" alt="Slide 5" />
         </div>       
          <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/BSCCO2gap2.jpg" alt="Slide 6" />
+            <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Slide6.jpg" alt="Slide 6" />
+        </div>    
+         <div class="item">
+            <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Slide7.jpg" alt="Slide 7" />
         </div>
     </div>
   <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
@@ -58,11 +68,15 @@ To achieve these goals, we develop new quantum sensing and quantum imaging instr
 </div>
 
 
-We are currently building up our instruments right in the center of Munich, in the *Sommerfeldkeller*, where Sommerfeld and Röntgen worked. We will exchange ideas with world class groups working in quantum physics, cold-atom many-body physics, and 2d quantum materials. We are also a proud member of the [SuperC consortium](https://superc2033.com/our-team/).
 
-**We are looking for passionate new PhD students, Postdocs, and Master students to join the team** [(more info)](https://www.allanlab.org/vacancies) **!**
+**We are looking for passionate new PhD students, and student summer interns to join the team** [(more info)](https://beyonddefense.github.io/vacancies) **!**
 
 
+<!-- News -->
+{% include news.html %}
+
+<!-- Research -->
+{% include research.html %}
 
 
 
