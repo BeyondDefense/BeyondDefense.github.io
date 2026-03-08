@@ -1,25 +1,155 @@
-
-- title: 
-  image: 
-  description: ""
-  authors:
-    
+- title: "Private Links, Public Leaks: Consequences of Frictionless User Experience on the Security and Privacy Posture of SMS-Delivered URLs"
+  authors: Muhammad Danish, Enrique Sobrados, Priya Kaushik, Bhupendra Acharya, Muhammad Saad, Abdullah Mueen, Sazzadur Rahaman, and Afsah Anwar
   link:
-    url: 
-    display: 
+    url: https://beyonddefense.github.io/
+    display: Arxiv
   highlight: 0
-  news1: <a style="color:#FF0000; text-decoration:underline" href="http://url.here//">News item in Science</a>
-  news2:
+  news1: <a style="color:#FF0000; text-decoration:underline" href="https://beyonddefense.github.io/">Ars Technica</a> and <a style="color:#FF0000; text-decoration:underline" href="https://beyonddefense.github.io/">Help Net Security</a>
+  news2: <a style="color:#FF0000; text-decoration:underline">Multiple Vulnerability Disclosures</a>
 
-- title: 
-  image: 
-  description:
-    
-  authors:
-    
+- title: "Silent Subversion: Sensor Spoofing Attacks via Supply Chain Implants in Satellite Systems"
+  authors: Jack Vanlyssel, Catalin Roman, and Afsah Anwar
   link:
-    url: 
-    display: 
-  highlight: 1
-  news1: <a style="color:#FF0000; text-decoration:underline" href="http://url.here/">Featured in 'News and Views' by L Taillefer</a>
-  news2: See also <a href="http://url.here"> DOmain 1</a>, <a href="http://url.here">Domain 2</a>
+    url: https://beyonddefense.github.io/
+    display: Arxiv
+  highlight: 0
+  news1: <a style="color:#FF0000; text-decoration:underline" href="https://beyonddefense.github.io/">SecurityAffairs</a> and <a style="color:#FF0000; text-decoration:underline" href="https://beyonddefense.github.io/">SCWorld</a>
+  news2: <a style="color:#FF0000; text-decoration:underline">Multiple Vulnerability Disclosures</a>
+
+- title: "Trusted Software, Hidden Threats: Multi-Vector Supply Chain Attacks Using Coordinated and Independent Components in Small Satellite"
+  authors: Jack Vanlyssel, Enrique Sobrados, Ramsha Anwar, Catalin Roman, and Afsah Anwar
+  link:
+    url: https://beyonddefense.github.io/
+    display: In The 47th IEEE Aerospace Conference (2026)
+  highlight: 0
+  news1: <a style="color:#FF0000; text-decoration:underline">Vulnerability Disclosure</a>
+  news2: <a style="color:#FF0000; text-decoration:underline">Novel Attack Vector for Satellites (SPARTA)</a>
+
+- title: "MVPNalyzer: An Investigative Framework for the Security & Privacy Audit of Mobile VPNs"
+  authors: Wayne Wang*, Aaron Ortwein*, Enrique Sobrados*, Robert Stanley, Piyush Kumar, Afsah Anwar, and Roya Ensafi
+  link:
+    url: https://beyonddefense.github.io/
+    display: In The Network and Distributed System Security (NDSS) Symposium (2026)
+  highlight: 0
+  news1: <a style="color:#FF0000; text-decoration:underline">Multiple Vulnerability Disclosures</a>
+
+- title: Exposing the Limitations of Machine Learning for Malware Detection Under Concept Drift
+  authors: Abusnaina, A., Anwar, A., Saad, M., Alabduljabbar, A., Jang, R., Salem, S., & Mohaisen, D.
+  link:
+    url: https://beyonddefense.github.io/
+    display: In International Conference on Web Information Systems Engineering (2025)
+  highlight: 0
+  news1: <a style="color:#FF0000; text-decoration:underline">Best Paper Award</a>
+
+- title: "A Recent Year On the Internet: Measuring and Understanding the Threats to Everyday Internet Devices"
+  authors: A. Anwar, Y. H. Chen, R. Hodgman, T. Sellers, E. Kirda, and A. Oprea
+  link:
+    url: https://beyonddefense.github.io/
+    display: The Annual Computer Security Applications Conference (2022)
+  highlight: 0
+
+- title: Systematically Evaluating the Robustness of ML-based IoT Malware Detection Systems
+  authors: A. Abusnaina*, A. Anwar*, A. Alabduljabbar, S. Alshamrani, R. Jang, D. Nyang, and D. Mohaisen
+  link:
+    url: https://beyonddefense.github.io/
+    display: The 25th International Symposium on Research in Attacks, Intrusions and Defenses (2022)
+  highlight: 0
+
+- title: "Cleaning the NVD: Comprehensive quality assessment, improvements, and analyses"
+  authors: Anwar, A., Abusnaina, A., Chen, S., Li, F. and Mohaisen, D.
+  link:
+    url: https://beyonddefense.github.io/
+    display: IEEE Transactions on Dependable and Secure Computing (2021)
+  highlight: 0
+
+- title: "Revisiting nakamoto consensus in asynchronous networks: A comprehensive analysis of bitcoin safety and chainquality"
+  authors: Saad, M., Anwar, A., Ravi, S. and Mohaisen, D.
+  link:
+    url: https://beyonddefense.github.io/
+    display: Proceedings of the 2021 ACM SIGSAC Conference on Computer and Communications Security (2021)
+  highlight: 0
+
+- title: "Dl-fhmc: Deep learning-based fine-grained hierarchical learning approach for robust malware classification"
+  authors: Abusnaina, A., Abuhamad, M., Alasmary, H., Anwar, A., Jang, R., Salem, S., Nyang, D. and Mohaisen, D.
+  link:
+    url: https://beyonddefense.github.io/
+    display: IEEE Transactions on Dependable and Secure Computing (2021)
+  highlight: 0
+
+
+- title: Systemically Evaluating the Robustness of ML-based IoT Malware Detectors
+  authors: Abusnaina, A., Anwar, A., Alshamrani, S., Alabduljabbar, A., Jang, R., Nyang, D. and Mohaisen, D.
+  link:
+    url: https://beyonddefense.github.io/
+    display: IEEE/IFIP International Conference on Dependable Systems and Networks – Supplemental Volume (2021)
+  highlight: 0
+
+- title: "Statically Dissecting Internet of Things Malware: Analysis, Characterization, and Detection"
+  authors: Afsah Anwar, Hisham Alasmary, Jeman Park, An Wang, Songqing Chen, and David Mohaisen
+  link:
+    url: https://beyonddefense.github.io/
+    display: The 22nd International Conference on Information and Communications Security (2020)
+  highlight: 0
+
+- title: "Soteria: Detecting adversarial examples in control flow graph-based malware classifiers"
+  authors: Alasmary, H., Abusnaina, A., Jang, R., Abuhamad, M., Anwar, A., Nyang, D. and Mohaisen, D.
+  link:
+    url: https://beyonddefense.github.io/
+    display: IEEE International Conference on Distributed Computing Systems (2020)
+  highlight: 0
+
+- title: Adversarial Learning Attacks on Graph-based IoT Malware Detection Systems
+  authors: A. Abusnaina, A. Khormali, H. Alasmary, J. Park, A. Anwar and A. Mohaisen
+  link:
+    url: https://beyonddefense.github.io/
+    display: IEEE International Conference on Distributed Computing Systems (2019)
+  highlight: 0
+
+- title: "RouteChain: Towards Blockchain-based Secure and Efficient BGP Routing"
+  authors: M. Saad, A. Anwar, A. Ahmad, H. Alasmary, M. Yukesl, and A. Mohaisen
+  link:
+    url: https://beyonddefense.github.io/
+    display: IEEE International Conference on Blockchain and Cryptocurrency (2019)
+  highlight: 0
+
+- title: "Understanding the Hidden Cost of Software Vulnerabilities: Measurements and Predictions"
+  authors: A. Anwar, A. Khormali, and A. Mohaisen
+  link:
+    url: https://beyonddefense.github.io/
+    display: International Conference on Security and Privacy in Communication Networks (2018)
+  highlight: 0
+
+- title: "Honor Among Thieves: Towards Understanding the Dynamics and Interdependencies in IoT Botnets"
+  authors: J. Choi, A. Abusnaina, A. Anwar, A. Wang, S. Chen, D. Nyang and A. Mohaisen
+  link:
+    url: https://beyonddefense.github.io/
+    display: IEEE Conference on Dependable and Secure Computing (2019)
+  highlight: 0
+
+- title: "Analyzing and Detecting Emerging Internet of Things Malware: A Graph-based Approach"
+  authors: H. Alasmary, A. Khormali, A. Anwar, J. Park, J. Choi, A. Abusnaina, A. Awad, D. Nyang, A. Mohaisen
+  link:
+    url: https://beyonddefense.github.io/
+    display: IEEE Internet of Things Journal (2019)
+  highlight: 0
+
+- title: Understanding Internet of Things malware by analyzing endpoints in their static artifacts
+  authors: J. Choi, A. Anwar, A. Alabduljabbar, H. Alasmary, J. Spaulding, A. Wang, S. Chen, D. Nyang, A. Awad, and D. Mohaisen
+  link:
+    url: https://beyonddefense.github.io/
+    display: Computer Networks (2022)
+  highlight: 0
+
+
+# - title: 
+#   image: 
+#   description:
+    
+#   authors:
+    
+#   link:
+#     url: 
+#     display: 
+#   highlight: 1
+#   news1: <a style="color:#FF0000; text-decoration:underline" href="http://url.here/">Featured in 'News and Views' by L Taillefer</a>
+#   news2: See also <a href="http://url.here"> DOmain 1</a>, <a href="http://url.here">Domain 2</a>
