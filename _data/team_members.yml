@@ -1,71 +1,71 @@
 - name: <a href="https://afsah.org/">Afsah Anwar</a>
-  photo: Afsah.png
+  photo: Afsah.jpeg
   info: Assistant Professor
   email: afsah@unm.edu
-  number_educ: 5
-  education1: PhD University of Central Florida with <a href="https://davidmohaisen.github.io/">David Mohaisen</a> 
-  education2: MS University of Central Florida with <a href="https://davidmohaisen.github.io/">David Mohaisen</a>
-  education3: BS Jamia Millia Islamia, India
-  education4: Postdoc Northeastern University with <a href="https://www.khoury.northeastern.edu/home/alina/">Alina Oprea</a>
+  number_educ: 1
+  education1: PhD University of Central Florida
+  # education2: MS University of Central Florida
+  # education3: BS Jamia Millia Islamia, India
+  # education4: Postdoc Northeastern University with <a href="https://www.khoury.northeastern.edu/home/alina/">Alina Oprea</a>
 
 - name: <a href="https://www.cs.unm.edu/~gcroman/">Gruia-Catalin Roman</a>
-  photo: Catalin.png
+  photo: Catalin.jpg
   info: Professor
   email: gcroman@unm.edu
-  number_educ: 5
+  number_educ: 1
   education1: PhD University of Pennsylvania
-  education2: MS University of Pennsylvania
-  education3: BS University of Pennsylvania
+  # education2: MS University of Pennsylvania
+  # education3: BS University of Pennsylvania
 
 - name: Enrique Sobrados
-  photo: Enrique.png
+  photo: Enrique.jpg
   info: PhD Student, started 2023
   email: esobrados720@unm.edu
-  number_educ: 2
-  education1: 
-  education2: 
-  education3:
-  education4:
+  number_educ: 1
+  education1: MS, University of New Mexico
+  # education2: 
+  # education3:
+  # education4:
 
 - name: Muhammad Danish
-  photo: Danish.png
+  photo: Danish.jpg
   info: PhD Student, started 2025
   email: b
-  number_educ: 2
+  number_educ: 1
   education1: BS, University of New Mexico (CRA Undergraduate Researcher Awardee)
-  education2: 
-  education3:
-  education4:
+  # education2: 
+  # education3:
+  # education4:
 
 - name: Jack Vanlyssel
-  photo: Jack.png
+  photo: Jack.jpeg
   info: PhD Student, co-advised with <a href="https://www.cs.unm.edu/~gcroman/">Prof. Catalin Roman</a>
   email: b
-  number_educ: 2
+  number_educ: 1
   education1: MS, University of New Mexico (NSF SFS Scholar)
-  education2: 
-  education3:
-  education4:
+  # education2: 
+  # education3:
+  # education4:
 
 - name: Ramsha Anwar
-  photo: Ramsha.png
+  photo: Ramsha.jpeg
   info: PhD Student, started 2025
   email: b
-  number_educ: 2
+  number_educ: 1
   education1: BS, Jamia Millia Islamia, India
-  education2: 
-  education3:
-  education4:
+  # education2: 
+  # education3:
+  # education4:
 
 - name: Chrysm Watson Ross
-  photo: Chrysm.png
+  photo: bio-photo.jpg
   info: PhD Student, part-time (Sandia National Labs)
   email: chrysm@unm.edu
-  number_educ: 2
-  education1: 
-  education2: 
-  education3:
-  education4:
+  number_educ: 0
+  # education1: 
+  # education2: 
+  # education3:
+  # education4:
 
 
 
@@ -74,6 +74,6 @@
   info: See <a href="https://beyonddefense.github.io/vacancies">openings</a> for more info
   email: afsah@unm.edu
   number_educ: 0
-  education1:
-  education2:
-  education3:
+  # education1:
+  # education2:
+  # education3:
