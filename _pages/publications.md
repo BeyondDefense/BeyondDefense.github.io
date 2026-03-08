@@ -11,7 +11,7 @@ permalink: /publications/
 
 ## Group highlights
 
-**At the end of this page, you can find the [full list of publications and patents](#full-list-of-publications). All papers can be found on on [Google Scholar](https://scholar.google.com/citations?user=Z52AG6wAAAAJ).**
+**All papers can be found on on [Google Scholar](https://scholar.google.com/citations?user=Z52AG6wAAAAJ).**
 
 {% assign number_printed = 0 %}
 {% for publi in site.data.publist %}
