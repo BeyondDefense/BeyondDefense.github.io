@@ -81,9 +81,7 @@ To achieve these goals, we develop new quantum sensing and quantum imaging instr
 
 
 <figure class="fifth">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/LMU_logo.png" style="width: 130px">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/Logo_Leiden.jpg" style="width: 140px">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/Tschira.png" style="width: 150px">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/Logo_ERC.jpg" style="width: 100px">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/SuperC_logo.png" style="width: 100px">
+  <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/UNM_logo.png" style="width: 130px">
+  <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/NSF.jpg" style="width: 140px">
+  <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/OTF.png" style="width: 150px">
 </figure>
