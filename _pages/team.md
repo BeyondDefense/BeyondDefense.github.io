@@ -8,7 +8,7 @@ permalink: /team/
 
 # Group Members
 
-Jump to [staff](#staff), [master and bachelor students](#master-and-bachelor-students), [alumni](#alumni), [lab visitors](#lab-visitors).
+Jump to [current](#current), [master and bachelor students](#master-and-bachelor-students), [alumni](#alumni), [lab visitors](#lab-visitors).
 
 ## Current
 {% assign number_printed = 0 %}
@@ -162,7 +162,7 @@ Jump to [staff](#staff), [master and bachelor students](#master-and-bachelor-stu
 </div>
 {% endif %}
 
-## Former visitors, BSc/ MSc students
+## Lab Visitors
 <div class="row">
 
 <div class="col-sm-4 clearfix">
