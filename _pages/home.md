@@ -41,7 +41,7 @@ Our students also organize the [LoboSec CTF group](https://www.cs.unm.edu/), fos
             <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Slide2.jpg" alt="Slide 2" />
         </div>
         <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Slide3.jpg" alt="Slide 3" />
+            <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Slide3.jpeg" alt="Slide 3" />
         </div>
         <div class="item">
             <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Slide4.jpg" alt="Slide 4" />
