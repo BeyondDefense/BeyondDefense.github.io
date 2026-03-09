@@ -17,7 +17,7 @@
   # education2: MS University of Pennsylvania
   # education3: BS University of Pennsylvania
 
-- name: Enrique Sobrados
+- name: <a href="https://esobrados.com/">Enrique Sobrados</a>
   photo: Enrique.jpg
   info: PhD Student, started 2023
   email: esobrados720@unm.edu
@@ -27,7 +27,7 @@
   # education3:
   # education4:
 
-- name: Muhammad Danish
+- name: <a href="https://mdanish.net/">Muhammad Danish</a>
   photo: Danish.jpg
   info: PhD Student, started 2025
   email: b
@@ -37,7 +37,7 @@
   # education3:
   # education4:
 
-- name: Jack Vanlyssel
+- name: <a href="https://jcvanly.github.io/">Jack Vanlyssel</a>
   photo: Jack.jpeg
   info: PhD Student, started 2025
   email: b
@@ -47,7 +47,7 @@
   # education3:
   # education4:
 
-- name: Ramsha Anwar
+- name: <a href="https://portfolio-website-alpha-umber.vercel.app/">Ramsha Anwar</a>
   photo: Ramsha.jpeg
   info: PhD Student, started 2025
   email: b
@@ -57,7 +57,7 @@
   # education3:
   # education4:
 
-- name: Chrysm Watson Ross
+- name: <a href="https://www.linkedin.com/in/chrysm">Chrysm Watson Ross</a>
   photo: bio-photo.jpg
   info: PhD Student, part-time (Sandia National Labs)
   email: chrysm@unm.edu
