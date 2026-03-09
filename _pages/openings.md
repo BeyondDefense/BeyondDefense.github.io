@@ -8,7 +8,7 @@ permalink: /vacancies
 
 # Open positions
 
-**We are currently open for PhD members and summer interns. The positions are mostly related to program analysis and threat modeling.**
+**We are currently open for PhD members and summer interns.**
 
 Most projects involve program/software/app analysis (static and dynamic) and threat modeling.
 
