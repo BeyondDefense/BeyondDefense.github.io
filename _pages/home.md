@@ -14,7 +14,7 @@ Our primary goal is to understand malicious activity on the Internet and its soc
 
 Our research spans mobile, web, and space systems, contributing to the security and privacy of critical infrastructures. 
 
-Our students also organize the [LoboSec CTF group](https://www.cs.unm.edu/), fostering hands-on cybersecurity skills through capture-the-flag competitions.
+Our students also organize the [LoboSec CTF group](https://lobosec.unm.edu/), fostering hands-on cybersecurity skills through capture-the-flag competitions.
 
 
 
