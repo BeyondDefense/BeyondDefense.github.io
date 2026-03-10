@@ -30,6 +30,7 @@ Our students also organize the [LoboSec CTF group](https://lobosec.unm.edu/), fo
         <li data-target="#carousel" data-slide-to="6"></li>
         <li data-target="#carousel" data-slide-to="7"></li>
         <li data-target="#carousel" data-slide-to="8"></li>
+        <li data-target="#carousel" data-slide-to="9"></li>
     </ol>
 
     <!-- Items -->
@@ -60,6 +61,9 @@ Our students also organize the [LoboSec CTF group](https://lobosec.unm.edu/), fo
         </div>  
          <div class="item">
             <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Slide9.jpg" alt="Slide 9" />
+        </div>
+         <div class="item">
+            <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Slide10.jpg" alt="Slide 10" />
         </div>
     </div>
   <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
