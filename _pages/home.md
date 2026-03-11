@@ -42,7 +42,7 @@ Our students also organize the [LoboSec CTF group](https://lobosec.unm.edu/), fo
             <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Slide2.jpg" alt="Slide 2" />
         </div>
         <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Slide3.jpeg" alt="Slide 3" />
+            <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Slide3.jpg" alt="Slide 3" />
         </div>
         <div class="item">
             <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Slide4.jpg" alt="Slide 4" />
@@ -60,7 +60,7 @@ Our students also organize the [LoboSec CTF group](https://lobosec.unm.edu/), fo
             <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Slide8.jpg" alt="Slide 8" />
         </div>  
          <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Slide9.jpg" alt="Slide 9" />
+            <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Slide9.jpeg" alt="Slide 9" />
         </div>
          <div class="item">
             <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Slide10.jpg" alt="Slide 10" />
