@@ -45,6 +45,16 @@ pubtit {
   background-color: #0B2447;
   border-color: #0B2447;
 }
+.navbar.navbar-default .navbar-brand,
+.navbar.navbar-default .navbar-nav > li > a {
+  color: #F4F7FA; /* choose any color you like */
+}
+
+.navbar.navbar-default .navbar-brand:hover,
+.navbar.navbar-default .navbar-nav > li > a:hover,
+.navbar.navbar-default .navbar-nav > li > a:focus {
+  color: #F7C948;
+}
 footer {
   background-color: #0B2447;
   color: #fff;
