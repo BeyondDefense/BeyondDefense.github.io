@@ -9,11 +9,8 @@ img { margin-bottom: 24px;
 }
 
 
-$body-bg: #F4F7FA;      // optional variable override
 body {
-  background-color: #F4F7FA;
-  color: #0D1F3C;
-  padding-top: 70px;
+	padding-top: 70px;
 }
 
 figcaption {
@@ -39,18 +36,6 @@ p.byline {
 pubtit {
 	font-weight: bold;
 }
-
-
-.navbar, .navbar-default {
-  background-color: #0B2447;
-  border-color: #0B2447;
-}
-footer {
-  background-color: #0B2447;
-  color: #fff;
-}
-.card, .panel { background: #FFFFFF; border-color: #E8EDF4; }
-
 
 firstp {
 }
