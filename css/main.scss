@@ -11,8 +11,9 @@ img { margin-bottom: 24px;
 
 $body-bg: #F4F7FA;      // optional variable override
 body {
-  background-color: #F4F7FA;
-  color: #0D1F3C;
+//   background-color: #F4F7FA;
+  background: linear-gradient(180deg, #0B2447 0%, #122C61 40%, #1F5F8B 100%);
+  color: #0D1F3C; 
   padding-top: 70px;
 }
 
@@ -69,6 +70,11 @@ firstp {
   margin-right: auto;
   margin-left: auto;
   max-width: 1000px; /* or 950px */
+}
+
+.container-fluid, .panel, .well {
+  background: rgba(255,255,255,0.93);
+  border-color: #DDE7F5;
 }
 
 /* Home, News */
