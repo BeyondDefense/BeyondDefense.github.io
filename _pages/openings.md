@@ -12,7 +12,7 @@ permalink: /vacancies
 
 Most projects involve program/software/app analysis (static and dynamic) and threat modeling.
 
-We look for people with passion, creativity, and persistence. We work as peers in a respectful and collaborative environment, and therefore value humility. 
+We look for people with passion, creativity, and persistence. We work as peers in a respectful and collaborative environment, and therefore value humility.
 
 In the lab you will:
 * investigate real‑world attacks and develop novel defenses  
@@ -24,7 +24,7 @@ In the lab you will:
 ### Applications for PhD
 **Are you interested in created malicious software or finding avenues to attack systems that are critical us?**
 
-Come work with us as a PhD student. Send us an [email](mailto:afsah@unm.edu). State briefly why you are interested and attach a CV. 
+Come work with us as a PhD student. Send us an [email](mailto:afsah@unm.edu). State briefly why you are interested and attach a CV.  
 _Important_: please insert "Prospective PhD student" in the subject line.
 
 
