@@ -24,7 +24,8 @@ In the lab you will:
 ### Applications for PhD
 **Are you interested in created malicious software or finding avenues to attack systems that are critical us?**
 
-Come work with us as a PhD student. Send us an [email](mailto:afsah@unm.edu). State briefly why you are interested and attach a CV. **Important**: please insert "Prospective PhD student" in the subject line.
+Come work with us as a PhD student. Send us an [email](mailto:afsah@unm.edu). State briefly why you are interested and attach a CV. 
+_Important_: please insert "Prospective PhD student" in the subject line.
 
 
 ### MS/BS students at UNM
