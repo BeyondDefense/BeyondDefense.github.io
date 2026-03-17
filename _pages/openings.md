@@ -12,9 +12,9 @@ permalink: /vacancies
 
 Most projects involve program/software/app analysis (static and dynamic) and threat modeling.
 
-We look for people with passion, creativity, and persistence.  
-In the lab you will…
+We look for people with passion, creativity, and persistence. We work as peers in a respectful and collaborative environment, and therefore value humility. 
 
+In the lab you will:
 * investigate real‑world attacks and develop novel defenses  
 * design and implement tooling for malware creation and analysis, vulnerability scanning, or decision making in resource constrained environments.
 * participate in LoboSec CTF activities and mentor junior members  
@@ -22,27 +22,27 @@ In the lab you will…
 
 
 ### Applications for PhD
-If you are interested in working with us as a PhD student or postdoc, please send me an [email](mailto:afsah@unm.edu). State briefly why you are interested and attach a CV, including information about the grades you had as an undergraduate. **Important**: please insert "Prospective PhD student" in the subject line.
+**Are you interested in created malicious software or finding avenues to attack systems that are critical us?**
+Come work with us as a PhD student. Send us an [email](mailto:afsah@unm.edu). State briefly why you are interested and attach a CV. **Important**: please insert "Prospective PhD student" in the subject line.
 
 
-### Master projects for UNM students
-If you are a Master student at UNM looking for a Master project, contact me (or any group member) per email or stop by my office.
+### MS/BS students at UNM
+If you are a Master student at UNM looking for a Master project, contact us by [email](mailto:afsah@unm.edu) or visit us.
 
-### BS students at UNM
-We welcome motivated students interested in various aspects of security, specifically, web security, digital fraud, financial scams, space security, open source cyber threat intelligence, and/or malware threats. 
+We welcome motivated students interested in various aspects of security, specifically, web security, space security, AI for security, threat intelligence, and/or malware threats. 
 
-Please reach out. You can sign up for an independent study, thesis advisor, and/or volunteer. Send an email at afsah@unm.edu.
+Please reach out. You can sign up for an independent study, thesis advisor, and/or volunteer.
 
 Join us every week for CTF and fun @ FEC 2150. Join [LoboSec](https://lobosec.unm.edu)! 
 
 ### Students with lack of support system / students from Bihar, India
 I grew up in Bihar, India, and I’m committed to helping students lacking support networks.
 
-* If you are under‑represented, low‑income, or from the Seemanchal region, please contact me – I’m happy to mentor, collaborate, or point you toward campus resources.
+* If you are from an under‑represented population in CS, low‑income household, or Seemanchal region (Bihar, India), please reach out to Afsah. He will be happy to mentor, collaborate, or point you toward campus resources.
 * “First‑generation” and “no‑support” students are especially encouraged to reach out.
 
 ---
 
 <figure>
-<img src="{{ site.url }}{{ site.baseurl }}/images/picpic/Gallery/image-students.jpg" width="95%">
+<img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Slide2.jpg" width="95%">
 </figure>

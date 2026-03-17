@@ -1,12 +1,12 @@
 ---
 title: "Beyond Defense Lab - Home"
 layout: homelay
-excerpt: "Beyond Defense Lab at University of New Mexico."
+excerpt: "Beyond Defense Lab at University of New Mexico"
 sitemap: false
 permalink: /
 ---
 
-**News: We are attending the 47th IEEE Aerospace Conference in Big Sky, Montana!** Come say hi! 
+<!-- **News: We are attending the 47th IEEE Aerospace Conference in Big Sky, Montana!** Come say hi!  -->
 
 We are a dynamic research group in the [Department of Computer Science](https://www.cs.unm.edu/) at the [University of New Mexico](https://www.unm.edu/). We focus on advancing cybersecurity and privacy in digital ecosystems.
 
