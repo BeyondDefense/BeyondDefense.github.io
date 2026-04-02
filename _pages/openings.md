@@ -31,9 +31,7 @@ _Important_: please insert "Prospective PhD student" in the subject line.
 ### MS/BS students at UNM
 If you are a Master student at UNM looking for a Master project, contact us by [email](mailto:afsah@unm.edu) or visit us.
 
-We welcome motivated students interested in various aspects of security, specifically, web security, space security, AI for security, threat intelligence, and/or malware threats. 
-
-Please reach out. You can sign up for an independent study, thesis advisor, and/or volunteer.
+We welcome motivated students interested in various aspects of security, specifically, web security, space security, AI for security, threat intelligence, and/or malware threats. You can sign up for an independent study, thesis advisor, and/or volunteer.
 
 Join us every week for CTF and fun @ FEC 2150. Join [LoboSec](https://lobosec.unm.edu)! 
 
