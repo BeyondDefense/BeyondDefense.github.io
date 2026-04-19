@@ -60,10 +60,10 @@ Our students also organize the [LoboSec CTF group](https://lobosec.unm.edu/), fo
             <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Slide8.jpg" alt="Slide 8" />
         </div>  
          <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Slide9.jpeg" alt="Slide 9" />
+            <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Slide9.jpg" alt="Slide 9" />
         </div>
          <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Slide10.jpg" alt="Slide 10" />
+            <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Slide10.jpeg" alt="Slide 10" />
         </div>
     </div>
   <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
