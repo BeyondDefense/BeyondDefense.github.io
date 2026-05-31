@@ -1,4 +1,4 @@
-<!-- ---
+---
 title: "BDL -- Gallery"
 layout: piclay
 excerpt: "Beyond Defense Lab -- Pictures"
@@ -28,18 +28,11 @@ Welcome to the Beyond Defense Lab photo gallery.
 
 <div class="row gallery-grid">
   {% for image_name in gallery_images %}
-    <div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="col-6 col-sm-4 col-md-3">
       <div class="thumbnail">
         <img src="{{ site.url }}{{ site.baseurl }}/images/picpic/Gallery/{{ image_name }}" alt="{{ image_name }}" />
       </div>
     </div>
   {% endfor %}
 </div>
- -->
 
----
-layout: piclay
-title: Pictures
----
-
-<img src="/images/picpic/Gallery/ABQ-evening.jpg">
