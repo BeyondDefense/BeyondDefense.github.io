@@ -1,5 +1,5 @@
----
-title: "Beyond Defense Lab - Pictures"
+<!-- ---
+title: "BDL -- Gallery"
 layout: piclay
 excerpt: "Beyond Defense Lab -- Pictures"
 permalink: /pictures/
@@ -8,9 +8,6 @@ permalink: /pictures/
 # Pictures
 
 Welcome to the Beyond Defense Lab photo gallery.
-
-## Gallery
-(Right-click *'view image'* to see a larger image.)
 
 <style>
   .gallery-grid .thumbnail {
@@ -38,4 +35,11 @@ Welcome to the Beyond Defense Lab photo gallery.
     </div>
   {% endfor %}
 </div>
+ -->
 
+---
+layout: piclay
+title: Pictures
+---
+
+<img src="/images/picpic/Gallery/ABQ-evening.jpg">
