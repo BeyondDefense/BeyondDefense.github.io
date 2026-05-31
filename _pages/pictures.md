@@ -6,46 +6,36 @@ permalink: /pictures/
 ---
 
 # Pictures
-Jump to: [Gallery](#gallery)
-<!-- , [TAG](#tag) -->
 
+Welcome to the Beyond Defense Lab photo gallery.
 
 ## Gallery
 (Right-click *'view image'* to see a larger image.)
-{% assign number_printed = 0 %}
-{% for pic in site.data.pictures %}
 
-{% assign even_odd = number_printed | modulo: 4 %}
+<style>
+  .gallery-grid .thumbnail {
+    border: 1px solid #ddd;
+    padding: 6px;
+    border-radius: 4px;
+    background: #fff;
+    margin-bottom: 18px;
+  }
+  .gallery-grid .thumbnail img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+</style>
 
-{% if even_odd == 0 %}
-<div class="row">
-{% endif %}
+{% assign gallery_images = "ABQ-evening.jpg|Jiyoo-Bhup.jpg|Lunch-Lobo.jpg|MichDinner.jpg|keynote-sazzad.jpg" | split: "|" %}
 
-<div class="col-sm-3 clearfix">
-<img src="{{ site.url }}{{ site.baseurl }}/images/picpic/Gallery/{{ pic.image }}" class="img-responsive" width="95%" style="float: left" />
+<div class="row gallery-grid">
+  {% for image_name in gallery_images %}
+    <div class="col-xs-6 col-sm-4 col-md-3">
+      <div class="thumbnail">
+        <img src="{{ site.url }}{{ site.baseurl }}/images/picpic/Gallery/{{ image_name }}" alt="{{ image_name }}" />
+      </div>
+    </div>
+  {% endfor %}
 </div>
-
-{% assign number_printed = number_printed | plus: 1 %}
-
-{% if even_odd > 2 %}
-</div>
-{% endif %}
-
-
-{% endfor %}
-
-{% assign even_odd = number_printed | modulo: 4 %}
-{% if even_odd == 1 %}
-</div>
-{% endif %}
-
-{% if even_odd == 2 %}
-</div>
-{% endif %}
-
-{% if even_odd == 3 %}
-</div>
-{% endif %}
-
-<p> &nbsp; </p>
 
