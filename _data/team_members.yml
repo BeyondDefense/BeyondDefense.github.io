@@ -21,9 +21,9 @@
   photo: Enrique.jpg
   info: PhD Student, started 2023
   email: esobrados720@unm.edu
-  number_educ: 1
+  number_educ: 2
   education1: MS, University of New Mexico
-  # education2: 
+  education2: BS, University of Engineering and Technology, Peru
   # education3:
   # education4:
 
@@ -31,9 +31,9 @@
   photo: Danish.jpg
   info: PhD Student, started 2025
   email: b
-  number_educ: 1
-  education1: BS, University of New Mexico (CRA Undergraduate Researcher Awardee)
-  # education2: 
+  number_educ: 2
+  education1: BS, University of New Mexico
+  education2: CRA Undergraduate Researcher Awardee
   # education3:
   # education4:
 
@@ -41,9 +41,9 @@
   photo: Jack.jpeg
   info: PhD Student, started 2025
   email: b
-  number_educ: 1
-  education1: MS, University of New Mexico (NSF SFS Scholar)
-  # education2: 
+  number_educ: 2
+  education1: MS, University of New Mexico
+  education2: NSF SFS Scholar
   # education3:
   # education4:
 
@@ -59,10 +59,10 @@
 
 - name: <a href="https://www.linkedin.com/in/chrysm">Chrysm Watson Ross</a>
   photo: bio-photo.jpg
-  info: PhD Student, part-time (Sandia National Labs)
+  info: PhD Student, part-time
   email: chrysm@unm.edu
-  number_educ: 0
-  # education1: 
+  number_educ: 1
+  education1: Sandia National Labs
   # education2: 
   # education3:
   # education4:
