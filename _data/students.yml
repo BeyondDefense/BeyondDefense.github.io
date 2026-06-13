@@ -1,9 +1,9 @@
-#- name:
-#  photo: rock.jpg
-#  info:
-#  email:
-#  number_educ:
-#  education1:
+- name: Nicholas Jasinski
+  photo: placeholder.jpg
+  info: MS student
+  email: b
+  number_educ: 1
+  education1: BS, University of New Mexico
 #  education2:
 #  education3:
 #  education4:
