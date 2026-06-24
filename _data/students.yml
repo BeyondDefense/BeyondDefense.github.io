@@ -8,4 +8,11 @@
 #  education3:
 #  education4:
 
+- name: Uzair Hammad
+  photo: uzair.jpg
+  info: BS student
+  email: b
+  number_educ: 1
+  education1: BS, University of New Mexico
+
 
