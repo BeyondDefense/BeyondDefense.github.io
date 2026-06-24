@@ -1,6 +1,6 @@
 ---
 title: "Beyond Defense Lab - Vacancies"
-layout: textlay
+layout: textnews
 excerpt: "Openings in Beyond Defense Lab."
 sitemap: false
 permalink: /vacancies

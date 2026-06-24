@@ -8,6 +8,10 @@ permalink: /team/
 
 # Group Members
 
+<div class="team-search-wrap">
+  <input type="search" id="teamSearch" placeholder="Search by name, degree, or institution…" autocomplete="off" />
+</div>
+
 Jump to [current](#current), [master and bachelor students](#master-and-bachelor-students), [alumni](#alumni), [lab visitors](#lab-visitors).
 
 ## Current

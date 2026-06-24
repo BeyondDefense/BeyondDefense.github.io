@@ -66,3 +66,12 @@ credentials.*
 # Sensitive research data (if applicable)
 data/private/*
 research/private/*
+
+# Docker
+.dockerignore
+
+# Ruby version managers
+.ruby-version
+
+# Claude Code (local dev tooling, not project source)
+.claude/

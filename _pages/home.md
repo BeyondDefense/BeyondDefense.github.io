@@ -16,8 +16,6 @@ Our research spans mobile, web, and space systems, contributing to the security 
 
 Our students also organize the [LoboSec CTF group](https://lobosec.unm.edu/), fostering hands-on cybersecurity skills through capture-the-flag competitions.
 
-
-
 <div markdown="0" id="carousel" class="carousel slide" data-ride="carousel" data-interval="4000" data-pause="hover" >
     <!-- Menu -->
     <ol class="carousel-indicators">

@@ -1,11 +1,9 @@
-
 <div class="well">
-<h4>News</h4>
+  <h4>News</h4>
 
-{% for article in site.data.news limit:9 %}
-<p><em>{{ article.date }}</em>: {{ article.headline | markdownify | remove: '<p>' | remove: '</p>' }}</p>
-{% endfor %}
+  {% for article in site.data.news limit:9 %}
+  <p><em>{{ article.date }}</em>{{ article.headline | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+  {% endfor %}
 
-<h4><a href="{{ site.url }}{{ site.baseurl }}/allnews.html">... see all News</a></h4>
-
-    </div>
+  <a class="see-all" href="{{ site.url }}{{ site.baseurl }}/allnews.html">See all news &rarr;</a>
+</div>

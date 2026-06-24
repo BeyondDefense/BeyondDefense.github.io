@@ -4,6 +4,8 @@
     url: https://arxiv.org/pdf/2601.09232
     display: Arxiv
   highlight: 1
+  year: 2026
+  tags: web,mobile
   news1: <a style="color:#FF0000; text-decoration:underline">Multiple Vulnerability Disclosures</a>
   news2: <a style="color:#FF0000; text-decoration:underline" href="https://arstechnica.com/security/2026/01/millions-of-people-imperiled-through-sign-in-links-sent-by-sms">Ars Technica</a> and <a style="color:#FF0000; text-decoration:underline" href="https://www.helpnetsecurity.com/2026/01/23/sms-private-urls-data-exposure-study/">Help Net Security</a>
 
@@ -13,6 +15,8 @@
     url: https://beyonddefense.github.io/downloads/manuscripts/Silent_Subversion_FINAL.pdf
     display: In The 47th IEEE Aerospace Conference (2026)
   highlight: 1
+  year: 2026
+  tags: space
   news2: <a style="color:#FF0000; text-decoration:underline">Multiple Vulnerability Disclosures</a>
 
 - title: "SpyChain: Multi-Vector Supply Chain Attacks on Small Satellite Systems"
@@ -21,6 +25,8 @@
     url: https://arxiv.org/pdf/2510.06535
     display: ArXiv
   highlight: 1
+  year: 2025
+  tags: space
   news1: <a style="color:#FF0000; text-decoration:underline">Novel Attack Vector for Satellites (SPARTA)</a>
   news2: <a style="color:#FF0000; text-decoration:underline" href="https://securityaffairs.com/183303/hacking/unverified-cots-hardware-enables-persistent-attacks-in-small-satellites-via-spychain.html">SecurityAffairs</a> and <a style="color:#FF0000; text-decoration:underline" href="https://www.scworld.com/brief/spychain-exposes-stealth-attacks-in-small-satellites">SCWorld</a>
 
@@ -30,6 +36,8 @@
     url: https://beyonddefense.github.io/downloads/manuscripts/mvpnalyzer.pdf
     display: In The Network and Distributed System Security (NDSS) Symposium (2026)
   highlight: 1
+  year: 2026
+  tags: vpn,mobile
   news1: <a style="color:#FF0000; text-decoration:underline">Multiple Vulnerability Disclosures</a>
 
 - title: Exposing the Limitations of Machine Learning for Malware Detection Under Concept Drift
@@ -38,6 +46,8 @@
     url: https://link.springer.com/chapter/10.1007/978-981-96-0567-5_20
     display: In International Conference on Web Information Systems Engineering (2025)
   highlight: 1
+  year: 2025
+  tags: malware
   news1: <a style="color:#FF0000; text-decoration:underline">Best Paper Award</a>
 
 - title: "A Recent Year On the Internet: Measuring and Understanding the Threats to Everyday Internet Devices"

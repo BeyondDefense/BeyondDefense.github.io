@@ -1,6 +1,6 @@
 ---
 title: "Beyond Defense Lab - Research"
-layout: textlay
+layout: textnews
 excerpt: "Beyond Defense Lab -- Research"
 sitemap: false
 permalink: /research/
