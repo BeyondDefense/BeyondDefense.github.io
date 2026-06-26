@@ -4,7 +4,8 @@
 (function () {
   var root = document.documentElement;
   var stored = localStorage.getItem('bdl-theme');
-  var theme = stored || 'light';
+  var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  var theme = stored || (systemDark ? 'dark' : 'light');
   root.setAttribute('data-theme', theme);
 
   document.addEventListener('click', function (e) {

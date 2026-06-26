@@ -293,6 +293,23 @@ $nav-h: 80px;
   background-color: var(--gold);
 }
 
+/* Sponsors section */
+.sponsors-block {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.sponsors-label {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
 /* Funder logos */
 figure.fifth {
   display: flex;
@@ -431,13 +448,13 @@ figure.fifth img:hover { opacity: 1; filter: none; }
 
 /* Circular team photos */
 #gridid img {
-  width: 76px !important;
-  height: 76px;
+  width: 120px !important;
+  height: 120px;
   object-fit: cover;
   border-radius: 50% !important;
   border: 3px solid var(--border);
   float: left;
-  margin: 0 16px 8px 0 !important;
+  margin: 0 20px 8px 0 !important;
   box-shadow: none;
 }
 

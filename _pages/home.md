@@ -81,8 +81,11 @@ Our students also organize the [LoboSec CTF group](https://lobosec.unm.edu/), fo
 
 
 
+<div class="sponsors-block" markdown="0">
+<p class="sponsors-label">Sponsors</p>
 <figure class="fifth">
   <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/NSF.png" style="width: 90px; margin-right: 10px;">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/new-cs-logo.png" style="width: 150px;">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/OTF.png" style="width: 140px">
+  <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/new-cs-logo.png" style="width: 200px;">
+  <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/OTF.png" style="width: 180px">
 </figure>
+</div>
