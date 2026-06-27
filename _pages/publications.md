@@ -8,8 +8,6 @@ permalink: /publications/
 
 # Publications
 
-## Group highlights
-
 **A complete list of publications can be found on [Google Scholar](https://scholar.google.com/citations?user=Z52AG6wAAAAJ).**
 
 <div class="pub-filters" markdown="0">
@@ -31,6 +29,10 @@ permalink: /publications/
 
 <p id="pubNoResults" style="display:none; color: var(--text-muted); margin-top: 1rem;">No publications match the selected filters.</p>
 
+
+
+## Group highlights
+
 {% assign number_printed = 0 %}
 {% for publi in site.data.publist %}
 
@@ -51,6 +53,7 @@ permalink: /publications/
   <pubtit>{{ publi.title }} <a class="pdf-link" href="{{ publi.link.url }}" target="_blank">PDF</a></pubtit>
   <p><em>{{ publi.authors }}</em></p>
   <p>{{ publi.link.display }}</p>
+  <p class="pub-tags">{% assign tag_list = publi.tags | split: "," %}{% for tag in tag_list %}<span class="pub-tag pub-tag--{{ tag | strip }}">{% if tag == "vpn" %}VPN Security{% elsif tag == "space" %}Space Systems{% elsif tag == "web" %}Web / Mobile{% elsif tag == "mobile" %}Mobile{% elsif tag == "malware" %}Malware{% else %}{{ tag | strip }}{% endif %}</span>{% endfor %}</p>
   <p class="text-danger"><strong>{{ publi.news1 }}</strong></p>
   <p>{{ publi.news2 }}</p>
   <button class="copy-bibtex">Copy BibTeX</button>
@@ -77,10 +80,10 @@ permalink: /publications/
 
 <div class="full-pub-list">
 {% for publi in site.data.publist %}
-<div class="full-pub-item">
+<div class="full-pub-item" data-year="{{ publi.year }}" data-topics="{{ publi.tags }}">
 <span class="full-pub-title">{{ publi.title }} <a class="pdf-link" href="{{ publi.link.url }}" target="_blank">PDF</a></span>
 <span class="full-pub-authors">{{ publi.authors }}</span>
-<span class="full-pub-venue">{{ publi.link.display }}</span>
+<span class="full-pub-venue">{{ publi.link.display }}</span><span class="pub-tags">{% assign tag_list = publi.tags | split: "," %}{% for tag in tag_list %}<span class="pub-tag pub-tag--{{ tag | strip }}">{% if tag == "vpn" %}VPN Security{% elsif tag == "space" %}Space Systems{% elsif tag == "web" %}Web / Mobile{% elsif tag == "mobile" %}Mobile{% elsif tag == "malware" %}Malware{% else %}{{ tag | strip }}{% endif %}</span>{% endfor %}</span>
 </div>
 {% endfor %}
 </div>

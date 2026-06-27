@@ -10,9 +10,9 @@ permalink: /
   <div class="tagline-carousel">
     <button class="tagline-arrow" id="taglinePrev" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
     <div class="tagline-slides">
-      <p class="home-tagline tagline-slide active">Defending VPNs — securing services that protect your privacy.</p>
-      <p class="home-tagline tagline-slide">Protecting satellite systems — building defenses for space-based infrastructure.</p>
-      <p class="home-tagline tagline-slide">Auditing mobile &amp; web apps — exposing vulnerabilities before attackers do.</p>
+      <p class="home-tagline tagline-slide active">Defending VPNs — securing services that protect your privacy</p>
+      <p class="home-tagline tagline-slide">Protecting satellite systems — building defenses for space-based infrastructure</p>
+      <p class="home-tagline tagline-slide">Auditing mobile &amp; web apps — exposing vulnerabilities before attackers do</p>
     </div>
     <button class="tagline-arrow" id="tagllineNext" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
   </div>

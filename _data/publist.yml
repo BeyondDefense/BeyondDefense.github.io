@@ -56,6 +56,8 @@
     url: https://dl.acm.org/doi/pdf/10.1145/3564625.3564649
     display: The Annual Computer Security Applications Conference (2022)
   highlight: 0
+  year: 2022
+  tags: malware
 
 - title: Systematically Evaluating the Robustness of ML-based IoT Malware Detection Systems
   authors: A. Abusnaina*, A. Anwar*, A. Alabduljabbar, S. Alshamrani, R. Jang, D. Nyang, and D. Mohaisen
@@ -63,6 +65,8 @@
     url: https://dl.acm.org/doi/pdf/10.1145/3545948.3545960
     display: The 25th International Symposium on Research in Attacks, Intrusions and Defenses (2022)
   highlight: 0
+  year: 2022
+  tags: malware
 
 - title: "Cleaning the NVD: Comprehensive quality assessment, improvements, and analyses"
   authors: Anwar, A., Abusnaina, A., Chen, S., Li, F. and Mohaisen, D.
@@ -70,6 +74,8 @@
     url: https://ieeexplore.ieee.org/abstract/document/9601266
     display: IEEE Transactions on Dependable and Secure Computing (2022)
   highlight: 0
+  year: 2022
+  tags: malware
 
 - title: "Revisiting nakamoto consensus in asynchronous networks: A comprehensive analysis of bitcoin safety and chainquality"
   authors: Saad, M., Anwar, A., Ravi, S. and Mohaisen, D.
@@ -77,6 +83,8 @@
     url: https://dl.acm.org/doi/pdf/10.1145/3460120.3484561
     display: Proceedings of the ACM SIGSAC Conference on Computer and Communications Security (2021)
   highlight: 0
+  year: 2021
+  tags: malware
 
 - title: "Dl-fhmc: Deep learning-based fine-grained hierarchical learning approach for robust malware classification"
   authors: Abusnaina, A., Abuhamad, M., Alasmary, H., Anwar, A., Jang, R., Salem, S., Nyang, D. and Mohaisen, D.
@@ -84,7 +92,8 @@
     url: https://ieeexplore.ieee.org/abstract/document/9484718
     display: IEEE Transactions on Dependable and Secure Computing (2021)
   highlight: 0
-
+  year: 2021
+  tags: malware
 
 - title: Systemically Evaluating the Robustness of ML-based IoT Malware Detectors
   authors: Abusnaina, A., Anwar, A., Alshamrani, S., Alabduljabbar, A., Jang, R., Nyang, D. and Mohaisen, D.
@@ -92,6 +101,8 @@
     url: https://ieeexplore.ieee.org/abstract/document/9525565
     display: IEEE/IFIP International Conference on Dependable Systems and Networks – Supplemental Volume (2021)
   highlight: 0
+  year: 2021
+  tags: malware
 
 - title: "Statically Dissecting Internet of Things Malware: Analysis, Characterization, and Detection"
   authors: Afsah Anwar, Hisham Alasmary, Jeman Park, An Wang, Songqing Chen, and David Mohaisen
@@ -99,6 +110,8 @@
     url: https://link.springer.com/chapter/10.1007/978-3-030-61078-4_25
     display: The 22nd International Conference on Information and Communications Security (2020)
   highlight: 0
+  year: 2020
+  tags: malware
 
 - title: "Soteria: Detecting adversarial examples in control flow graph-based malware classifiers"
   authors: Alasmary, H., Abusnaina, A., Jang, R., Abuhamad, M., Anwar, A., Nyang, D. and Mohaisen, D.
@@ -106,6 +119,8 @@
     url: https://ieeexplore.ieee.org/abstract/document/9355825
     display: IEEE International Conference on Distributed Computing Systems (2020)
   highlight: 0
+  year: 2020
+  tags: malware
 
 - title: Adversarial Learning Attacks on Graph-based IoT Malware Detection Systems
   authors: A. Abusnaina, A. Khormali, H. Alasmary, J. Park, A. Anwar and A. Mohaisen
@@ -113,6 +128,8 @@
     url: https://ieeexplore.ieee.org/abstract/document/8885251
     display: IEEE International Conference on Distributed Computing Systems (2019)
   highlight: 0
+  year: 2019
+  tags: malware
 
 - title: "RouteChain: Towards Blockchain-based Secure and Efficient BGP Routing"
   authors: M. Saad, A. Anwar, A. Ahmad, H. Alasmary, M. Yukesl, and A. Mohaisen
@@ -120,6 +137,8 @@
     url: https://www.sciencedirect.com/science/article/abs/pii/S1389128622003966
     display: IEEE International Conference on Blockchain and Cryptocurrency (2019)
   highlight: 0
+  year: 2019
+  tags: malware
 
 - title: "Understanding the Hidden Cost of Software Vulnerabilities: Measurements and Predictions"
   authors: A. Anwar, A. Khormali, and A. Mohaisen
@@ -127,6 +146,8 @@
     url: https://link.springer.com/chapter/10.1007/978-3-030-01701-9_21
     display: International Conference on Security and Privacy in Communication Networks (2018)
   highlight: 0
+  year: 2018
+  tags: malware
 
 - title: "Honor Among Thieves: Towards Understanding the Dynamics and Interdependencies in IoT Botnets"
   authors: J. Choi, A. Abusnaina, A. Anwar, A. Wang, S. Chen, D. Nyang and A. Mohaisen
@@ -134,6 +155,8 @@
     url: https://ieeexplore.ieee.org/abstract/document/8937574
     display: IEEE Conference on Dependable and Secure Computing (2019)
   highlight: 0
+  year: 2019
+  tags: malware
 
 - title: "Analyzing and Detecting Emerging Internet of Things Malware: A Graph-based Approach"
   authors: H. Alasmary, A. Khormali, A. Anwar, J. Park, J. Choi, A. Abusnaina, A. Awad, D. Nyang, A. Mohaisen
@@ -141,6 +164,8 @@
     url: https://ieeexplore.ieee.org/abstract/document/8752028
     display: IEEE Internet of Things Journal (2019)
   highlight: 0
+  year: 2019
+  tags: malware
 
 - title: Understanding Internet of Things malware by analyzing endpoints in their static artifacts
   authors: J. Choi, A. Anwar, A. Alabduljabbar, H. Alasmary, J. Spaulding, A. Wang, S. Chen, D. Nyang, A. Awad, and D. Mohaisen
@@ -148,17 +173,5 @@
     url: https://www.sciencedirect.com/science/article/abs/pii/S1389128622000056
     display: Computer Networks (2022)
   highlight: 0
-
-
-# - title: 
-#   image: 
-#   description:
-    
-#   authors:
-    
-#   link:
-#     url: 
-#     display: 
-#   highlight: 1
-#   news1: <a style="color:#FF0000; text-decoration:underline" href="http://url.here/">Featured in 'News and Views' by L Taillefer</a>
-#   news2: See also <a href="http://url.here"> DOmain 1</a>, <a href="http://url.here">Domain 2</a>
+  year: 2022
+  tags: malware

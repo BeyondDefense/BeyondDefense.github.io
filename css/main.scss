@@ -146,7 +146,7 @@ $nav-h: 80px;
   color: #fff !important;
   font-family: 'Exo 2', sans-serif;
   font-weight: 700;
-  font-size: 1.3rem;
+  font-size: 1.95rem;
   letter-spacing: 0.02em;
   padding: 0 16px;
   height: $nav-h;
@@ -761,7 +761,6 @@ hr.section-divider {
 }
 
 .navbar, .navbar-default {
-  position: relative;
   border-bottom: none !important;
 }
 .navbar::after {
@@ -1018,6 +1017,31 @@ hr.section-divider {
   line-height: 1.45;
 }
 
+p.pub-tags, span.pub-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 6px 0 8px;
+  padding: 0;
+}
+.pub-tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  border-radius: 20px;
+  padding: 2px 9px;
+  cursor: pointer;
+  background: var(--gold);
+  color: var(--navy);
+  transition: opacity 0.15s;
+  &:hover { opacity: 0.8; }
+}
+[data-theme="dark"] .pub-tag {
+  background: var(--gold);
+  color: #0B2447;
+}
 .pdf-link {
   display: inline-block;
   font-family: 'Inter', sans-serif;
@@ -1437,7 +1461,7 @@ hr.section-divider {
 }
 .home-tagline {
   font-family: 'Exo 2', sans-serif;
-  font-size: 1.75rem;
+  font-size: 2.1rem;
   font-weight: 700;
   color: var(--navy);
   line-height: 1.35;

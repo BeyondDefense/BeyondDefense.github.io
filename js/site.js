@@ -88,18 +88,37 @@
     });
   });
 
+  /* clicking a pub-tag pill applies the topic filter */
+  document.addEventListener('click', function (e) {
+    var tag = e.target.closest('.pub-tag');
+    if (!tag) return;
+    var topic = tag.className.match(/pub-tag--(\S+)/);
+    if (!topic) return;
+    var val = topic[1];
+    var btn = document.querySelector('[data-group="topic"][data-filter="' + val + '"]');
+    if (!btn) return;
+    document.querySelectorAll('[data-group="topic"]').forEach(function (b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    applyFilters();
+    document.querySelector('.pub-filters').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
   function applyFilters() {
     var yearBtn  = document.querySelector('[data-group="year"].active');
     var topicBtn = document.querySelector('[data-group="topic"].active');
     var yearVal  = yearBtn  ? yearBtn.getAttribute('data-filter')  : 'all';
     var topicVal = topicBtn ? topicBtn.getAttribute('data-filter') : 'all';
 
+    function matches(el) {
+      var year   = el.getAttribute('data-year') || '';
+      var topics = (el.getAttribute('data-topics') || '').split(',');
+      return (yearVal === 'all' || year === yearVal) &&
+             (topicVal === 'all' || topics.indexOf(topicVal) !== -1);
+    }
+
+    /* highlighted pub cards */
     document.querySelectorAll('.pub-item').forEach(function (card) {
-      var year   = card.getAttribute('data-year') || '';
-      var topics = (card.getAttribute('data-topics') || '').split(',');
-      var show   = (yearVal === 'all' || year === yearVal) &&
-                   (topicVal === 'all' || topics.indexOf(topicVal) !== -1);
-      card.style.display = show ? '' : 'none';
+      card.style.display = matches(card) ? '' : 'none';
     });
 
     /* hide rows that have no visible children */
@@ -108,10 +127,16 @@
       row.style.display = vis ? '' : 'none';
     });
 
+    /* full pub list */
+    document.querySelectorAll('.full-pub-item').forEach(function (item) {
+      item.style.display = matches(item) ? '' : 'none';
+    });
+
     /* show empty-state message */
     var none = document.getElementById('pubNoResults');
     if (none) {
-      var total = document.querySelectorAll('.pub-item:not([style*="none"])').length;
+      var total = document.querySelectorAll('.pub-item:not([style*="none"])').length +
+                  document.querySelectorAll('.full-pub-item:not([style*="none"])').length;
       none.style.display = total ? 'none' : '';
     }
   }
