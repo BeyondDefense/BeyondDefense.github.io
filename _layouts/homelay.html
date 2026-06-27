@@ -3,19 +3,8 @@ layout: default
 ---
 
   <div id="homeid" class="col-sm-8">
-        <!-- <h1>Welcome to the Beyond Defense Lab</h1> -->
-      <h1>
-          <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/BDL-logo.png"
-           alt="Beyond Defense Lab logo"
-           style="width:50px;
-                  display:inline-block;
-                  vertical-align:middle;
-                  margin-right:8px;" />
-      Welcome to Beyond Defense Lab
-    </h1>
-
-	{{ content }}
+    {{ content }}
   </div>
-  <div id="newsid" class="col-sm-4" >
-	{% include news.html %}
+  <div id="newsid" class="col-sm-4">
+    {% include news.html %}
   </div>

@@ -29,10 +29,53 @@
   setIcon(theme);
 })();
 
-/* ── 2. Publication filter ────────────────────── */
+/* ── 2. Tagline carousel ─────────────────────── */
+(function () {
+  var slides = document.querySelectorAll('.tagline-slide');
+  if (slides.length < 2) return;
+  var current = 0;
+  var timer;
+
+  function goTo(idx) {
+    slides[current].classList.remove('active');
+    current = (idx + slides.length) % slides.length;
+    slides[current].classList.add('active');
+  }
+
+  function startTimer() {
+    clearInterval(timer);
+    timer = setInterval(function () { goTo(current + 1); }, 3500);
+  }
+
+  var prev = document.getElementById('taglinePrev');
+  var next = document.getElementById('tagllineNext');
+  if (prev) prev.addEventListener('click', function () { goTo(current - 1); startTimer(); });
+  if (next) next.addEventListener('click', function () { goTo(current + 1); startTimer(); });
+
+  startTimer();
+})();
+
+/* ── 3. Publication filter ────────────────────── */
 (function () {
   var filterBtns = document.querySelectorAll('[data-filter]');
   if (!filterBtns.length) return;
+
+  /* auto-apply topic/year from URL query params e.g. ?topic=vpn&year=2026 */
+  var params = new URLSearchParams(window.location.search);
+  ['topic', 'year'].forEach(function (group) {
+    var val = params.get(group);
+    if (!val) return;
+    var btn = document.querySelector('[data-group="' + group + '"][data-filter="' + val + '"]');
+    if (!btn) return;
+    document.querySelectorAll('[data-group="' + group + '"]').forEach(function (b) {
+      b.classList.remove('active');
+    });
+    btn.classList.add('active');
+  });
+  /* run filters after params applied — deferred so applyFilters is defined */
+  if (params.get('topic') || params.get('year')) {
+    setTimeout(applyFilters, 0);
+  }
 
   filterBtns.forEach(function (btn) {
     btn.addEventListener('click', function () {
@@ -108,7 +151,27 @@
   });
 })();
 
-/* ── 5. Copy BibTeX ───────────────────────────── */
+/* ── 5. Card entrance animation (Intersection Observer) ── */
+(function () {
+  if (!window.IntersectionObserver) return;
+  var cards = document.querySelectorAll(
+    '#gridid .col-sm-6.clearfix, .pub-item .well, .full-pub-item'
+  );
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('card-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  cards.forEach(function (card) {
+    card.classList.add('card-animate');
+    observer.observe(card);
+  });
+})();
+
+/* ── 6. Copy BibTeX ───────────────────────────── */
 (function () {
   document.addEventListener('click', function (e) {
     var btn = e.target.closest('.copy-bibtex');

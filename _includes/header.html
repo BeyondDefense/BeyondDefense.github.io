@@ -16,12 +16,12 @@
     </div>
     <div class="collapse navbar-collapse" id="navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="{{ site.url }}{{ site.baseurl }}/">Home</a></li>
-        <li><a href="{{ site.url }}{{ site.baseurl }}/team">Team</a></li>
-        <li><a href="{{ site.url }}{{ site.baseurl }}/research">Research</a></li>
-        <li><a href="{{ site.url }}{{ site.baseurl }}/publications">Publications</a></li>
-        <li><a href="{{ site.url }}{{ site.baseurl }}/vacancies">Vacancies</a></li>
-        <li><a href="{{ site.url }}{{ site.baseurl }}/pictures">Gallery</a></li>
+        <li{% if page.url == '/' %} class="active"{% endif %}><a href="{{ site.url }}{{ site.baseurl }}/">Home</a></li>
+        <li{% if page.url contains '/team' %} class="active"{% endif %}><a href="{{ site.url }}{{ site.baseurl }}/team">Team</a></li>
+        <li{% if page.url contains '/research' %} class="active"{% endif %}><a href="{{ site.url }}{{ site.baseurl }}/research">Research</a></li>
+        <li{% if page.url contains '/publications' %} class="active"{% endif %}><a href="{{ site.url }}{{ site.baseurl }}/publications">Publications</a></li>
+        <li{% if page.url contains '/vacancies' %} class="active"{% endif %}><a href="{{ site.url }}{{ site.baseurl }}/vacancies">Vacancies</a></li>
+        <li{% if page.url contains '/pictures' %} class="active"{% endif %}><a href="{{ site.url }}{{ site.baseurl }}/pictures">Gallery</a></li>
         <li><button id="darkToggle" aria-label="Toggle dark mode" title="Toggle dark mode"></button></li>
       </ul>
     </div>

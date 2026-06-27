@@ -48,9 +48,9 @@ permalink: /publications/
      data-authors="{{ publi.authors | escape }}"
      data-venue="{{ publi.link.display | escape }}">
  <div class="well">
-  <pubtit>{{ publi.title }}</pubtit>
+  <pubtit>{{ publi.title }} <a class="pdf-link" href="{{ publi.link.url }}" target="_blank">PDF</a></pubtit>
   <p><em>{{ publi.authors }}</em></p>
-  <p><strong><a href="{{ publi.link.url }}">{{ publi.link.display }}</a></strong></p>
+  <p>{{ publi.link.display }}</p>
   <p class="text-danger"><strong>{{ publi.news1 }}</strong></p>
   <p>{{ publi.news2 }}</p>
   <button class="copy-bibtex">Copy BibTeX</button>
@@ -78,9 +78,9 @@ permalink: /publications/
 <div class="full-pub-list">
 {% for publi in site.data.publist %}
 <div class="full-pub-item">
-  <span class="full-pub-title">{{ publi.title }}</span><br/>
-  <em>{{ publi.authors }}</em><br/>
-  <a href="{{ publi.link.url }}">{{ publi.link.display }}</a>
+<span class="full-pub-title">{{ publi.title }} <a class="pdf-link" href="{{ publi.link.url }}" target="_blank">PDF</a></span>
+<span class="full-pub-authors">{{ publi.authors }}</span>
+<span class="full-pub-venue">{{ publi.link.display }}</span>
 </div>
 {% endfor %}
 </div>
