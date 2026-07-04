@@ -1,79 +1,60 @@
 - name: <a href="https://afsah.org/">Afsah Anwar</a>
   photo: Afsah.jpeg
   info: Assistant Professor
-  email: afsah@unm.edu
-  number_educ: 1
-  education1: PhD, University of Central Florida
-  # education2: MS University of Central Florida
-  # education3: BS Jamia Millia Islamia, India
-  # education4: Postdoc Northeastern University with <a href="https://www.khoury.northeastern.edu/home/alina/">Alina Oprea</a>
+  duration: 
+  highlight: 
 
 - name: <a href="https://www.cs.unm.edu/~gcroman/">Gruia-Catalin Roman</a>
   photo: Catalin.jpg
   info: Professor
-  email: gcroman@unm.edu
-  number_educ: 1
-  education1: PhD, University of Pennsylvania
-  # education2: MS University of Pennsylvania
-  # education3: BS University of Pennsylvania
+  duration: 
+  highlight: 
 
 - name: <a href="https://esobrados.com/">Enrique Sobrados</a>
   photo: Enrique.jpg
-  info: PhD Student, started 2023
-  email: esobrados720@unm.edu
-  number_educ: 2
-  education1: MS, University of New Mexico
-  education2: BS, University of Engineering and Technology, Peru
-  # education3:
-  # education4:
+  info: PhD Student
+  duration: 2023-
+  highlight: b
 
 - name: <a href="https://mdanish.net/">Muhammad Danish</a>
   photo: Danish.jpg
-  info: PhD Student, started 2025
-  email: b
-  number_educ: 2
-  education1: BS, University of New Mexico
-  education2: CRA Undergraduate Researcher Awardee
-  # education3:
-  # education4:
+  info: PhD Student
+  duration: 2025-
+  highlight: CRA UG Researcher HM
 
 - name: <a href="https://jcvanly.github.io/">Jack Vanlyssel</a>
   photo: Jack.jpeg
-  info: PhD Student, started 2025
-  email: b
-  number_educ: 2
-  education1: MS, University of New Mexico
-  education2: NSF SFS Scholar
-  # education3:
-  # education4:
+  info: PhD Student
+  duration: 2025-
+  highlight: NSF SFS Scholar
 
 - name: <a href="https://portfolio-website-alpha-umber.vercel.app/">Ramsha Anwar</a>
   photo: Ramsha.jpeg
-  info: PhD Student, started 2025
-  email: b
-  number_educ: 1
-  education1: BS, Jamia Millia Islamia, India
-  # education2: 
-  # education3:
-  # education4:
+  info: PhD Student
+  duration: 2025-
+  highlight: b
 
 - name: <a href="https://www.linkedin.com/in/chrysm">Chrysm Watson Ross</a>
   photo: bio-photo.jpg
   info: PhD Student, part-time
-  email: chrysm@unm.edu
-  number_educ: 1
-  education1: Sandia National Labs
-  # education2: 
-  # education3:
-  # education4:
+  duration: 2025-
+  highlight: Sandia National Labs
 
+- name: <a href="https://njasi.com/">Nicholas Jasinski</a>
+  photo: placeholder.jpg
+  info: MS student
+  duration: 2026-
+  highlight: b
+
+- name: <a href="https://beyonddefense.github.io/team/">Uzair Hammad</a>
+  photo: uzair.jpg
+  info: BS student @UCLA
+  duration: Summer 2026
+  highlight: b
 
 
 - name: "This could be you !"
   photo: rock.jpg
   info: See <a href="https://beyonddefense.github.io/vacancies">openings</a> for more info
-  email: afsah@unm.edu
-  number_educ: 0
-  # education1:
-  # education2:
-  # education3:
+  highlight: b
+  duration: b

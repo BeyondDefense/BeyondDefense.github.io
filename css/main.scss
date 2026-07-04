@@ -476,15 +476,16 @@ figure.fifth img:hover { opacity: 1; filter: none; }
   h4 {
     font-size: 0.95rem;
     font-weight: 700;
-    margin-bottom: 4px;
+    margin-bottom: auto;
+    padding-bottom: 4px;
     a { color: var(--navy); }
     a:hover { color: var(--gold-dark); }
   }
 }
 
 .team-photo {
-  width: 80px !important;
-  height: 80px !important;
+  width: 110px !important;
+  height: 110px !important;
   object-fit: cover;
   border-radius: 50% !important;
   border: 3px solid var(--border) !important;
@@ -497,25 +498,30 @@ figure.fifth img:hover { opacity: 1; filter: none; }
   display: block;
   font-size: 0.78rem;
   color: var(--text-muted);
-  font-style: italic;
-  margin-bottom: 0;
+  margin: 0;
+  line-height: 1.4;
+}
+/* Kramdown wraps img and span.team-role in <p> tags; kill their margins */
+#gridid .team-page .col-sm-6.clearfix > p {
+  margin: 0;
+  padding: 0;
 }
 
 .team-duration {
-  display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--navy);
-  background: var(--gold);
-  border-radius: 20px;
-  padding: 2px 10px;
-  margin-top: 6px;
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.4;
 }
-[data-theme="dark"] .team-duration {
-  background: var(--gold) !important;
-  color: #0B2447 !important;
+
+.team-highlight {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin: 0;
+  line-height: 1.4;
 }
 
 .team-edu {
@@ -998,24 +1004,31 @@ hr.section-divider {
 /* ============================================================
    FULL PUBLICATION LIST (bottom of publications page)
    ============================================================ */
-.full-pub-list { margin-top: 8px; }
+.full-pub-list { margin-top: 8px; display: flex; flex-direction: column; gap: 10px; }
 .full-pub-item {
-  padding: 16px 0;
-  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
   display: flex;
   flex-direction: column;
   gap: 4px;
+  transition: box-shadow var(--transition), border-color var(--transition);
+  &:hover {
+    border-color: var(--gold);
+    box-shadow: 0 4px 16px var(--gold-glow);
+  }
 }
-.full-pub-item:last-child { border-bottom: none; }
 
 .full-pub-title {
   font-family: 'Exo 2', sans-serif;
   font-weight: 700;
   color: var(--navy);
   display: block;
-  font-size: 1.05rem;
+  font-size: 0.98rem;
   line-height: 1.45;
 }
+[data-theme="dark"] .full-pub-title { color: var(--text); }
 
 p.pub-tags, span.pub-tags {
   display: flex;

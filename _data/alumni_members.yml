@@ -1,14 +1,9 @@
 
-- name: Dheeman Saha (co-advised with Dr. Abdullah Mueen)
+- name: Dheeman Saha
   photo: Dheeman.png
   duration: 2023 - 2025
-  info: "PhD, \"Thesis: Irregularities in the Dynamics of Large Networks: Cases on Social Networks and the Internet\""
-  email: 
-  number_educ: 1
-  education1: PhD, University of New Mexico
-  education2:
-  education3:
-  education4:
+  info: PhD Student
+  highlight: co-advised with Dr. Abdullah Mueen
 
 # - name: Preston Quade
 #   photo: rock.jpg

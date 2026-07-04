@@ -10,14 +10,13 @@ permalink: /team/
 
 # Group Members
 
-<div class="team-search-wrap">
-  <input type="search" id="teamSearch" placeholder="Search by name, degree, or institution…" autocomplete="off" />
-</div>
+<!-- <div class="team-search-wrap">
+  <input type="search" id="teamSearch" placeholder="Search by name or degree" autocomplete="off" />
+</div> -->
 
-Jump to [current](#current), [master and bachelor students](#master-and-bachelor-students), [alumni](#alumni), [lab visitors](#lab-visitors).
 
-## Current
-<div id="current"></div>
+<!-- ## Current
+<div id="current"></div> -->
 
 <div class="row row-faculty">
 {% for member in site.data.team_members limit:2 %}
@@ -25,13 +24,7 @@ Jump to [current](#current), [master and bachelor students](#master-and-bachelor
   <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.photo }}" class="team-photo" />
   <h4>{{ member.name }}</h4>
   <span class="team-role">{{ member.info }}</span>
-  <ul class="team-edu">
-  {% if member.number_educ >= 1 %}<li>{{ member.education1 | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>{% endif %}
-  {% if member.number_educ >= 2 %}<li>{{ member.education2 | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>{% endif %}
-  {% if member.number_educ >= 3 %}<li>{{ member.education3 | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>{% endif %}
-  {% if member.number_educ >= 4 %}<li>{{ member.education4 | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>{% endif %}
-  {% if member.number_educ >= 5 %}<li>{{ member.education5 | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>{% endif %}
-  </ul>
+  <span class="team-role">{{ member.duration }}</span>
 </div>
 {% endfor %}
 </div>
@@ -49,13 +42,8 @@ Jump to [current](#current), [master and bachelor students](#master-and-bachelor
   <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.photo }}" class="team-photo" />
   <h4>{{ member.name }}</h4>
   <span class="team-role">{{ member.info }}</span>
-  <ul class="team-edu">
-  {% if member.number_educ >= 1 %}<li>{{ member.education1 | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>{% endif %}
-  {% if member.number_educ >= 2 %}<li>{{ member.education2 | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>{% endif %}
-  {% if member.number_educ >= 3 %}<li>{{ member.education3 | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>{% endif %}
-  {% if member.number_educ >= 4 %}<li>{{ member.education4 | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>{% endif %}
-  {% if member.number_educ >= 5 %}<li>{{ member.education5 | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>{% endif %}
-  </ul>
+  {% if member.duration and member.duration != "b" %}<span class="team-duration">{{ member.duration }}</span>{% endif %}
+  {% if member.highlight and member.highlight != "b" %}<span class="team-highlight">{{ member.highlight }}</span>{% endif %}
 </div>
 
 {% assign number_printed = number_printed | plus: 1 %}
@@ -71,41 +59,7 @@ Jump to [current](#current), [master and bachelor students](#master-and-bachelor
 </div>
 {% endif %}
 
-## Master and Bachelor Students
-<div id="master-and-bachelor-students"></div>
-{% assign number_printed = 0 %}
-{% for member in site.data.students %}
 
-{% assign even_odd = number_printed | modulo: 2 %}
-
-{% if even_odd == 0 %}
-<div class="row">
-{% endif %}
-
-<div class="col-sm-6 clearfix">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.photo }}" class="team-photo" />
-  <h4>{{ member.name }}</h4>
-  <span class="team-role">{{ member.info }}</span>
-  <ul class="team-edu">
-  {% if member.number_educ >= 1 %}<li>{{ member.education1 }}</li>{% endif %}
-  {% if member.number_educ >= 2 %}<li>{{ member.education2 }}</li>{% endif %}
-  {% if member.number_educ >= 3 %}<li>{{ member.education3 }}</li>{% endif %}
-  {% if member.number_educ >= 4 %}<li>{{ member.education4 }}</li>{% endif %}
-  </ul>
-</div>
-
-{% assign number_printed = number_printed | plus: 1 %}
-
-{% if even_odd == 1 %}
-</div>
-{% endif %}
-
-{% endfor %}
-
-{% assign even_odd = number_printed | modulo: 2 %}
-{% if even_odd == 1 %}
-</div>
-{% endif %}
 
 ## Alumni
 <div id="alumni"></div>
@@ -123,6 +77,7 @@ Jump to [current](#current), [master and bachelor students](#master-and-bachelor
   <h4>{{ member.name }}</h4>
   <span class="team-role">{{ member.info }}</span>
   <span class="team-duration">{{ member.duration }}</span>
+  <span class="team-highlight">{{ member.highlight }}</span>
 </div>
 
 {% assign number_printed = number_printed | plus: 1 %}
@@ -138,7 +93,7 @@ Jump to [current](#current), [master and bachelor students](#master-and-bachelor
 </div>
 {% endif %}
 
-## Lab Visitors
+## Visitors
 <div id="lab-visitors"></div>
 <div class="visitors-grid">
 <div class="visitors-card">

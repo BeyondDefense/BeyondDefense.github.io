@@ -11,12 +11,12 @@ permalink: /vacancies
   <div class="vacancy-header">
     <h1>Open Positions <span class="hiring-badge">● Now Hiring</span></h1>
     <p class="vacancy-intro">Most projects involve program/software/app analysis (static and dynamic) and threat modeling. We look for people with <strong>passion</strong>, <strong>creativity</strong>, and <strong>persistence</strong>. We work as peers in a respectful and collaborative environment.</p>
-    <div class="trait-pills">
+    <!-- <div class="trait-pills">
       <span class="trait-pill">Passion</span>
       <span class="trait-pill">Creativity</span>
       <span class="trait-pill">Persistence</span>
       <span class="trait-pill">Humility</span>
-    </div>
+    </div> -->
   </div>
 
   <div class="vacancy-columns">
