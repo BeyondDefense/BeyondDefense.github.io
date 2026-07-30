@@ -7,7 +7,20 @@
   year: 2026
   tags: web,mobile
   news1: <a style="color:#FF0000; text-decoration:underline">Multiple Vulnerability Disclosures</a>
-  news2: <a style="color:#FF0000; text-decoration:underline" href="https://arstechnica.com/security/2026/01/millions-of-people-imperiled-through-sign-in-links-sent-by-sms">Ars Technica</a> and <a style="color:#FF0000; text-decoration:underline" href="https://www.helpnetsecurity.com/2026/01/23/sms-private-urls-data-exposure-study/">Help Net Security</a>
+  news2: <a style="color:#FF0000; text-decoration:underline" href="https://arstechnica.com/security/2026/01/millions-of-people-imperiled-through-sign-in-links-sent-by-sms">Ars Technica</a>, <a style="color:#FF0000; text-decoration:underline" href="https://www.helpnetsecurity.com/2026/01/23/sms-private-urls-data-exposure-study/">Help Net Security</a>
+
+
+- title: "MVPNalyzer: An Investigative Framework for the Security & Privacy Audit of Mobile VPNs"
+  authors: Wayne Wang*, Aaron Ortwein*, Enrique Sobrados*, Robert Stanley, Piyush Kumar, Afsah Anwar, and Roya Ensafi
+  link:
+    url: https://beyonddefense.github.io/downloads/manuscripts/mvpnalyzer.pdf
+    display: In The Network and Distributed System Security (NDSS) Symposium (2026)
+  highlight: 1
+  year: 2026
+  tags: vpn,mobile
+  news1: <a style="color:#FF0000; text-decoration:underline">Multiple Vulnerability Disclosures</a>
+  news2: <a style="color:#FF0000; text-decoration:underline" href="https://thehackernews.com/2026/07/study-of-281-free-android-vpn-apps.html">The Hacker News</a>, <a style="color:#FF0000; text-decoration:underline" href="https://www.news18.com/tech/using-free-vpn-apps-on-android-your-data-and-location-may-have-been-exposed-ws-el-10207470.html">News18</a>
+
 
 - title: "Silent Subversion: Sensor Spoofing Attacks via Supply Chain Implants in Satellite Systems"
   authors: Jack Vanlyssel, Catalin Roman, and Afsah Anwar
@@ -19,15 +32,7 @@
   tags: space
   news2: <a style="color:#FF0000; text-decoration:underline">Multiple Vulnerability Disclosures</a>
 
-- title: "MVPNalyzer: An Investigative Framework for the Security & Privacy Audit of Mobile VPNs"
-  authors: Wayne Wang*, Aaron Ortwein*, Enrique Sobrados*, Robert Stanley, Piyush Kumar, Afsah Anwar, and Roya Ensafi
-  link:
-    url: https://beyonddefense.github.io/downloads/manuscripts/mvpnalyzer.pdf
-    display: In The Network and Distributed System Security (NDSS) Symposium (2026)
-  highlight: 1
-  year: 2026
-  tags: vpn,mobile
-  news1: <a style="color:#FF0000; text-decoration:underline">Multiple Vulnerability Disclosures</a>
+
 
 - title: "SpyChain: Multi-Vector Supply Chain Attacks on Small Satellite Systems"
   authors: Jack Vanlyssel, Enrique Sobrados, Ramsha Anwar, Catalin Roman, and Afsah Anwar
