@@ -19,6 +19,16 @@
   tags: space
   news2: <a style="color:#FF0000; text-decoration:underline">Multiple Vulnerability Disclosures</a>
 
+- title: "MVPNalyzer: An Investigative Framework for the Security & Privacy Audit of Mobile VPNs"
+  authors: Wayne Wang*, Aaron Ortwein*, Enrique Sobrados*, Robert Stanley, Piyush Kumar, Afsah Anwar, and Roya Ensafi
+  link:
+    url: https://beyonddefense.github.io/downloads/manuscripts/mvpnalyzer.pdf
+    display: In The Network and Distributed System Security (NDSS) Symposium (2026)
+  highlight: 1
+  year: 2026
+  tags: vpn,mobile
+  news1: <a style="color:#FF0000; text-decoration:underline">Multiple Vulnerability Disclosures</a>
+
 - title: "SpyChain: Multi-Vector Supply Chain Attacks on Small Satellite Systems"
   authors: Jack Vanlyssel, Enrique Sobrados, Ramsha Anwar, Catalin Roman, and Afsah Anwar
   link:
@@ -30,15 +40,7 @@
   news1: <a style="color:#FF0000; text-decoration:underline">Novel Attack Vector for Satellites (SPARTA)</a>
   news2: <a style="color:#FF0000; text-decoration:underline" href="https://securityaffairs.com/183303/hacking/unverified-cots-hardware-enables-persistent-attacks-in-small-satellites-via-spychain.html">SecurityAffairs</a> and <a style="color:#FF0000; text-decoration:underline" href="https://www.scworld.com/brief/spychain-exposes-stealth-attacks-in-small-satellites">SCWorld</a>
 
-- title: "MVPNalyzer: An Investigative Framework for the Security & Privacy Audit of Mobile VPNs"
-  authors: Wayne Wang*, Aaron Ortwein*, Enrique Sobrados*, Robert Stanley, Piyush Kumar, Afsah Anwar, and Roya Ensafi
-  link:
-    url: https://beyonddefense.github.io/downloads/manuscripts/mvpnalyzer.pdf
-    display: In The Network and Distributed System Security (NDSS) Symposium (2026)
-  highlight: 1
-  year: 2026
-  tags: vpn,mobile
-  news1: <a style="color:#FF0000; text-decoration:underline">Multiple Vulnerability Disclosures</a>
+
 
 - title: Exposing the Limitations of Machine Learning for Malware Detection Under Concept Drift
   authors: Abusnaina, A., Anwar, A., Saad, M., Alabduljabbar, A., Jang, R., Salem, S., & Mohaisen, D.
