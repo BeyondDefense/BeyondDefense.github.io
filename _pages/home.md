@@ -79,7 +79,7 @@ permalink: /
 <div class="join-card" markdown="0">
   <div class="join-card-text">
     <h4>Join the Lab</h4>
-    <p>We are looking for passionate PhD students and summer interns. We work on real-world security problems.</p>
+    <p>We are looking for passionate PhD students to work on real-world security problems.</p>
   </div>
   <a class="cta-btn cta-primary" href="/vacancies">See Open Positions →</a>
 </div>

@@ -63,7 +63,7 @@ permalink: /vacancies
     <div class="vacancy-sidebar">
       <div class="apply-card">
         <h4>Quick Apply</h4>
-        <p>Send a brief statement of interest and your CV to:</p>
+        <p>Send a brief statement of interest and your CV.</p>
         <a class="apply-email-btn" href="mailto:afsah@unm.edu">Email Us</a>
       </div>
 
