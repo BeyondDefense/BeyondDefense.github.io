@@ -88,7 +88,9 @@ permalink: /
   <p class="sponsors-label">Sponsors</p>
   <div class="sponsors-logos">
     <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/NSF.png" alt="NSF">
-    <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/new-cs-logo.png" alt="UNM CS">
-    <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/OTF.png" alt="OTF">
+    <img class="theme-light" src="{{ site.url }}{{ site.baseurl }}/images/logopic/new-cs-logo.png" alt="UNM CS">
+    <img class="theme-dark" src="{{ site.url }}{{ site.baseurl }}/images/logopic/new-cs-logo-dark.png" alt="UNM CS">
+    <img class="theme-light" src="{{ site.url }}{{ site.baseurl }}/images/logopic/OTF.png" alt="OTF">
+    <img class="theme-dark" src="{{ site.url }}{{ site.baseurl }}/images/logopic/OTF-dark.png" alt="OTF">
   </div>
 </div>

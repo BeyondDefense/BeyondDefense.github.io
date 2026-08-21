@@ -1639,3 +1639,6 @@ p.pub-tags, span.pub-tags {
   }
 }
 [data-theme="dark"] .sponsors-logos img { opacity: 0.9; }
+.sponsors-logos img.theme-dark { display: none; }
+[data-theme="dark"] .sponsors-logos img.theme-light { display: none; }
+[data-theme="dark"] .sponsors-logos img.theme-dark { display: block; }
