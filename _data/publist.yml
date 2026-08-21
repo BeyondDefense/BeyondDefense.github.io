@@ -1,4 +1,4 @@
-- title: "Private Links, Public Leaks: Consequences of Frictionless User Experience on the Security and Privacy Posture of SMS-Delivered URLs"
+- title: "The Tragedy of Convenience: Cascading User-Data Leakage from SMS-delivered URLs"
   authors: Muhammad Danish, Enrique Sobrados, Priya Kaushik, Bhupendra Acharya, Muhammad Saad, Abdullah Mueen, Sazzadur Rahaman, and Afsah Anwar
   link:
     url: https://arxiv.org/pdf/2601.09232
@@ -6,7 +6,7 @@
   highlight: 1
   year: 2026
   tags: web,mobile
-  news1: <a style="color:#FF0000; text-decoration:underline">Multiple Vulnerability Disclosures</a>
+  news1: <a style="color:#FF0000; text-decoration:underline">Multiple Vulnerability Disclosures</a> <a style="color:#FF0000; text-decoration:underline">Bug Bounty</a>
   news2: <a style="color:#FF0000; text-decoration:underline" href="https://arstechnica.com/security/2026/01/millions-of-people-imperiled-through-sign-in-links-sent-by-sms">Ars Technica</a>, <a style="color:#FF0000; text-decoration:underline" href="https://www.helpnetsecurity.com/2026/01/23/sms-private-urls-data-exposure-study/">Help Net Security</a>
 
 

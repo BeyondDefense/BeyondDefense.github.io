@@ -40,13 +40,28 @@
   duration: 2025-
   highlight: Sandia National Labs
 
+
+- name: <a href="https://beyondefense.org/team/"> Natalie Runyan</a>
+  photo: placeholder.jpg
+  info: MS student
+  duration: Fall 2026-
+  highlight: b
+
+
+- name: <a href="https://beyondefense.org/team/"> Sijan Mainali</a>
+  photo: placeholder.jpg
+  info: BS student
+  duration: Fall 2026-
+  highlight: b
+
+
 - name: <a href="https://njasi.com/">Nicholas Jasinski</a>
   photo: placeholder.jpg
   info: MS student
-  duration: 2026-
+  duration: Summer 2026
   highlight: b
 
-- name: <a href="https://beyonddefense.github.io/team/">Uzair Hammad</a>
+- name: <a href="https://beyondefense.org/team/">Uzair Hammad</a>
   photo: uzair.jpg
   info: BS student @UCLA
   duration: Summer 2026
