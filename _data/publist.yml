@@ -16,8 +16,20 @@
   highlight: 1
   year: 2026
   tags: web,mobile
-  news1: <a class="highlight-link">Multiple Vulnerability Disclosures</a>, <a class="highlight-link">Bug Bounty</a>
-  news2: <a class="highlight-link" href="https://arstechnica.com/security/2026/01/millions-of-people-imperiled-through-sign-in-links-sent-by-sms">Ars Technica</a>, <a class="highlight-link" href="https://www.helpnetsecurity.com/2026/01/23/sms-private-urls-data-exposure-study/">Help Net Security</a>, <a class="highlight-link" href="https://www.techradar.com/pro/millions-of-smartphone-users-could-be-at-risk-from-the-sms-sign-in-url-issue-heres-what-you-need-to-look-out-for">TechRadar Pro</a>
+  highlights:
+    - type: disclosure
+      text: Multiple Vulnerability Disclosures
+    - type: disclosure
+      text: Bug Bounty
+    - type: press
+      text: Ars Technica
+      url: https://arstechnica.com/security/2026/01/millions-of-people-imperiled-through-sign-in-links-sent-by-sms
+    - type: press
+      text: Help Net Security
+      url: https://www.helpnetsecurity.com/2026/01/23/sms-private-urls-data-exposure-study/
+    - type: press
+      text: TechRadar Pro
+      url: https://www.techradar.com/pro/millions-of-smartphone-users-could-be-at-risk-from-the-sms-sign-in-url-issue-heres-what-you-need-to-look-out-for
 
 
 - title: "MVPNalyzer: An Investigative Framework for the Security & Privacy Audit of Mobile VPNs"
@@ -28,8 +40,18 @@
   highlight: 1
   year: 2026
   tags: vpn,mobile
-  news1: <a class="highlight-link">Multiple Vulnerability Disclosures</a>
-  news2: <a class="highlight-link" href="https://thehackernews.com/2026/07/study-of-281-free-android-vpn-apps.html">The Hacker News</a>, <a class="highlight-link" href="https://www.news18.com/tech/using-free-vpn-apps-on-android-your-data-and-location-may-have-been-exposed-ws-el-10207470.html">News18</a>, <a class="highlight-link" href="https://news.engin.umich.edu/2026/07/mobile-vpn-security-is-not-as-strong-as-advertised/">Michigan Engineering News</a>
+  highlights:
+    - type: disclosure
+      text: Multiple Vulnerability Disclosures
+    - type: press
+      text: The Hacker News
+      url: https://thehackernews.com/2026/07/study-of-281-free-android-vpn-apps.html
+    - type: press
+      text: News18
+      url: https://www.news18.com/tech/using-free-vpn-apps-on-android-your-data-and-location-may-have-been-exposed-ws-el-10207470.html
+    - type: press
+      text: Michigan Engineering News
+      url: https://news.engin.umich.edu/2026/07/mobile-vpn-security-is-not-as-strong-as-advertised/
 
 
 - title: "Silent Subversion: Sensor Spoofing Attacks via Supply Chain Implants in Satellite Systems"
@@ -40,7 +62,9 @@
   highlight: 1
   year: 2026
   tags: space
-  news2: <a class="highlight-link">Multiple Vulnerability Disclosures</a>
+  highlights:
+    - type: disclosure
+      text: Multiple Vulnerability Disclosures
 
 
 
@@ -52,8 +76,15 @@
   highlight: 1
   year: 2025
   tags: space
-  news1: <a class="highlight-link">Novel Attack Vector for Satellites (SPARTA)</a>
-  news2: <a class="highlight-link" href="https://securityaffairs.com/183303/hacking/unverified-cots-hardware-enables-persistent-attacks-in-small-satellites-via-spychain.html">SecurityAffairs</a>, <a class="highlight-link" href="https://www.scworld.com/brief/spychain-exposes-stealth-attacks-in-small-satellites">SCWorld</a>
+  highlights:
+    - type: disclosure
+      text: Novel Attack Vector for Satellites (SPARTA)
+    - type: press
+      text: SecurityAffairs
+      url: https://securityaffairs.com/183303/hacking/unverified-cots-hardware-enables-persistent-attacks-in-small-satellites-via-spychain.html
+    - type: press
+      text: SCWorld
+      url: https://www.scworld.com/brief/spychain-exposes-stealth-attacks-in-small-satellites
 
 
 
@@ -65,7 +96,9 @@
   highlight: 1
   year: 2025
   tags: malware
-  news1: <a class="highlight-link">Best Paper Award</a>
+  highlights:
+    - type: award
+      text: Best Paper Award
 
 - title: "A Recent Year On the Internet: Measuring and Understanding the Threats to Everyday Internet Devices"
   authors: A. Anwar, Y. H. Chen, R. Hodgman, T. Sellers, E. Kirda, and A. Oprea

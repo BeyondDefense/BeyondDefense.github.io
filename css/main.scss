@@ -1140,6 +1140,24 @@ p.pub-tags, span.pub-tags {
 [data-theme="dark"] .pdf-link {
   color: var(--red) !important;
 }
+.pub-highlight-badge {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  color: var(--red);
+  cursor: default;
+  text-decoration: none !important;
+  transition: color var(--transition);
+}
+a.pub-highlight-badge {
+  cursor: pointer;
+}
+a.pub-highlight-badge:hover {
+  color: var(--red-dark) !important;
+}
+[data-theme="dark"] a.pub-highlight-badge:hover {
+  color: #fff !important;
+}
 [data-theme="dark"] .pdf-link:hover {
   color: #fff !important;
 }
