@@ -52,6 +52,9 @@
     - type: press
       text: Michigan Engineering News
       url: https://news.engin.umich.edu/2026/07/mobile-vpn-security-is-not-as-strong-as-advertised/
+    - type: press
+      text: TechXplore
+      url: https://techxplore.com/news/2026-07-mobile-vpn-strong-advertised.html
 
 
 - title: "Silent Subversion: Sensor Spoofing Attacks via Supply Chain Implants in Satellite Systems"
