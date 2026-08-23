@@ -51,11 +51,11 @@ permalink: /publications/
      data-authors="{{ publi.authors | escape }}"
      data-venue="{{ publi.link.display | escape }}">
  <div class="well">
-  <pubtit>{{ publi.title }} <a class="pdf-link" href="{{ publi.link.url }}" target="_blank" title="View PDF" aria-label="View PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></a></pubtit>
+  <pubtit><span class="pub-title-text">{{ publi.title }}</span> <a class="pdf-link" href="{{ publi.link.url }}" target="_blank" title="View PDF" aria-label="View PDF"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><text x="12.5" y="18" font-size="6.5" font-weight="700" font-family="Arial, sans-serif" text-anchor="middle" fill="currentColor" stroke="none">PDF</text></svg></a></pubtit>
   <p><em>{{ publi.authors }}</em></p>
   <p>{{ publi.link.display }}</p>
   <p class="pub-tags">{% assign tag_list = publi.tags | split: "," %}{% for tag in tag_list %}<span class="pub-tag pub-tag--{{ tag | strip }}">{% if tag == "vpn" %}VPN{% elsif tag == "space" %}Space{% elsif tag == "web" %}Web{% elsif tag == "mobile" %}Mobile{% elsif tag == "malware" %}Malware{% else %}{{ tag | strip }}{% endif %}</span>{% endfor %}</p>
-  <p class="text-danger"><strong>{{ publi.news1 }}</strong></p>
+  <p><strong>{{ publi.news1 }}</strong></p>
   <p>{{ publi.news2 }}</p>
   <button class="copy-bibtex">Copy BibTeX</button>
  </div>
@@ -82,7 +82,7 @@ permalink: /publications/
 <div class="full-pub-list">
 {% for publi in site.data.publist %}
 <div class="full-pub-item" data-year="{{ publi.year }}" data-topics="{{ publi.tags }}">
-<span class="full-pub-title">{{ publi.title }} <a class="pdf-link" href="{{ publi.link.url }}" target="_blank" title="View PDF" aria-label="View PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></a></span>
+<span class="full-pub-title"><span class="pub-title-text">{{ publi.title }}</span> <a class="pdf-link" href="{{ publi.link.url }}" target="_blank" title="View PDF" aria-label="View PDF"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><text x="12.5" y="18" font-size="6.5" font-weight="700" font-family="Arial, sans-serif" text-anchor="middle" fill="currentColor" stroke="none">PDF</text></svg></a></span>
 <span class="full-pub-authors">{{ publi.authors }}</span>
 <span class="full-pub-venue">{{ publi.link.display }}</span><span class="pub-tags">{% assign tag_list = publi.tags | split: "," %}{% for tag in tag_list %}<span class="pub-tag pub-tag--{{ tag | strip }}">{% if tag == "vpn" %}VPN{% elsif tag == "space" %}Space{% elsif tag == "web" %}Web{% elsif tag == "mobile" %}Mobile{% elsif tag == "malware" %}Malware{% else %}{{ tag | strip }}{% endif %}</span>{% endfor %}</span>
 </div>

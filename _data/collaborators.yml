@@ -1,0 +1,12 @@
+- name: <a href="https://ensa.fi/">Roya Ensafi</a>
+  photo: ensafi.jpg
+  affiliation: Associate Professor, University of Michigan
+
+- name: <a href="https://www.sazzadur.com/">Sazzadur Rahaman</a>
+  photo: rahaman.jpg
+  affiliation: Assistant Professor, University of Arizona
+
+- name: <a href="https://www.cs.unm.edu/~mueen/">Abdullah Mueen</a>
+  photo: mueen.jpg
+  affiliation: Professor, University of New Mexico
+  # note: Co-author, SMS-delivered URLs study (CCS 2026)

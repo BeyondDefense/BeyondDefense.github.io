@@ -61,6 +61,19 @@ permalink: /team/
 
 
 
+## Frequent Collaborators
+<div id="collaborators"></div>
+<div class="collab-grid">
+{% for c in site.data.collaborators %}
+<div class="collab-card">
+  <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ c.photo }}" class="collab-photo" />
+  <h4>{{ c.name }}</h4>
+  <span class="collab-affil">{{ c.affiliation }}</span>
+  <span class="collab-note">{{ c.note }}</span>
+</div>
+{% endfor %}
+</div>
+
 ## Alumni
 <div id="alumni"></div>
 {% assign number_printed = 0 %}

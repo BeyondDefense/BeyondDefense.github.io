@@ -54,7 +54,7 @@ permalink: /research/
           <line x1="12" y1="18" x2="12.01" y2="18"/>
         </svg>
       </div>
-      <h3>Mobile App &amp; Web Audits</h3>
+      <h3>Web Audits</h3>
       <p>We sometimes conduct security audits of mobile applications and web services, identifying vulnerabilities such as insecure data handling, API weaknesses, and authentication flaws. This line of work contributes to safer technology adoption and informed trust in digital ecosystems.</p>
       <a class="research-pub-badge" href="/publications/?topic=web">View publications ↗</a>
     </div>

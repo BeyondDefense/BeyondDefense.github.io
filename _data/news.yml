@@ -1,9 +1,11 @@
 - date: August 2026
-  headline: We are happy to welcome Natalie Runyan and Sijan Mainali! They will be working on various research projects in security and privacy. Welcome to the team!
+  headline: We are happy to welcome Natalie and Sijan! They will be working on various research projects in security and privacy. Welcome to the team!
 
 - date: July 2026
-  headline: 'Paper on \"The Tragedy of Convenience: Cascading User-Data Leakage from SMS-delivered URLs\" will appear at ACM CCS 2026. Congrats Danish and Enrique! <a href="https://arxiv.org/pdf/2601.09232">Preprint</a>.'
+  headline: 'Paper on \"The Tragedy of Convenience: Cascading User-Data Leakage from SMS-delivered URLs\" will appear at ACM CCS 2026. Congrats Danish and Enrique! <a href="https://arxiv.org/pdf/2601.09232">Read the Preprint</a>'
 
+- date: June 2026
+  headline: Danish received a Bug Bounty worth $1,000 for his work on SMS-delivered URLs. Congratulations Danish!
 
 - date: April 2026
   headline: We have received NSF CAREER award on building resilient VPNs. Thank you to the students, collaborators, and NSF for their support!
