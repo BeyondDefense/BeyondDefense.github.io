@@ -1,10 +1,51 @@
-- title: pic1_description
-  image: ABQ-evening.jpg
-- title: pic2_description
-  image: Jiyoo-Bhup.jpg
-- title: pic3_description
-  image: keynote-sazzad.jpg
-- title: pic4_description
+# group: must match one of the section names listed in _pages/pictures.md
+# ("Group Activities", "Talks and Visits", "Miscellaneous").
+# An entry with an unrecognised group will not be rendered.
+
+- title: Lab members during a group work session
+  image: group-work-session.jpg
+  group: Group Activities
+- title: Lab members at work in the group's space
+  image: lab-workspace.jpg
+  group: Group Activities
+- title: Lab members at a group social
+  image: lab-social.jpg
+  group: Group Activities
+- title: Lab lunch on the UNM campus
   image: Lunch-Lobo.jpg
-- title: pic5_description
+  group: Group Activities
+- title: Volleyball in Ann Arbor
+  image: lab-outing.jpg
+  group: Group Activities
+- title: Dinner with collaborators in Michigan
   image: MichDinner.jpg
+  group: Group Activities
+
+- title: Kendra Cook (NASA IV&V) on securing mission-critical software
+  image: talk-nasa-ivv.jpg
+  group: Talks and Visits
+- title: Dr. Sanchari Das on cybersecurity by design
+  image: talk-sanchari-das.jpg
+  group: Talks and Visits
+- title: Sazzadur Rahaman delivering a keynote
+  image: keynote-sazzad.jpg
+  group: Talks and Visits
+- title: Presenting research at a conference
+  image: conference-talk.jpg
+  group: Talks and Visits
+- title: Presenting a study on security recommendations
+  image: talk-recommendations.jpg
+  group: Talks and Visits
+- title: Q&A session at a lab research talk
+  image: talk-qa.jpg
+  group: Talks and Visits
+- title: A full house at a research talk
+  image: lecture-audience.jpg
+  group: Talks and Visits
+
+- title: Hot-air balloons over Albuquerque at sunrise
+  image: ABQ-evening.jpg
+  group: Miscellaneous
+- title: Lab members at a conference
+  image: Jiyoo-Bhup.jpg
+  group: Miscellaneous

@@ -11,12 +11,33 @@ permalink: /
     <button class="tagline-arrow" id="taglinePrev" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
     <div class="tagline-slides">
       <p class="home-tagline tagline-slide active">Defending VPNs — securing services that protect your privacy</p>
-      <p class="home-tagline tagline-slide">Protecting satellite systems — building defenses for space-based infrastructure</p>
-      <p class="home-tagline tagline-slide">Auditing mobile &amp; web apps — exposing vulnerabilities before attackers do</p>
+      <p class="home-tagline tagline-slide">Defending Spacecrafts — securing space-based infrastructures</p>
+      <p class="home-tagline tagline-slide">Auditing Mobile &amp; Web — exposing flaws before attackers</p>
     </div>
     <button class="tagline-arrow" id="tagllineNext" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
   </div>
-  <p class="home-body">We are a cybersecurity research group in the <a href="https://www.cs.unm.edu/">Department of Computer Science</a> at the <a href="https://www.unm.edu/">University of New Mexico</a>. We uncover and defend against emerging threats to VPNs, satellites, mobile apps, and web applications through malware analysis, vulnerability research, and threat intelligence.</p> 
+  <div class="home-cover">
+    <picture>
+      <source type="image/webp"
+              sizes="(max-width: 767px) 100vw, 720px"
+              srcset="{{ site.url }}{{ site.baseurl }}/images/homepage/lab-group-700.webp 700w,
+                      {{ site.url }}{{ site.baseurl }}/images/homepage/lab-group-1050.webp 1050w,
+                      {{ site.url }}{{ site.baseurl }}/images/homepage/lab-group-1400.webp 1400w,
+                      {{ site.url }}{{ site.baseurl }}/images/homepage/lab-group-2100.webp 2100w,
+                      {{ site.url }}{{ site.baseurl }}/images/homepage/lab-group-2800.webp 2800w">
+      <img src="{{ site.url }}{{ site.baseurl }}/images/homepage/lab-group-1400.jpg"
+           sizes="(max-width: 767px) 100vw, 720px"
+           srcset="{{ site.url }}{{ site.baseurl }}/images/homepage/lab-group-700.jpg 700w,
+                   {{ site.url }}{{ site.baseurl }}/images/homepage/lab-group-1050.jpg 1050w,
+                   {{ site.url }}{{ site.baseurl }}/images/homepage/lab-group-1400.jpg 1400w,
+                   {{ site.url }}{{ site.baseurl }}/images/homepage/lab-group-2100.jpg 2100w,
+                   {{ site.url }}{{ site.baseurl }}/images/homepage/lab-group-2800.jpg 2800w"
+           width="1400" height="788"
+           fetchpriority="high" decoding="async"
+           alt="Members of the Beyond Defense Lab outside the Farris Engineering Center at the University of New Mexico">
+    </picture>
+  </div>
+  <p class="home-body">We are a cybersecurity research group in the <a href="https://www.cs.unm.edu/">Department of Computer Science</a> at the <a href="https://www.unm.edu/">University of New Mexico</a>, led by Afsah Anwar. We uncover and defend against emerging threats to VPNs, satellites, mobile apps, and web applications through malware analysis, vulnerability research, and threat intelligence.</p> 
 
   <p class="home-body">Our research has delivered measurable real-world impact. Our CCS 2026 study of SMS-delivered URLs uncovered personal-data exposure across 177 online services, leading 7 providers to fix the vulnerabilities and being covered by <a href="https://arstechnica.com/security/2026/01/millions-of-people-imperiled-through-sign-in-links-sent-by-sms">Ars Technica</a>, <a href="https://www.helpnetsecurity.com/2026/01/23/sms-private-urls-data-exposure-study/">Help Net Security</a>, and <a href="https://www.techradar.com/pro/millions-of-smartphone-users-could-be-at-risk-from-the-sms-sign-in-url-issue-heres-what-you-need-to-look-out-for">TechRadar Pro</a>. Our MVPNalyzer framework (NDSS 2026) analyzed free Android VPN apps, exposing widespread data leaks and security failures, with coverage from <a href="https://thehackernews.com/2026/07/study-of-281-free-android-vpn-apps.html">The Hacker News</a> and <a href="https://news.engin.umich.edu/2026/07/mobile-vpn-security-is-not-as-strong-as-advertised/">Michigan Engineering News</a>. We have also discovered a <a href="https://sparta.aerospace.org/technique/DE-0012/">novel spacecrafts vulnerability</a>.</p>
 
@@ -49,35 +70,6 @@ permalink: /
       <span>Mobile &amp; Web</span>
     </a>
   </div>
-</div>
-
-<div markdown="0" id="carousel" class="carousel slide" data-ride="carousel" data-interval="4000" data-pause="hover">
-    <ol class="carousel-indicators">
-        <li data-target="#carousel" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel" data-slide-to="1"></li>
-        <li data-target="#carousel" data-slide-to="2"></li>
-        <li data-target="#carousel" data-slide-to="3"></li>
-        <li data-target="#carousel" data-slide-to="4"></li>
-        <li data-target="#carousel" data-slide-to="5"></li>
-        <li data-target="#carousel" data-slide-to="6"></li>
-        <li data-target="#carousel" data-slide-to="7"></li>
-        <li data-target="#carousel" data-slide-to="8"></li>
-        <li data-target="#carousel" data-slide-to="9"></li>
-    </ol>
-    <div class="carousel-inner" markdown="0">
-        <div class="item active"><img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Slide1.jpg" alt="Slide 1" /></div>
-        <div class="item"><img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Slide2.jpg" alt="Slide 2" /></div>
-        <div class="item"><img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Slide3.jpg" alt="Slide 3" /></div>
-        <div class="item"><img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Slide4.jpg" alt="Slide 4" /></div>
-        <div class="item"><img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Slide5.jpg" alt="Slide 5" /></div>
-        <div class="item"><img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Slide6.jpg" alt="Slide 6" /></div>
-        <div class="item"><img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Slide7.jpg" alt="Slide 7" /></div>
-        <div class="item"><img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Slide8.jpg" alt="Slide 8" /></div>
-        <div class="item"><img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Slide9.jpg" alt="Slide 9" /></div>
-        <div class="item"><img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Slide10.jpeg" alt="Slide 10" /></div>
-    </div>
-    <a class="left carousel-control" href="#carousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
-    <a class="right carousel-control" href="#carousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
 </div>
 
 <div class="join-card" markdown="0">

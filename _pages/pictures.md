@@ -6,44 +6,19 @@ permalink: /pictures/
 ---
 
 
-## Gallery
-(Right-click *'view image'* to see a larger image.)
-{% assign number_printed = 0 %}
-{% for pic in site.data.pictures_UNM %}
 
-{% assign even_odd = number_printed | modulo: 4 %}
+{% assign gallery_groups = "Group Activities,Talks and Visits,Miscellaneous" | split: "," %}
+{% for group in gallery_groups %}
+{% assign pics = site.data.pictures_UNM | where: "group", group %}
+{% if pics.size > 0 %}
 
-{% if even_odd == 0 %}
-<div class="row">
+## {{ group }}
+
+<div class="gallery-grid" markdown="0">
+{% for pic in pics %}<img src="{{ site.url }}{{ site.baseurl }}/images/picpic/Gallery/{{ pic.image }}" class="img-responsive" alt="{{ pic.title | escape }}" title="{{ pic.title | escape }}" />
+{% endfor %}</div>
+
 {% endif %}
-
-<div class="col-sm-3 clearfix">
-<img src="{{ site.url }}{{ site.baseurl }}/images/picpic/Gallery/{{ pic.image }}" class="img-responsive" width="95%" style="float: left" />
-</div>
-
-{% assign number_printed = number_printed | plus: 1 %}
-
-{% if even_odd > 2 %}
-</div>
-{% endif %}
-
-
 {% endfor %}
-
-{% assign even_odd = number_printed | modulo: 4 %}
-{% if even_odd == 1 %}
-</div>
-{% endif %}
-
-{% if even_odd == 2 %}
-</div>
-{% endif %}
-
-{% if even_odd == 3 %}
-</div>
-{% endif %}
-
-
-
 
 <p> &nbsp; </p>
