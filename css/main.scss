@@ -13,6 +13,15 @@
   --red-dark:  #6b0813;
   --red-glow:  rgba(138,6,25,.22);
   --red-solid: #8a0619;
+  --red-soft-bg:           rgba(138,6,25,.07);
+  --red-soft-border:       rgba(138,6,25,.22);
+  /* Label chips. A tint of --navy rather than a flat token, so the chip
+     always lifts off the --surface panel it sits on (in dark mode --bg and
+     --surface are too close to separate on their own). */
+  --chip-bg:               rgba(11,36,71,.07);
+  --chip-border:           rgba(11,36,71,.20);
+  --red-soft-bg-hover:     rgba(138,6,25,.14);
+  --red-soft-border-hover: rgba(138,6,25,.45);
   --bg:         #F0F4FF;
   --surface:    #FFFFFF;
   --border:     #D9E4F0;
@@ -83,8 +92,12 @@ p { margin-bottom: 1rem; font-size: 1rem; }
   --red-dark:  #e11d48;
   --red-glow:  rgba(244,63,94,.22);
   --red-solid: #8a0619;
-  --red-soft-bg:     rgba(244,63,94,.15);
-  --red-soft-border: rgba(244,63,94,.45);
+  --red-soft-bg:           rgba(244,63,94,.15);
+  --red-soft-border:       rgba(244,63,94,.45);
+  --chip-bg:               rgba(147,197,253,.22);
+  --chip-border:           rgba(147,197,253,.42);
+  --red-soft-bg-hover:     rgba(244,63,94,.26);
+  --red-soft-border-hover: rgba(244,63,94,.7);
 }
 
 [data-theme="dark"] .navbar,
@@ -403,19 +416,16 @@ figure.fifth img:hover { opacity: 1; filter: none; }
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #fff;
-  background: var(--red);
+  /* Non-interactive date label: quiet navy-tinted chip, no red. */
+  color: var(--navy);
+  background: var(--chip-bg);
+  border: 1px solid var(--chip-border);
   border-radius: 20px;
   padding: 2px 10px;
   margin-bottom: 6px;
   width: fit-content;
 }
 
-[data-theme="dark"] #newsid p em {
-  color: var(--red);
-  background: var(--red-soft-bg);
-  border: 1px solid var(--red-soft-border);
-}
 
 #newsid a.see-all {
   display: inline-block;
@@ -1076,15 +1086,11 @@ hr.section-divider {
   border-color: var(--red);
   color: var(--red-dark);
 }
+/* Selected state uses the same navy fill as the primary buttons. */
 .filter-btn.active {
-  background: var(--red);
-  border-color: var(--red);
-  color: #fff;
-}
-[data-theme="dark"] .filter-btn.active {
-  background: var(--red-soft-bg);
-  border-color: var(--red-soft-border);
-  color: var(--red);
+  background: var(--navy);
+  border-color: var(--navy);
+  color: var(--surface);
 }
 
 /* ============================================================
@@ -1160,15 +1166,12 @@ p.pub-tags, span.pub-tags {
   border-radius: 20px;
   padding: 2px 9px;
   cursor: pointer;
-  background: var(--red);
-  color: #fff;
-  transition: opacity 0.15s;
-  &:hover { opacity: 0.8; }
-}
-[data-theme="dark"] .pub-tag {
-  background: var(--red-soft-bg);
-  color: var(--red);
-  border: 1px solid var(--red-soft-border);
+  /* Clickable topic filter: quiet at rest, red on hover like everything else. */
+  background: var(--chip-bg);
+  color: var(--navy);
+  border: 1px solid var(--chip-border);
+  transition: border-color var(--transition), color var(--transition);
+  &:hover { border-color: var(--red); color: var(--red); }
 }
 .pdf-link {
   display: inline-flex;
@@ -1354,20 +1357,20 @@ a.pub-highlight-badge:hover {
 .role-card--accent {
   border-color: rgba(247,201,72,.35);
 }
+/* Same chip treatment as .pub-tag — these are the same kind of element.
+   Previously #fff on var(--navy), which is fine in light mode but renders
+   white-on-light-blue in dark mode, where --navy flips to #93c5fd. */
 .role-tag {
   display: inline-block;
   font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #fff;
-  background: var(--navy);
-  border-radius: 4px;
-  padding: 2px 8px;
-}
-.role-tag--gold {
-  background: var(--navy);
-  color: #fff;
+  color: var(--navy);
+  background: var(--chip-bg);
+  border: 1px solid var(--chip-border);
+  border-radius: 20px;
+  padding: 2px 9px;
 }
 .role-checklist {
   padding-left: 0;
@@ -1387,23 +1390,14 @@ a.pub-highlight-badge:hover {
     }
   }
 }
+/* Colour, radius and hover come from the shared primary-button rule near
+   the home CTAs; only layout lives here. */
 .apply-btn {
   display: inline-block;
   font-size: 0.8rem;
   font-weight: 700;
-  color: #ffffff !important;
-  background: var(--navy);
-  border-radius: 6px;
   padding: 6px 16px;
   text-decoration: none !important;
-  transition: background 0.2s ease, color 0.2s ease;
-  &:hover { background: var(--red-dark) !important; color: #fff !important; }
-}
-[data-theme="dark"] .apply-btn {
-  background: var(--red-solid) !important;
-  color: #fff !important;
-  border-radius: 20px !important;
-  &:hover { background: var(--red-dark) !important; color: #fff !important; }
 }
 .apply-note {
   font-size: 0.75rem !important;
@@ -1425,26 +1419,15 @@ a.pub-highlight-badge:hover {
   h4 { font-family: 'Exo 2', sans-serif; margin-top: 0; margin-bottom: 0.5rem; }
   p { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem; }
 }
+/* As .apply-btn: layout only, styling from the shared primary rule. */
 .apply-email-btn {
   display: block;
   text-align: center;
   font-size: 0.82rem;
   font-weight: 700;
-  color: #fff !important;
-  background: var(--navy);
-  border-radius: 6px;
   padding: 8px 12px;
   text-decoration: none !important;
   word-break: break-all;
-  transition: background 0.2s ease, color 0.2s ease;
-  &:hover { background: var(--red-dark) !important; color: #fff !important; }
-}
-[data-theme="dark"] .apply-email-btn {
-  background: transparent !important;
-  color: var(--red) !important;
-  border: 1.5px solid var(--red-soft-border) !important;
-  border-radius: 20px !important;
-  &:hover { background: var(--red-solid) !important; color: #fff !important; border-color: var(--red-solid) !important; }
 }
 .apply-divider {
   border-color: var(--border);
@@ -1546,26 +1529,15 @@ a.pub-highlight-badge:hover {
 .research-card:hover .research-icon {
   background: var(--red-solid);
 }
+/* Layout only; colour, radius and hover come from the shared primary rule. */
 .research-pub-badge {
   display: inline-block;
   font-size: 0.75rem;
   font-weight: 700;
-  color: #fff !important;
-  background: var(--red);
-  border-radius: 6px;
   padding: 4px 10px;
   text-decoration: none !important;
   margin-top: auto;
   width: fit-content;
-  transition: background 0.2s ease, color 0.2s ease;
-  &:hover { background: var(--red-dark) !important; }
-}
-[data-theme="dark"] .research-pub-badge {
-  background: var(--red-soft-bg) !important;
-  color: var(--red) !important;
-  border: 1px solid var(--red-soft-border);
-  border-radius: 20px !important;
-  &:hover { background: var(--red-glow) !important; color: var(--red) !important; }
 }
 .project-chips {
   display: flex;
@@ -1687,6 +1659,70 @@ a.pub-highlight-badge:hover {
   &:hover { background: var(--red-solid) !important; color: #fff !important; border-color: var(--red-solid) !important; }
 }
 
+/* Home hero CTAs — matched pair on the .home-area-card idiom: neutral
+   surface at rest, red border + glow on hover. Scoped to .home-ctas so
+   "See Open Positions" and the vacancies Apply buttons keep their solid
+   maroon fill. The [data-theme="dark"] variants are listed explicitly to
+   outrank the equally-specific dark .cta-primary/.cta-secondary rules above. */
+.home-ctas .cta-btn,
+[data-theme="dark"] .home-ctas .cta-btn {
+  background: var(--surface) !important;
+  color: var(--navy) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  box-shadow: none !important;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.home-ctas .cta-btn:hover,
+[data-theme="dark"] .home-ctas .cta-btn:hover {
+  background: var(--surface) !important;
+  color: var(--navy) !important;
+  border-color: var(--red) !important;
+  box-shadow: 0 0 0 1px var(--red-glow), 0 4px 14px var(--red-glow) !important;
+  transform: translateY(-2px);
+}
+
+/* Primary action — filled with --navy so it outweighs the quiet secondary
+   without using red. --navy is theme-adaptive (dark navy in light mode,
+   light blue in dark), and --surface is its natural counterpart, so the
+   label stays legible in both themes with one rule.
+   Listed after the .cta-btn rules above, which are equally specific. */
+.home-ctas .cta-primary,
+.join-card .cta-primary,
+.apply-btn,
+.apply-email-btn,
+.research-pub-badge,
+[data-theme="dark"] .home-ctas .cta-primary,
+[data-theme="dark"] .join-card .cta-primary,
+[data-theme="dark"] .apply-btn,
+[data-theme="dark"] .apply-email-btn,
+[data-theme="dark"] .research-pub-badge {
+  background: var(--navy) !important;
+  color: var(--surface) !important;
+  border: 1px solid var(--navy) !important;
+  border-radius: var(--radius) !important;
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.home-ctas .cta-primary:hover,
+.join-card .cta-primary:hover,
+.apply-btn:hover,
+.apply-email-btn:hover,
+.research-pub-badge:hover,
+[data-theme="dark"] .home-ctas .cta-primary:hover,
+[data-theme="dark"] .join-card .cta-primary:hover,
+[data-theme="dark"] .apply-btn:hover,
+[data-theme="dark"] .apply-email-btn:hover,
+[data-theme="dark"] .research-pub-badge:hover {
+  /* Same move as .home-area-card:hover .home-area-icon — navy fill goes
+     to --red-solid. Text must be literal #fff, not var(--surface): in dark
+     mode --surface is near-black and would be unreadable on the maroon. */
+  background: var(--red-solid) !important;
+  border-color: var(--red-solid) !important;
+  color: #fff !important;
+  box-shadow: 0 0 0 1px var(--red-glow), 0 4px 14px var(--red-glow) !important;
+  transform: translateY(-2px);
+}
+
 /* Research area mini-tiles */
 .home-research-areas {
   margin-bottom: 1.5rem;
@@ -1754,16 +1790,23 @@ a.pub-highlight-badge:hover {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  background: var(--navy);
+  /* Same idiom as .home-area-card: neutral surface at rest, red only on
+     hover. Keeps the solid CTA button as the single point of emphasis. */
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 18px 22px;
   margin: 1.5rem 0;
   flex-wrap: wrap;
-  h4 { color: #fff; margin: 0 0 4px; font-size: 1rem; }
-  p  { color: rgba(255,255,255,.75); font-size: 0.83rem; margin: 0; line-height: 1.5; }
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+  h4 { color: var(--navy); margin: 0 0 4px; font-size: 1rem; }
+  p  { color: var(--text-muted); font-size: 0.83rem; margin: 0; line-height: 1.5; }
+  &:hover {
+    border-color: var(--red);
+    box-shadow: 0 0 0 1px var(--red-glow), 0 4px 14px var(--red-glow);
+    transform: translateY(-2px);
+  }
 }
-[data-theme="dark"] .join-card { background: var(--surface); border: 1px solid var(--border); }
-[data-theme="dark"] .join-card h4 { color: var(--text); }
 
 /* Sponsors */
 .sponsors-logos {

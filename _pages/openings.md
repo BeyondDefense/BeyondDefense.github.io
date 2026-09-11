@@ -48,7 +48,7 @@ permalink: /vacancies
       </div>
 
       <div class="role-card role-card--accent">
-        <div class="role-tag role-tag--gold">Community</div>
+        <div class="role-tag">Community</div>
         <h3>Students Lacking a Support System</h3>
         <p>Prof. Anwar grew up in Bihar, India, and is committed to helping students lacking support networks — including first-generation students, low-income households, and students from the Seemanchal region.</p>
         <ul class="role-checklist">
@@ -61,11 +61,6 @@ permalink: /vacancies
     </div>
 
     <div class="vacancy-sidebar">
-      <div class="apply-card">
-        <h4>Quick Apply</h4>
-        <p>Send a brief statement of interest and your CV.</p>
-        <a class="apply-email-btn" href="mailto:afsah@unm.edu">Email Us</a>
-      </div>
 
       <div class="apply-card">
         <h4>Community</h4>
