@@ -11,7 +11,7 @@ email: afsah@unm.edu
 description: > # this means to ignore newlines until "baseurl:"
   Website of the Beyond Defense Lab.
 baseurl: ""
-url: "https://beyonddefense.github.io"
+url: "https://beyondefense.org"
 
 include:
   - .htaccess

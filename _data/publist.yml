@@ -35,7 +35,7 @@
 - title: "MVPNalyzer: An Investigative Framework for the Security & Privacy Audit of Mobile VPNs"
   authors: Wayne Wang*, Aaron Ortwein*, Enrique Sobrados*, Robert Stanley, Piyush Kumar, Afsah Anwar, and Roya Ensafi
   link:
-    url: https://beyonddefense.github.io/downloads/manuscripts/mvpnalyzer.pdf
+    url: https://beyondefense.org/downloads/manuscripts/mvpnalyzer.pdf
     display: In The Network and Distributed System Security (NDSS) Symposium (2026)
   highlight: 1
   year: 2026
@@ -57,7 +57,7 @@
 - title: "Silent Subversion: Sensor Spoofing Attacks via Supply Chain Implants in Satellite Systems"
   authors: Jack Vanlyssel, Catalin Roman, and Afsah Anwar
   link:
-    url: https://beyonddefense.github.io/downloads/manuscripts/Silent_Subversion_FINAL.pdf
+    url: https://beyondefense.org/downloads/manuscripts/Silent_Subversion_FINAL.pdf
     display: In The 47th IEEE Aerospace Conference (2026)
   highlight: 1
   year: 2026

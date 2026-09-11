@@ -70,6 +70,6 @@
 
 - name: "This could be you !"
   photo: rock.jpg
-  info: See <a href="https://beyonddefense.github.io/vacancies">openings</a> for more info
+  info: See <a href="https://beyondefense.org/vacancies">openings</a> for more info
   highlight: b
   duration: b
