@@ -24,6 +24,20 @@ permalink: /vacancies
     <div class="vacancy-roles">
 
       <div class="role-card">
+        <div class="role-tag">Postdoc</div>
+        <h3>Postdoctoral</h3>
+        <p>Interested in investigating space systems? Come work with us.</p>
+        <ul class="role-checklist">
+          <li>Investigate real-world attacks, threat models, and build defenses</li>
+          <li>Design and implement tooling for program, system, and vulnerability analysis</li>
+          <li>Must be a US citizen or a permanent resident</li>
+        </ul>
+        <a class="apply-btn" href="mailto:afsah@unm.edu,gcroman@unm.edu?subject=Prospective Postdoc">Apply</a>
+        <p class="apply-note">Include "Prospective Postdoc" in subject line and attach a CV.</p>
+      </div>
+
+
+      <div class="role-card">
         <div class="role-tag">PhD</div>
         <h3>PhD Student</h3>
         <p>Interested in creating malicious software or finding avenues to attack critical systems? Come work with us.</p>
@@ -50,7 +64,7 @@ permalink: /vacancies
       <div class="role-card role-card--accent">
         <div class="role-tag">Community</div>
         <h3>Students Lacking a Support System</h3>
-        <p>Prof. Anwar grew up in Bihar, India, and is committed to helping students lacking support networks — including first-generation students, low-income households, and students from the Seemanchal region.</p>
+        <p>Afsah grew up in Bihar, India, and is committed to helping students lacking support networks — including first-generation students, low-income households, and students from the Seemanchal region.</p>
         <ul class="role-checklist">
           <li>Under-represented populations in CS are especially encouraged</li>
           <li>Mentorship, collaboration, or campus resource referrals available</li>
