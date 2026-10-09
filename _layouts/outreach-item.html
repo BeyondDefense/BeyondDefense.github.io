@@ -1,0 +1,33 @@
+---
+layout: default
+---
+{% assign kind = page.tags | first | default: 'blog' %}
+<div id="textid" class="col-sm-12">
+  <article class="post outreach-item">
+
+    <header class="post-header">
+      <h1 class="post-title">{{ page.title }}</h1>
+      <p class="post-meta">
+        <span class="outreach-meta">{{ kind }}</span>
+        <span class="post-byline">
+          {{ page.date | date: "%B %-d, %Y" }}{% if page.author %} · {{ page.author }}{% endif %}{% if page.role %} · {{ page.role }}{% endif %}
+        </span>
+      </p>
+      {% if page.venue %}<p class="workshop-venue">{{ page.venue }}</p>{% endif %}
+      {% if page.external_url %}
+      <p class="workshop-links">
+        <a class="cta-btn cta-primary" href="{{ page.external_url }}" target="_blank" rel="noopener">Workshop site &nearr;</a>
+      </p>
+      {% endif %}
+    </header>
+
+    <div class="post-content">
+      {{ content }}
+    </div>
+
+    <p class="post-back">
+      <a href="{{ site.url }}{{ site.baseurl }}/outreach/">&larr; Back to Outreach</a>
+    </p>
+
+  </article>
+</div>

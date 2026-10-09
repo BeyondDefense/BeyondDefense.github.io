@@ -13,6 +13,17 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: ""
 url: "https://beyondefense.org"
 
+# Blog posts and workshops are one collection. Each item carries its own
+# date, author and tags (blog / workshop) in front matter.
+collections:
+  outreach:
+    output: true
+    permalink: /outreach/:name/
+
+# Required: workshops are announced before they happen, and Jekyll silently
+# refuses to build documents with a future date unless this is true.
+future: true
+
 include:
   - .htaccess
   - _pages

@@ -176,6 +176,39 @@
   });
 })();
 
+/* ── Outreach filter (blog / workshop) ───────── */
+(function () {
+  var btns = document.querySelectorAll('.outreach-filter-btn');
+  if (!btns.length) return;
+  var cards = document.querySelectorAll('.outreach-card[data-kind]');
+  var empty = document.getElementById('outreachNoResults');
+
+  function apply(val) {
+    var shown = 0;
+    cards.forEach(function (card) {
+      var match = val === 'all' || card.getAttribute('data-kind') === val;
+      card.style.display = match ? '' : 'none';
+      if (match) shown++;
+    });
+    if (empty) empty.style.display = shown ? 'none' : '';
+  }
+
+  btns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      btns.forEach(function (b) { b.classList.remove('active'); });
+      this.classList.add('active');
+      apply(this.getAttribute('data-outreach-filter'));
+    });
+  });
+
+  /* deep link, e.g. /outreach/?show=workshop */
+  var want = new URLSearchParams(window.location.search).get('show');
+  if (want) {
+    var target = document.querySelector('.outreach-filter-btn[data-outreach-filter="' + want + '"]');
+    if (target) target.click();
+  }
+})();
+
 /* ── 5. Card entrance animation (Intersection Observer) ── */
 (function () {
   if (!window.IntersectionObserver) return;

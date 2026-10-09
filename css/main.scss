@@ -816,6 +816,166 @@ pubtit, .pubtit {
 }
 
 /* ============================================================
+   OUTREACH (blog list + workshops) and blog post pages
+   ============================================================ */
+.outreach-filters {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 1.5rem;
+}
+.outreach-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0 0 2.25rem;
+}
+/* Date · author line, on cards and on the item page. */
+.outreach-byline,
+.post-byline {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 5px;
+}
+/* Same card idiom as .home-area-card / .join-card. */
+.outreach-card {
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  text-decoration: none !important;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+a.outreach-card:hover {
+  border-color: var(--red);
+  box-shadow: 0 0 0 1px var(--red-glow), 0 4px 14px var(--red-glow);
+  transform: translateY(-2px);
+  text-decoration: none !important;
+}
+.outreach-card--static { cursor: default; }
+/* Matches the news date chip and .pub-tag. */
+.outreach-meta {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--navy);
+  background: var(--chip-bg);
+  border: 1px solid var(--chip-border);
+  border-radius: 20px;
+  padding: 2px 9px;
+  margin-bottom: 6px;
+}
+.outreach-title {
+  display: block;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.45;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+.outreach-venue {
+  display: block;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+.outreach-desc {
+  display: block;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+.outreach-empty { color: var(--text-muted); }
+
+.post-header { margin-bottom: 1.5rem; }
+.post-title { margin-bottom: 0.5rem; }
+.post-meta { font-size: 0.85rem; color: var(--text-muted); }
+.post-author::before { content: " · "; }
+/* Full width, matching the other #textid pages (vacancies, research). */
+.post-content { max-width: none; }
+.post-content h2 { margin-top: 1.9rem; }
+.post-content h3 { margin-top: 1.4rem; }
+.post-back {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.workshop-venue {
+  font-size: 0.92rem;
+  font-style: italic;
+  color: var(--text-muted);
+  margin: 0 0 0.9rem;
+}
+.workshop-links { margin: 0 0 0.5rem; }
+
+/* Markdown tables (workshop agendas). Bootstrap 3 only styles .table, and
+   kramdown emits a bare <table>, so these arrive with no padding or rules. */
+#textid table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 1.75rem;
+  font-size: 0.9rem;
+}
+#textid thead th {
+  text-align: left;
+  color: var(--navy);
+  border-bottom: 2px solid var(--chip-border);
+  padding: 9px 12px;
+}
+#textid td {
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+#textid tbody tr:last-child td { border-bottom: none; }
+#textid tbody tr:hover { background: var(--chip-bg); }
+/* Keep a wide agenda from forcing the page to scroll sideways on phones. */
+@media (max-width: 600px) {
+  #textid table { display: block; overflow-x: auto; }
+}
+
+/* Bootstrap 3 ships <pre> as #f5f5f5 and inline <code> as crimson-on-pink,
+   neither of which is themed — they render as glaring light blocks in dark
+   mode and the pink clashes with the red accent. Scoped to #textid so it
+   covers blog posts and any other text page. */
+#textid pre,
+#textid code {
+  background: var(--chip-bg);
+  border: 1px solid var(--chip-border);
+  color: var(--text);
+  border-radius: 6px;
+}
+#textid code {
+  padding: 1px 5px;
+  font-size: 0.86em;
+}
+#textid pre {
+  padding: 12px 14px;
+  overflow-x: auto;
+  line-height: 1.55;
+}
+#textid pre code {
+  background: none;
+  border: none;
+  padding: 0;
+}
+#textid blockquote {
+  border-left: 3px solid var(--chip-border);
+  padding: 0.25rem 0 0.25rem 1rem;
+  margin-left: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* ============================================================
    UTILITY / OVERRIDES
    ============================================================ */
 .well {
@@ -1692,11 +1852,13 @@ a.pub-highlight-badge:hover {
 .apply-btn,
 .apply-email-btn,
 .research-pub-badge,
+.workshop-links .cta-primary,
 [data-theme="dark"] .home-ctas .cta-primary,
 [data-theme="dark"] .join-card .cta-primary,
 [data-theme="dark"] .apply-btn,
 [data-theme="dark"] .apply-email-btn,
-[data-theme="dark"] .research-pub-badge {
+[data-theme="dark"] .research-pub-badge,
+[data-theme="dark"] .workshop-links .cta-primary {
   background: var(--navy) !important;
   color: var(--surface) !important;
   border: 1px solid var(--navy) !important;
@@ -1708,11 +1870,13 @@ a.pub-highlight-badge:hover {
 .apply-btn:hover,
 .apply-email-btn:hover,
 .research-pub-badge:hover,
+.workshop-links .cta-primary:hover,
 [data-theme="dark"] .home-ctas .cta-primary:hover,
 [data-theme="dark"] .join-card .cta-primary:hover,
 [data-theme="dark"] .apply-btn:hover,
 [data-theme="dark"] .apply-email-btn:hover,
-[data-theme="dark"] .research-pub-badge:hover {
+[data-theme="dark"] .research-pub-badge:hover,
+[data-theme="dark"] .workshop-links .cta-primary:hover {
   /* Same move as .home-area-card:hover .home-area-icon — navy fill goes
      to --red-solid. Text must be literal #fff, not var(--surface): in dark
      mode --surface is near-black and would be unreadable on the maroon. */

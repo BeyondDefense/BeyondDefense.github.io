@@ -19,6 +19,7 @@
         <li{% if page.url contains '/team' %} class="active"{% endif %}><a href="{{ site.url }}{{ site.baseurl }}/team">Team</a></li>
         <li{% if page.url contains '/research' %} class="active"{% endif %}><a href="{{ site.url }}{{ site.baseurl }}/research">Research</a></li>
         <li{% if page.url contains '/publications' %} class="active"{% endif %}><a href="{{ site.url }}{{ site.baseurl }}/publications">Publications</a></li>
+        <li{% if page.url contains '/outreach' or page.url contains '/blog/' or page.url contains '/workshops/' %} class="active"{% endif %}><a href="{{ site.url }}{{ site.baseurl }}/outreach/">Outreach</a></li>
         <li{% if page.url contains '/vacancies' %} class="active"{% endif %}><a href="{{ site.url }}{{ site.baseurl }}/vacancies">Vacancies</a></li>
         <li{% if page.url contains '/pictures' %} class="active"{% endif %}><a href="{{ site.url }}{{ site.baseurl }}/pictures">Gallery</a></li>
         <li><button id="darkToggle" aria-label="Toggle dark mode" title="Toggle dark mode"></button></li>
