@@ -19,7 +19,9 @@
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
     </button>
 
-    <script src="{{ site.url }}{{ site.baseurl }}/js/site.js"></script>
+    <!-- ?v=<build time> so browsers re-fetch after every build instead of
+         replaying a stale cached copy (same treatment as main.css). -->
+    <script src="{{ site.url }}{{ site.baseurl }}/js/site.js?v={{ site.time | date: '%s' }}"></script>
   </body>
 
 </html>

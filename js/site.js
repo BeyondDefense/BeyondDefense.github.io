@@ -4,8 +4,9 @@
 (function () {
   var root = document.documentElement;
   var stored = localStorage.getItem('bdl-theme');
-  var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  var theme = stored || (systemDark ? 'dark' : 'light');
+  /* Light is the default. The OS prefers-color-scheme setting is deliberately
+     not consulted — only a visitor's own toggle (stored here) switches it. */
+  var theme = stored || 'light';
   root.setAttribute('data-theme', theme);
 
   document.addEventListener('click', function (e) {
