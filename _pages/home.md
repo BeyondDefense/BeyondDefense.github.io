@@ -16,28 +16,32 @@ permalink: /
     </div>
     <button class="tagline-arrow" id="tagllineNext" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
   </div>
-  <div class="home-cover">
-    <picture>
-      <source type="image/webp"
-              sizes="(max-width: 767px) 100vw, 720px"
-              srcset="{{ site.url }}{{ site.baseurl }}/images/homepage/lab-group-700.webp 700w,
-                      {{ site.url }}{{ site.baseurl }}/images/homepage/lab-group-1050.webp 1050w,
-                      {{ site.url }}{{ site.baseurl }}/images/homepage/lab-group-1400.webp 1400w,
-                      {{ site.url }}{{ site.baseurl }}/images/homepage/lab-group-2100.webp 2100w,
-                      {{ site.url }}{{ site.baseurl }}/images/homepage/lab-group-2800.webp 2800w">
-      <img src="{{ site.url }}{{ site.baseurl }}/images/homepage/lab-group-1400.jpg"
-           sizes="(max-width: 767px) 100vw, 720px"
-           srcset="{{ site.url }}{{ site.baseurl }}/images/homepage/lab-group-700.jpg 700w,
-                   {{ site.url }}{{ site.baseurl }}/images/homepage/lab-group-1050.jpg 1050w,
-                   {{ site.url }}{{ site.baseurl }}/images/homepage/lab-group-1400.jpg 1400w,
-                   {{ site.url }}{{ site.baseurl }}/images/homepage/lab-group-2100.jpg 2100w,
-                   {{ site.url }}{{ site.baseurl }}/images/homepage/lab-group-2800.jpg 2800w"
-           width="1400" height="788"
-           fetchpriority="high" decoding="async"
-           alt="Members of the Beyond Defense Lab outside the Farris Engineering Center at the University of New Mexico">
-    </picture>
+  <div class="home-hero">
+    <div class="home-hero-text">
+  <p class="home-body">We are a cybersecurity research group in the <a href="https://www.cs.unm.edu/">Department of Computer Science</a> at <a href="https://www.unm.edu/">The University of New Mexico</a>, led by Afsah Anwar. We uncover and defend against emerging threats to VPNs, satellites, mobile apps, and web applications through malware analysis, vulnerability research, and threat intelligence.</p>
+    </div>
+    <div class="home-cover">
+      <picture>
+        <source type="image/webp"
+                sizes="(max-width: 767px) 100vw, 600px"
+                srcset="{{ site.url }}{{ site.baseurl }}/images/homepage/lab-group-700.webp 700w,
+                        {{ site.url }}{{ site.baseurl }}/images/homepage/lab-group-1050.webp 1050w,
+                        {{ site.url }}{{ site.baseurl }}/images/homepage/lab-group-1400.webp 1400w,
+                        {{ site.url }}{{ site.baseurl }}/images/homepage/lab-group-2100.webp 2100w,
+                        {{ site.url }}{{ site.baseurl }}/images/homepage/lab-group-2800.webp 2800w">
+        <img src="{{ site.url }}{{ site.baseurl }}/images/homepage/lab-group-1400.jpg"
+             sizes="(max-width: 767px) 100vw, 600px"
+             srcset="{{ site.url }}{{ site.baseurl }}/images/homepage/lab-group-700.jpg 700w,
+                     {{ site.url }}{{ site.baseurl }}/images/homepage/lab-group-1050.jpg 1050w,
+                     {{ site.url }}{{ site.baseurl }}/images/homepage/lab-group-1400.jpg 1400w,
+                     {{ site.url }}{{ site.baseurl }}/images/homepage/lab-group-2100.jpg 2100w,
+                     {{ site.url }}{{ site.baseurl }}/images/homepage/lab-group-2800.jpg 2800w"
+             width="1400" height="670"
+             fetchpriority="high" decoding="async"
+             alt="Members of the Beyond Defense Lab outside the Farris Engineering Center at the University of New Mexico">
+      </picture>
+    </div>
   </div>
-  <p class="home-body">We are a cybersecurity research group in the <a href="https://www.cs.unm.edu/">Department of Computer Science</a> at <a href="https://www.unm.edu/">The University of New Mexico</a>, led by Afsah Anwar. We uncover and defend against emerging threats to VPNs, satellites, mobile apps, and web applications through malware analysis, vulnerability research, and threat intelligence.</p> 
 
   <p class="home-body">Our research has delivered measurable real-world impact. Our study of SMS-delivered URLs uncovered personal-data exposure across 177 online services, leading 7 providers to fix the vulnerabilities and being covered by <a href="https://arstechnica.com/security/2026/01/millions-of-people-imperiled-through-sign-in-links-sent-by-sms">Ars Technica</a>, <a href="https://www.helpnetsecurity.com/2026/01/23/sms-private-urls-data-exposure-study/">Help Net Security</a>, and <a href="https://www.techradar.com/pro/millions-of-smartphone-users-could-be-at-risk-from-the-sms-sign-in-url-issue-heres-what-you-need-to-look-out-for">TechRadar Pro</a>. Our MVPNalyzer framework analyzed free Android VPN apps, exposing widespread data leaks and security failures, with coverage from <a href="https://thehackernews.com/2026/07/study-of-281-free-android-vpn-apps.html">The Hacker News</a> and <a href="https://news.engin.umich.edu/2026/07/mobile-vpn-security-is-not-as-strong-as-advertised/">Michigan Engineering News</a>. We have also discovered a <a href="https://sparta.aerospace.org/technique/DE-0012/">novel spacecrafts vulnerability</a>.</p>
 

@@ -130,12 +130,15 @@ figcaption {
   color: var(--text-muted);
 }
 
+/* Navbar and page content share proportional ~7% gutters and span the
+   viewport, matching censoredplanet.org. Previously capped at 1080px, which
+   left 269px of dead space each side at 1600px. */
 .container-fluid {
   margin-right: auto;
   margin-left: auto;
-  max-width: 1080px;
-  padding-left: 24px;
-  padding-right: 24px;
+  max-width: none;
+  padding-left: 7%;
+  padding-right: 7%;
 }
 
 /* ============================================================
@@ -283,6 +286,45 @@ $nav-h: 80px;
    .sponsors-label all sit inside wrappers, and an id selector here would
    otherwise outrank their own font sizes. */
 #homeid > p { font-size: 1rem; line-height: 1.75; }
+
+/* Hero: intro paragraph beside the cover photo, like censoredplanet.org.
+   The remaining paragraphs run full width underneath. */
+.home-hero {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  margin-bottom: 1.1rem;
+}
+.home-hero-text {
+  flex: 1 1 0;
+  /* Floor the text column so narrower desktops shrink the image instead of
+     crushing the paragraph to a few words per line. */
+  min-width: 300px;
+}
+.home-hero-text .home-body:last-child { margin-bottom: 0; }
+.home-hero .home-cover {
+  flex: 1 1 64%;
+  max-width: 600px;
+  min-width: 0;
+  margin: 0;
+}
+
+/* Narrow the news rail so the main column (and the hero image) get more room.
+   Overrides Bootstrap's col-sm-8 / col-sm-4 (66.67% / 33.33%). */
+@media (min-width: 768px) {
+  #homeid { width: 72%; }
+  #newsid { width: 28%; }
+}
+/* Fixed rail once there is room for it, so the news column stays a constant
+   410px instead of growing with the screen. Below 992px it falls back to the
+   percentage split above, and below 768px the columns stack. */
+@media (min-width: 992px) {
+  #homeid { width: calc(100% - 410px); }
+  #newsid { width: 410px; }
+}
+@media (max-width: 767px) {
+  .home-hero { flex-direction: column; align-items: stretch; gap: 16px; }
+}
 
 /* Homepage cover photo */
 .home-cover {
@@ -1033,6 +1075,7 @@ hr.section-divider {
   .member-card { flex-direction: column; align-items: center; text-align: center; }
   .member-card-body ul { text-align: left; }
   #newsid { padding-left: 0; }
+  /* Percentage gutters would waste space on a phone. */
   .container-fluid { padding-left: 14px; padding-right: 14px; }
 }
 
@@ -1565,7 +1608,9 @@ a.pub-highlight-badge:hover {
   margin-top: 0.5rem !important;
 }
 .vacancy-sidebar {
-  width: 240px;
+  /* 240px dated from the old 1080px-capped container; on the full-width
+     layout it left the role cards at ~81% of the row. */
+  width: 380px;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
