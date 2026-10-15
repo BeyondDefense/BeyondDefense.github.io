@@ -19,6 +19,7 @@ description: Sponsored by Idaho National Laboratory.
 #   - name: Sazzadur Rahaman
 #     affiliation: University of Arizona
 #     photo: bio-photo.jpg
+#     url: 
 ---
 
 # Towards a Unified Research Community for the Cybersecurity of Space Systems
@@ -62,12 +63,12 @@ This workshop brings together researchers in space systems cybersecurity with go
 | **4:35–4:55 PM** | *Research Priorities, Commitments, and White Paper* |
 | **4:55–5:00 PM** | **Aerospace Corporation: Closing Remarks** |
 
-## Participants
+<!-- ## Participants
 We will update this soon!
 
 ## Organizer
 
-- Afsah Anwar, University of New Mexico
+- Afsah Anwar, University of New Mexico -->
 
 ## Sponsor
 
