@@ -8,6 +8,17 @@ role: Organizer
 venue: Centennial Engineering Center, Albuquerque, NM
 description: Sponsored by Idaho National Laboratory.
 # external_url: https://...   # optional: adds a "Workshop site" button
+# People shown in the right-hand rail. Photos go in images/newspic/ and are
+# cropped to a circle; omit `photo` to fall back to the placeholder avatar.
+# organizers:
+#   - name: Afsah Anwar
+#     affiliation: University of New Mexico
+#     photo: afsah.jpg
+#     url: https://afsah.org/
+# participants:
+#   - name: Sazzadur Rahaman
+#     affiliation: University of Arizona
+#     photo: bio-photo.jpg
 ---
 
 # Towards a Unified Research Community for the Cybersecurity of Space Systems
@@ -54,10 +65,9 @@ This workshop brings together researchers in space systems cybersecurity with go
 ## Participants
 We will update this soon!
 
-## Organizers
+## Organizer
 
 - Afsah Anwar, University of New Mexico
-- Sazzadur Rahaman (Sazz), University of Arizona
 
 ## Sponsor
 

@@ -21,9 +21,49 @@ layout: default
       {% endif %}
     </header>
 
+{% if kind == 'workshop' %}
+    <div class="workshop-columns">
+      <div class="workshop-main">
+        <div class="post-content">
+          {{ content }}
+        </div>
+      </div>
+
+      <aside class="workshop-people">
+        {% assign people_groups = "Organizers,Participants" | split: "," %}
+        {% for group in people_groups %}
+        {% if group == "Organizers" %}{% assign people = page.organizers %}{% else %}{% assign people = page.participants %}{% endif %}
+        <section class="people-group">
+          <h2>{{ group }}</h2>
+          {% if people and people.size > 0 %}
+          <ul class="people-list">
+            {% for p in people %}
+            <li class="person">
+              {% comment %}Photos live in images/newspic/; entries without one
+              fall back to the shared placeholder in images/teampic/ rather
+              than duplicating that file.{% endcomment %}
+              <img class="person-photo"
+                   src="{% if p.photo %}{{ site.url }}{{ site.baseurl }}/images/newspic/{{ p.photo }}{% else %}{{ site.url }}{{ site.baseurl }}/images/teampic/bio-photo.jpg{% endif %}"
+                   alt="{{ p.name | escape }}" />
+              <span class="person-text">
+                <span class="person-name">{% if p.url %}<a href="{{ p.url }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}</span>
+                {% if p.affiliation %}<span class="person-affil">{{ p.affiliation }}</span>{% endif %}
+              </span>
+            </li>
+            {% endfor %}
+          </ul>
+          {% else %}
+          <p class="people-empty">To be announced.</p>
+          {% endif %}
+        </section>
+        {% endfor %}
+      </aside>
+    </div>
+{% else %}
     <div class="post-content">
       {{ content }}
     </div>
+{% endif %}
 
     <p class="post-back">
       <a href="{{ site.url }}{{ site.baseurl }}/outreach/">&larr; Back to Outreach</a>
