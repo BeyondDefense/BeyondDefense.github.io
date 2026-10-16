@@ -1,0 +1,28 @@
+{% comment %}
+  Shared header for both outreach layouts (post.html, workshop.html).
+
+  `title` is always the short name — it is what the Outreach card, the browser
+  tab and any listing show. A page that also sets `headline` (long/formal name)
+  promotes it to the <h1> and demotes `title` to a small eyebrow above it, so
+  the two names stay in one place instead of being duplicated in the body.
+
+  `kind` still comes from tags so the chip always matches the value the
+  Outreach page filters on.
+{% endcomment %}
+{% assign kind = page.tags | first | default: 'blog' %}
+<header class="post-header">
+  {% if page.headline %}<p class="post-eyebrow">{{ page.title }}</p>{% endif %}
+  <h1 class="post-title">{{ page.headline | default: page.title }}</h1>
+  <p class="post-meta">
+    <span class="outreach-meta">{{ kind }}</span>
+    <span class="post-byline">
+      {{ page.date | date: "%B %-d, %Y" }}{% if page.author %} · {{ page.author }}{% endif %}{% if page.role %} · {{ page.role }}{% endif %}
+    </span>
+  </p>
+  {% if page.venue %}<p class="workshop-venue">{{ page.venue }}</p>{% endif %}
+  {% if page.external_url %}
+  <p class="workshop-links">
+    <a class="cta-btn cta-primary" href="{{ page.external_url }}" target="_blank" rel="noopener">Workshop site &nearr;</a>
+  </p>
+  {% endif %}
+</header>

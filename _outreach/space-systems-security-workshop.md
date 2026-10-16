@@ -1,6 +1,9 @@
 ---
-layout: outreach-item
+layout: workshop
 title: "Space Systems Security Workshop '26"
+# `title` is the short name: used on the Outreach card, the browser tab,
+# and as the small eyebrow above the headline on this page.
+headline: "Towards a Unified Research Community for the Cybersecurity of Space Systems"
 date: 2026-10-26
 author: Afsah Anwar
 tags: [workshop]
@@ -10,19 +13,84 @@ description: Sponsored by Idaho National Laboratory.
 # external_url: https://...   # optional: adds a "Workshop site" button
 # People shown in the right-hand rail. Photos go in images/newspic/ and are
 # cropped to a circle; omit `photo` to fall back to the placeholder avatar.
-# organizers:
-#   - name: Afsah Anwar
-#     affiliation: University of New Mexico
-#     photo: afsah.jpg
-#     url: https://afsah.org/
-# participants:
-#   - name: Sazzadur Rahaman
-#     affiliation: University of Arizona
-#     photo: bio-photo.jpg
-#     url: 
+organizers:
+  - name: Afsah Anwar
+    affiliation: University of New Mexico
+    photo: Afsah.jpg
+    url: https://afsah.org/
+keynote_speakers:
+  - name: Kendra Cook
+    affiliation: NASA IV&V
+    photo: Kendra.jpg
+    url: 
+  - name: Sean Phillips
+    affiliation: Air Force Research Lab
+    photo: Sean.jpg
+    url: https://seanaphillipscom.wordpress.com/
+  - name: Arupjyoti Bhuyan
+    affiliation: Idaho National Lab
+    photo: Arup.jpg
+    url: https://inl.elsevierpure.com/en/persons/arupjyoti-bhuyan/
+  - name: Dan Trujillo
+    affiliation: Air Force Research Lab
+    photo: Dan.jpg
+    url: https://afrlscholars.usra.edu/scholarsprogram/mentors/?id=2343
+  - name: Brandon Bailey
+    affiliation: The Aerospace Corporation
+    photo: Brandon.jpg
+    url: https://aerospace.org/person/brandon-bailey
+attendees:
+  - name: Catalin Roman
+    affiliation: University of New Mexico
+    photo: Catalin.jpg
+    url: https://www.cs.unm.edu/directory/faculty-profiles/gruia-catalin-roman.html
+  - name: Sazzadur Rahaman
+    affiliation: University of Arizona
+    photo: Sazzad.jpg
+    url: https://cs.arizona.edu/person/sazzadur-rahaman
+  - name: Christos Christodoulou
+    affiliation: University of New Mexico
+    photo: Christos.jpg
+    url: https://ece.unm.edu/faculty-staff/electrical-and-computer/christos-christodoulou.html
+  - name: Kevin Butler
+    affiliation: University of Florida
+    photo: Kevin.jpg
+    url: https://cise.ufl.edu/~butler/
+  - name: Sara Rampazzi
+    affiliation: University of Florida
+    photo: Sara.jpg
+    url: https://sararampazzi.com/
+  - name: Andrew Zeliff
+    affiliation: Georgia Tech Research Institute
+    url: 
+  - name: Efren Lopez
+    affiliation: New Mexico State University
+    photo: Efren.jpg
+    url: https://computerscience.nmsu.edu/facultydirectory/individual-bio-pages/efren-lopez-morales.html
+  - name: Michael Seng
+    affiliation: Georgia Tech Research Institute
+    photo: Michael.png
+    url: https://www.linkedin.com/in/michael-seng-cse/
+  - name: Kun Sun
+    affiliation: George Mason University
+    photo: Kun.jpg
+    url: https://cec.gmu.edu/profiles/ksun3
+  - name: Omar Alrawi
+    affiliation: Georgia Institute of Technology
+    photo: Omar.jpg
+    url: https://alrawi.io/
+  - name: Rajiv Thummala
+    affiliation: Cornell University
+    photo: Rajiv.jpg
+    url: https://carlsaganinstitute.cornell.edu/rajiv-thummala
+  - name: Edward John Oughton
+    affiliation: George Mason University
+    photo: Edward.jpg
+    url: https://science.gmu.edu/directory/edward-oughton
+  - name: Kiel Bolin Brunner
+    affiliation: Deloitte
 ---
 
-# Towards a Unified Research Community for the Cybersecurity of Space Systems
 Bringing together researchers, government organizations, national laboratories, and industry to define the next research challenges in space systems cybersecurity.
 
 ## About the Workshop
@@ -38,7 +106,7 @@ This workshop brings together researchers in space systems cybersecurity with go
 
 ## Goals
 - Build a community of researchers, industry practitioners, and government advisors to bridge the gap and collectively address space security 
-- Identify the most important open research challenges in space systems cybersecurity
+- Identify the most important open problems in space systems cybersecurity
 - Identify challenges to space security
 
 

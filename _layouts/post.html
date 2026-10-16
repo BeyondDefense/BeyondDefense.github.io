@@ -1,0 +1,22 @@
+---
+layout: default
+---
+{% comment %}
+  Blog posts: one column of prose and images, nothing else. Workshops use
+  _layouts/workshop.html instead.
+{% endcomment %}
+<div id="textid" class="col-sm-12">
+  <article class="post outreach-item">
+
+    {% include outreach-header.html %}
+
+    <div class="post-content">
+      {{ content }}
+    </div>
+
+    <p class="post-back">
+      <a href="{{ site.url }}{{ site.baseurl }}/outreach/">&larr; Back to Outreach</a>
+    </p>
+
+  </article>
+</div>

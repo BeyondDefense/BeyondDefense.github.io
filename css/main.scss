@@ -67,6 +67,13 @@ body {
   line-height: 1.8;
   padding-top: 84px;
 }
+/* Between Bootstrap's nav-float breakpoint (768px) and ~1185px the brand is
+   too wide for the links to sit beside it, so .navbar-collapse wraps onto a
+   second row and the fixed navbar becomes 160px tall. Reserve that height or
+   it covers the top of every page's content. */
+@media (min-width: 768px) and (max-width: 1199px) {
+  body { padding-top: 164px; }
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Exo 2', 'Inter', sans-serif;
@@ -968,6 +975,16 @@ a.outreach-card:hover {
 .outreach-empty { color: var(--text-muted); }
 
 .post-header { margin-bottom: 1.5rem; }
+/* Short/series name above the headline on pages that set `headline`.
+   Accent-coloured so it reads as the series, not as a second title. */
+.post-eyebrow {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  color: var(--red);
+  margin: 0 0 6px;
+}
 .post-title { margin-bottom: 0.5rem; }
 .post-meta { font-size: 0.85rem; color: var(--text-muted); }
 .post-author::before { content: " · "; }
@@ -1030,36 +1047,54 @@ a.outreach-card:hover {
   color: var(--navy);
   margin: 0 0 0.85rem;
 }
-.people-list {
+/* Grid rather than a stacked list so several people share a row. auto-fill
+   lets the column count follow the rail's width, so it also works when the
+   rail drops full-width below 900px. */
+/* #textid ul sets padding-left: 20px and #textid li a bottom margin, both of
+   which are id-specificity, so the grid has to be declared at the same weight
+   or the tracks are indented and the rows gain stray gaps. */
+#textid .people-list {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(86px, 1fr));
+  gap: 18px 12px;
 }
+#textid .people-list .person { margin-bottom: 0; }
+/* Photo on top, name and affiliation centred underneath. */
 .person {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 11px;
-  padding: 7px 0;
+  text-align: center;
+  gap: 8px;
+  padding: 0;
 }
 .person-photo {
-  width: 44px;
-  height: 44px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
   margin: 0 !important;
 }
-.person-text { min-width: 0; }
+/* Tracks are ~100px, so long names and institutions have to be able to wrap. */
+.person-text {
+  min-width: 0;
+  width: 100%;
+  overflow-wrap: break-word;
+}
 .person-name {
   display: block;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: var(--navy);
   line-height: 1.3;
 }
 .person-affil {
   display: block;
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   color: var(--text-muted);
   line-height: 1.35;
 }

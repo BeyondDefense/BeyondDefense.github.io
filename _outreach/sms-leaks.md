@@ -1,5 +1,5 @@
 ---
-layout: outreach-item
+layout: post
 title: "The Tragedy of Convenience"
 date: 2026-10-08
 author: Beyond Defense Lab
