@@ -18,6 +18,10 @@ organizers:
     affiliation: University of New Mexico
     photo: Afsah.jpg
     url: https://afsah.org/
+  - name: Catalin Roman
+    affiliation: University of New Mexico
+    photo: Catalin.jpg
+    url: https://www.cs.unm.edu/directory/faculty-profiles/gruia-catalin-roman.html
 keynote_speakers:
   - name: Kendra Cook
     affiliation: NASA IV&V
@@ -40,10 +44,6 @@ keynote_speakers:
     photo: Brandon.jpg
     url: https://aerospace.org/person/brandon-bailey
 attendees:
-  - name: Catalin Roman
-    affiliation: University of New Mexico
-    photo: Catalin.jpg
-    url: https://www.cs.unm.edu/directory/faculty-profiles/gruia-catalin-roman.html
   - name: Sazzadur Rahaman
     affiliation: University of Arizona
     photo: Sazzad.jpg
