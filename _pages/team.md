@@ -29,13 +29,16 @@ permalink: /team/
 {% endfor %}
 </div>
 
+{% comment %}Five per row. `row-members` is what the 5-column grid hooks on;
+the alumni rows below stay on the default .row grid.{% endcomment %}
+{% assign per_row = 5 %}
 {% assign number_printed = 0 %}
 {% for member in site.data.team_members offset:2 %}
 
-{% assign mod4 = number_printed | modulo: 4 %}
+{% assign slot = number_printed | modulo: per_row %}
 
-{% if mod4 == 0 %}
-<div class="row">
+{% if slot == 0 %}
+<div class="row row-members">
 {% endif %}
 
 <div class="col-sm-6 clearfix">
@@ -48,13 +51,14 @@ permalink: /team/
 
 {% assign number_printed = number_printed | plus: 1 %}
 
-{% if mod4 == 3 %}
+{% assign last_slot = per_row | minus: 1 %}
+{% if slot == last_slot %}
 </div>
 {% endif %}
 
 {% endfor %}
 
-{% assign leftover = number_printed | modulo: 4 %}
+{% assign leftover = number_printed | modulo: per_row %}
 {% if leftover != 0 %}
 </div>
 {% endif %}

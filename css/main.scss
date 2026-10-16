@@ -283,7 +283,7 @@ $nav-h: 80px;
    HOME PAGE  (#homeid + #newsid)
    ============================================================ */
 #homeid {
-  padding: 32px 24px 24px;
+  padding: 32px 16px 24px;
   position: relative;
 }
 
@@ -445,8 +445,10 @@ figure.fifth img {
 figure.fifth img:hover { opacity: 1; filter: none; }
 
 /* NEWS SIDEBAR */
+/* 16px like every other wrapper, so the rail's right edge lines up with the
+   content edge on the other pages instead of sitting 16px further out. */
 #newsid {
-  padding: 32px 0 24px 8px;
+  padding: 32px 16px 24px;
 }
 
 #newsid .well,
@@ -555,6 +557,15 @@ figure.fifth img:hover { opacity: 1; filter: none; }
   &::before, &::after { display: none; }
   @media (max-width: 900px) { grid-template-columns: 1fr 1fr; }
   @media (max-width: 480px) { grid-template-columns: 1fr; }
+}
+
+/* Group members: five across. Scoped to .row-members so the alumni rows keep
+   the default grid above. */
+#gridid .team-page .row.row-members {
+  grid-template-columns: repeat(5, 1fr);
+  @media (max-width: 1200px) { grid-template-columns: repeat(3, 1fr); }
+  @media (max-width: 900px)  { grid-template-columns: 1fr 1fr; }
+  @media (max-width: 480px)  { grid-template-columns: 1fr; }
 }
 
 #gridid .team-page .row.row-faculty {
@@ -833,7 +844,7 @@ pubtit, .pubtit {
    ============================================================ */
 #textid,
 .textlay-body {
-  padding: 32px 24px;
+  padding: 32px 16px;
   max-width: 760px;
 }
 
@@ -860,6 +871,9 @@ pubtit, .pubtit {
 /* ============================================================
    PICTURES GALLERY
    ============================================================ */
+#picid {
+  padding: 32px 16px;
+}
 #picid img {
   margin: 6px 4px 48px 4px;
   border-radius: var(--radius);
@@ -905,10 +919,16 @@ pubtit, .pubtit {
   gap: 8px;
   margin: 0 0 1.5rem;
 }
+/* Grid, so the uncapped page width goes into more cards per row rather than
+   into one very wide card. auto-FILL, not auto-fit: the filter buttons hide
+   cards with display:none, and auto-fit would collapse the freed tracks and
+   stretch the last visible card across the whole row. Fixed tracks keep the
+   cards the same size whichever filter is active. min() stops the track
+   overflowing a viewport narrower than the 420px floor. */
 .outreach-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(420px, 100%), 1fr));
+  gap: 14px;
   margin: 0 0 2.25rem;
 }
 /* Date · author line, on cards and on the item page. */
@@ -1221,8 +1241,10 @@ hr.section-divider {
   .member-card { flex-direction: column; align-items: center; text-align: center; }
   .member-card-body ul { text-align: left; }
   #newsid { padding-left: 0; }
-  /* Percentage gutters would waste space on a phone. */
-  .container-fluid { padding-left: 14px; padding-right: 14px; }
+  /* Percentage gutters would waste space on a phone. 15px, not 14px: Bootstrap
+     pulls .navbar-header and .row out with margin: 0 -15px, so anything less
+     lets them bleed past the viewport and adds a horizontal scrollbar. */
+  .container-fluid { padding-left: 15px; padding-right: 15px; }
 }
 
 /* ============================================================
@@ -1633,6 +1655,12 @@ a.pub-highlight-badge:hover {
   box-shadow: 0 0 0 3px var(--red-glow);
 }
 
+/* Outreach index: a list of cards, not prose, so it opts out of the 760px
+   cap like the vacancies and workshop pages do. */
+#textid:has(.outreach-filters) {
+  max-width: 100%;
+}
+
 /* ── Vacancies page ─────────────────────────────── */
 #textid:has(.vacancy-page) {
   max-width: 100%;
@@ -1800,9 +1828,10 @@ a.pub-highlight-badge:hover {
 }
 
 /* ── Research page ──────────────────────────────── */
+/* No max-width: like #publications and #gridid, this fills the 7% container.
+   The prose that needs a readable measure caps itself (.research-intro). */
 #research {
-  max-width: 1080px;
-  padding: 32px 24px;
+  padding: 32px 16px;
 }
 .research-hero {
   margin-bottom: 2.5rem;
@@ -1824,15 +1853,16 @@ a.pub-highlight-badge:hover {
 }
 .research-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  /* One row of four. Dropping to two then one keeps the cards readable once
+     the 1080px page cap stops giving each column enough room. */
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.25rem;
   margin-bottom: 2.5rem;
-  .research-card:last-child:nth-child(3n+1) {
-    grid-column: 2;
+  @media (max-width: 1100px) {
+    grid-template-columns: repeat(2, 1fr);
   }
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
     grid-template-columns: 1fr;
-    .research-card:last-child:nth-child(3n+1) { grid-column: auto; }
   }
 }
 .research-card {
