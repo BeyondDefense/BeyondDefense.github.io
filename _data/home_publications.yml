@@ -1,0 +1,10 @@
+internet:
+  - match: "Exposing Probe-Resistant"
+    label: "IEEE S&P ’27"
+  - match: "MVPNalyzer:"
+    label: "NDSS ’26"
+space:
+  - match: "Silent Subversion:"
+    label: "IEEE Aerospace ’26"
+  - match: "Trust Without Boundaries:"
+    label: "IEEE RISC ’26"

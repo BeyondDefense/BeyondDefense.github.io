@@ -2,7 +2,11 @@
   <h4>News</h4>
 
   {% for article in site.data.news limit:9 %}
-  <p><em>{{ article.date }}</em>{{ article.headline | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+  {% comment %}Dates are stored as "September 2026"; abbreviate the month here
+  rather than in _data/news.yml so the full name stays available to
+  /allnews.html.{% endcomment %}
+  {% assign parts = article.date | split: ' ' %}
+  <p><em>{{ parts[0] | slice: 0, 3 }} {{ parts[1] }}</em>{{ article.headline | markdownify | remove: '<p>' | remove: '</p>' }}</p>
   {% endfor %}
 
   <a class="see-all" href="{{ site.url }}{{ site.baseurl }}/allnews.html">See all news &rarr;</a>

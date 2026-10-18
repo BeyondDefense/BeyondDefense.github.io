@@ -1,0 +1,8 @@
+{% assign person = include.person %}
+<article class="team-profile">
+  <img src="{{ '/images/teampic/' | append: person.photo | relative_url }}" class="team-photo" width="110" height="110" loading="lazy" decoding="async" alt="{{ person.name | strip_html | strip | escape }}">
+  <h3>{{ person.name }}</h3>
+  <span class="team-role">{{ person.info }}</span>
+  {% if person.duration and person.duration != 'b' %}<span class="team-duration">{{ person.duration }}</span>{% endif %}
+  {% if person.highlight and person.highlight != 'b' %}<span class="team-highlight">{{ person.highlight }}</span>{% endif %}
+</article>

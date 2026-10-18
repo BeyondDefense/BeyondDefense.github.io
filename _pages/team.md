@@ -6,121 +6,59 @@ sitemap: false
 permalink: /team/
 ---
 
-<div class="team-page" markdown="1">
+<main class="team-page" markdown="0">
+  <h1>Group Members</h1>
+  <section aria-labelledby="current-title">
+    <h2 id="current-title">Members</h2>
+    <div class="team-profile-grid team-faculty-grid">
+      {% for member in site.data.team_members limit:2 %}
+        {% include team-profile.html person=member %}
+      {% endfor %}
+    </div>
+    <div class="team-profile-grid">
+      {% for member in site.data.team_members offset:2 %}
+        {% unless member.name == 'This could be you !' %}
+          {% include team-profile.html person=member %}
+        {% endunless %}
+      {% endfor %}
+      {% for member in site.data.alumni_members %}
+        {% include team-profile.html person=member %}
+      {% endfor %}
+    </div>
+  </section>
 
-# Group Members
-
-<!-- <div class="team-search-wrap">
-  <input type="search" id="teamSearch" placeholder="Search by name or degree" autocomplete="off" />
-</div> -->
-
-
-<!-- ## Current
-<div id="current"></div> -->
-
-<div class="row row-faculty">
-{% for member in site.data.team_members limit:2 %}
-<div class="col-sm-6 clearfix">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.photo }}" class="team-photo" />
-  <h4>{{ member.name }}</h4>
-  <span class="team-role">{{ member.info }}</span>
-  <span class="team-role">{{ member.duration }}</span>
-</div>
-{% endfor %}
-</div>
-
-{% comment %}Five per row. `row-members` is what the 5-column grid hooks on;
-the alumni rows below stay on the default .row grid.{% endcomment %}
-{% assign per_row = 5 %}
-{% assign number_printed = 0 %}
-{% for member in site.data.team_members offset:2 %}
-
-{% assign slot = number_printed | modulo: per_row %}
-
-{% if slot == 0 %}
-<div class="row row-members">
-{% endif %}
-
-<div class="col-sm-6 clearfix">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.photo }}" class="team-photo" />
-  <h4>{{ member.name }}</h4>
-  <span class="team-role">{{ member.info }}</span>
-  {% if member.duration and member.duration != "b" %}<span class="team-duration">{{ member.duration }}</span>{% endif %}
-  {% if member.highlight and member.highlight != "b" %}<span class="team-highlight">{{ member.highlight }}</span>{% endif %}
-</div>
-
-{% assign number_printed = number_printed | plus: 1 %}
-
-{% assign last_slot = per_row | minus: 1 %}
-{% if slot == last_slot %}
-</div>
-{% endif %}
-
-{% endfor %}
-
-{% assign leftover = number_printed | modulo: per_row %}
-{% if leftover != 0 %}
-</div>
-{% endif %}
+  <section id="collaborators" aria-labelledby="collaborators-title">
+    <h2 id="collaborators-title">Frequent Collaborators</h2>
+    <div class="team-profile-grid">
+      {% for c in site.data.collaborators %}
+      <article class="team-profile">
+        <img src="{{ '/images/teampic/' | append: c.photo | relative_url }}" class="team-photo" width="110" height="110" loading="lazy" decoding="async" alt="{{ c.name | strip_html | strip | escape }}">
+        <h3>{{ c.name }}</h3>
+        <span class="team-role">{{ c.affiliation }}</span>
+        {% if c.note %}<span class="team-highlight">{{ c.note }}</span>{% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </section>
 
 
 
-## Frequent Collaborators
-<div id="collaborators"></div>
-<div class="collab-grid">
-{% for c in site.data.collaborators %}
-<div class="collab-card">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ c.photo }}" class="collab-photo" />
-  <h4>{{ c.name }}</h4>
-  <span class="collab-affil">{{ c.affiliation }}</span>
-  <span class="collab-note">{{ c.note }}</span>
-</div>
-{% endfor %}
-</div>
+  <section id="lab-visitors" aria-labelledby="visitors-title">
+    <h2 id="visitors-title">Visitors</h2>
+    <div class="team-history-grid">
+      <div>
+        <h3>Master’s Students</h3>
+        <ul>{% for member in site.data.alumni_msc %}<li>{{ member.name }}</li>{% endfor %}</ul>
+      </div>
+      <div>
+        <h3>Undergraduate Students</h3>
+        <ul>{% for member in site.data.alumni_bsc %}<li>{{ member.name }}</li>{% endfor %}</ul>
+      </div>
+    </div>
+  </section>
 
-## Alumni
-<div id="alumni"></div>
-{% assign number_printed = 0 %}
-{% for member in site.data.alumni_members %}
-
-{% assign even_odd = number_printed | modulo: 2 %}
-
-{% if even_odd == 0 %}
-<div class="row">
-{% endif %}
-
-<div class="col-sm-6 clearfix">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.photo }}" class="team-photo" />
-  <h4>{{ member.name }}</h4>
-  <span class="team-role">{{ member.info }}</span>
-  <span class="team-duration">{{ member.duration }}</span>
-  <span class="team-highlight">{{ member.highlight }}</span>
-</div>
-
-{% assign number_printed = number_printed | plus: 1 %}
-
-{% if even_odd == 1 %}
-</div>
-{% endif %}
-
-{% endfor %}
-
-{% assign even_odd = number_printed | modulo: 2 %}
-{% if even_odd == 1 %}
-</div>
-{% endif %}
-
-## Visitors
-<div id="lab-visitors"></div>
-<div class="visitors-grid">
-<div class="visitors-card">
-<h4>Master Students</h4>
-<ul>{% for member in site.data.alumni_msc %}<li>{{ member.name }}</li>{% endfor %}</ul>
-</div>
-<div class="visitors-card">
-<h4>Undergrad Students</h4>
-<ul>{% for member in site.data.alumni_bsc %}<li>{{ member.name }}</li>{% endfor %}</ul>
-</div>
-</div>
-
-</div><!-- /.team-page -->
+  <section class="team-join" aria-labelledby="team-join-title">
+    <h2 id="team-join-title">Join the lab</h2>
+    <p>Interested in working with us? Explore our <a href="{{ '/research/' | relative_url }}">research</a> and <a href="{{ '/vacancies' | relative_url }}">opportunities to join the lab</a>.</p>
+  </section>
+</main>

@@ -1,5 +1,5 @@
 # group: must match one of the section names listed in _pages/pictures.md
-# ("Group Activities", "Talks and Visits", "Miscellaneous").
+# ("Group Activities", "Talks & Visits", "Conferences & Life in Albuquerque").
 # An entry with an unrecognised group will not be rendered.
 
 - title: Lab members during a group work session
@@ -23,29 +23,29 @@
 
 - title: Kendra Cook (NASA IV&V) on securing mission-critical software
   image: talk-nasa-ivv.jpg
-  group: Talks and Visits
+  group: Talks & Visits
 - title: Dr. Sanchari Das on cybersecurity by design
   image: talk-sanchari-das.jpg
-  group: Talks and Visits
+  group: Talks & Visits
 - title: Sazzadur Rahaman delivering a keynote
   image: keynote-sazzad.jpg
-  group: Talks and Visits
+  group: Talks & Visits
 - title: Presenting research at a conference
   image: conference-talk.jpg
-  group: Talks and Visits
+  group: Talks & Visits
 - title: Presenting a study on security recommendations
   image: talk-recommendations.jpg
-  group: Talks and Visits
+  group: Talks & Visits
 - title: Q&A session at a lab research talk
   image: talk-qa.jpg
-  group: Talks and Visits
+  group: Talks & Visits
 - title: A full house at a research talk
   image: lecture-audience.jpg
-  group: Talks and Visits
+  group: Talks & Visits
 
 - title: Hot-air balloons over Albuquerque at sunrise
   image: ABQ-evening.jpg
-  group: Miscellaneous
+  group: Conferences & Life in Albuquerque
 - title: Lab members at a conference
   image: Jiyoo-Bhup.jpg
-  group: Miscellaneous
+  group: Conferences & Life in Albuquerque

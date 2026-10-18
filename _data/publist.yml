@@ -5,7 +5,7 @@
     display: To Appear at IEEE S&P 2027
   highlight: 1
   year: 2026
-  tags: vpn,mobile
+  tags: vpn
 
 - title: "Trust Without Boundaries: An Architectural Analysis of Satellite Flight Software"
   authors: Jack Vanlyssel, Gruia-Catalin Roman, Kendra Cook, Sazzadur Rahaman, Afsah Anwar
@@ -24,7 +24,7 @@
     display: To Appear at CCS 2026 (Arxiv)
   highlight: 1
   year: 2026
-  tags: web,mobile
+  tags: web
   highlights:
     - type: disclosure
       text: Multiple Vulnerability Disclosures
@@ -48,7 +48,7 @@
     display: In The Network and Distributed System Security (NDSS) Symposium (2026)
   highlight: 1
   year: 2026
-  tags: vpn,mobile
+  tags: vpn
   highlights:
     - type: disclosure
       text: Multiple Vulnerability Disclosures
@@ -134,7 +134,7 @@
     display: IEEE Transactions on Dependable and Secure Computing (2022)
   highlight: 0
   year: 2022
-  tags: malware
+  tags: vulnerability
 
 - title: "Revisiting nakamoto consensus in asynchronous networks: A comprehensive analysis of bitcoin safety and chainquality"
   authors: Saad, M., Anwar, A., Ravi, S. and Mohaisen, D.
@@ -143,7 +143,7 @@
     display: Proceedings of the ACM SIGSAC Conference on Computer and Communications Security (2021)
   highlight: 0
   year: 2021
-  tags: malware
+  tags: ""
 
 - title: "Dl-fhmc: Deep learning-based fine-grained hierarchical learning approach for robust malware classification"
   authors: Abusnaina, A., Abuhamad, M., Alasmary, H., Anwar, A., Jang, R., Salem, S., Nyang, D. and Mohaisen, D.
@@ -197,7 +197,7 @@
     display: IEEE International Conference on Blockchain and Cryptocurrency (2019)
   highlight: 0
   year: 2019
-  tags: malware
+  tags: ""
 
 - title: "Understanding the Hidden Cost of Software Vulnerabilities: Measurements and Predictions"
   authors: A. Anwar, A. Khormali, and A. Mohaisen
@@ -206,7 +206,7 @@
     display: International Conference on Security and Privacy in Communication Networks (2018)
   highlight: 0
   year: 2018
-  tags: malware
+  tags: vulnerability
 
 - title: "Honor Among Thieves: Towards Understanding the Dynamics and Interdependencies in IoT Botnets"
   authors: J. Choi, A. Abusnaina, A. Anwar, A. Wang, S. Chen, D. Nyang and A. Mohaisen

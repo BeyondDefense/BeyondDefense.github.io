@@ -56,91 +56,53 @@
   startTimer();
 })();
 
-/* ── 3. Publication filter ────────────────────── */
+/* Publication archive filters. Curated highlights remain independent. */
 (function () {
-  var filterBtns = document.querySelectorAll('[data-filter]');
-  if (!filterBtns.length) return;
-
-  /* auto-apply topic/year from URL query params e.g. ?topic=vpn&year=2026 */
+  var archive = document.getElementById('gridid');
+  if (!archive || !archive.querySelector('.pub-filters')) return;
+  var state = { year: 'all', topic: 'all' };
   var params = new URLSearchParams(window.location.search);
-  ['topic', 'year'].forEach(function (group) {
-    var val = params.get(group);
-    if (!val) return;
-    var btn = document.querySelector('[data-group="' + group + '"][data-filter="' + val + '"]');
-    if (!btn) return;
-    document.querySelectorAll('[data-group="' + group + '"]').forEach(function (b) {
-      b.classList.remove('active');
-    });
-    btn.classList.add('active');
+  Object.keys(state).forEach(function (group) {
+    var value = params.get(group);
+    var valid = Array.from(archive.querySelectorAll('[data-group="' + group + '"]')).some(function (b) { return b.dataset.filter === value; });
+    if (valid) state[group] = value;
   });
-  /* run filters after params applied — deferred so applyFilters is defined */
-  if (params.get('topic') || params.get('year')) {
-    setTimeout(applyFilters, 0);
-  }
-
-  filterBtns.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var group = this.getAttribute('data-group');
-      document.querySelectorAll('[data-group="' + group + '"]').forEach(function (b) {
-        b.classList.remove('active');
-      });
-      this.classList.add('active');
-      applyFilters();
+  function apply(updateUrl) {
+    archive.querySelectorAll('[data-filter]').forEach(function (b) {
+      var active = b.dataset.filter === state[b.dataset.group];
+      b.classList.toggle('active', active);
+      b.setAttribute('aria-pressed', String(active));
     });
-  });
-
-  /* clicking a pub-tag pill applies the topic filter */
-  document.addEventListener('click', function (e) {
-    var tag = e.target.closest('.pub-tag');
-    if (!tag) return;
-    var topic = tag.className.match(/pub-tag--(\S+)/);
-    if (!topic) return;
-    var val = topic[1];
-    var btn = document.querySelector('[data-group="topic"][data-filter="' + val + '"]');
-    if (!btn) return;
-    document.querySelectorAll('[data-group="topic"]').forEach(function (b) { b.classList.remove('active'); });
-    btn.classList.add('active');
-    applyFilters();
-    document.querySelector('.pub-filters').scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-
-  function applyFilters() {
-    var yearBtn  = document.querySelector('[data-group="year"].active');
-    var topicBtn = document.querySelector('[data-group="topic"].active');
-    var yearVal  = yearBtn  ? yearBtn.getAttribute('data-filter')  : 'all';
-    var topicVal = topicBtn ? topicBtn.getAttribute('data-filter') : 'all';
-
-    function matches(el) {
-      var year   = el.getAttribute('data-year') || '';
-      var topics = (el.getAttribute('data-topics') || '').split(',');
-      return (yearVal === 'all' || year === yearVal) &&
-             (topicVal === 'all' || topics.indexOf(topicVal) !== -1);
-    }
-
-    /* highlighted pub cards */
-    document.querySelectorAll('.pub-item').forEach(function (card) {
-      card.style.display = matches(card) ? '' : 'none';
+    var total = 0;
+    archive.querySelectorAll('.pub-item, .full-pub-item').forEach(function (entry) {
+      var topics = (entry.dataset.topics || '').split(',').map(function (t) { return t.trim(); });
+      var match = (state.year === 'all' || entry.dataset.year === state.year) && (state.topic === 'all' || topics.indexOf(state.topic) !== -1);
+      entry.hidden = !match;
+      if (match && entry.classList.contains('full-pub-item')) total++;
     });
-
-    /* hide rows that have no visible children */
-    document.querySelectorAll('.pub-row').forEach(function (row) {
-      var vis = row.querySelectorAll('.pub-item:not([style*="none"])').length;
-      row.style.display = vis ? '' : 'none';
+    archive.querySelectorAll('.pub-row').forEach(function (row) {
+      row.hidden = !Array.from(row.querySelectorAll('.pub-item')).some(function (entry) { return !entry.hidden; });
     });
-
-    /* full pub list */
-    document.querySelectorAll('.full-pub-item').forEach(function (item) {
-      item.style.display = matches(item) ? '' : 'none';
-    });
-
-    /* show empty-state message */
-    var none = document.getElementById('pubNoResults');
-    if (none) {
-      var total = document.querySelectorAll('.pub-item:not([style*="none"])').length +
-                  document.querySelectorAll('.full-pub-item:not([style*="none"])').length;
-      none.style.display = total ? 'none' : '';
+    document.getElementById('pubNoResults').hidden = total !== 0;
+    document.getElementById('pubResultCount').textContent = total + (total === 1 ? ' publication' : ' publications');
+    if (updateUrl) {
+      var url = new URL(window.location.href);
+      Object.keys(state).forEach(function (group) { if (state[group] === 'all') url.searchParams.delete(group); else url.searchParams.set(group, state[group]); });
+      history.replaceState(null, '', url);
     }
   }
+  archive.addEventListener('click', function (event) {
+    var filter = event.target.closest('[data-filter]');
+    var tag = event.target.closest('[data-topic]');
+    if (filter) state[filter.dataset.group] = filter.dataset.filter;
+    else if (tag) state.topic = tag.dataset.topic;
+    else if (event.target.closest('#pubReset')) state = { year: 'all', topic: 'all' };
+    else return;
+    apply(true);
+    if (tag) archive.querySelector('.pub-filters').scrollIntoView({ behavior: 'auto', block: 'start' });
+  });
+  apply(false);
+  if (state.topic !== 'all' || state.year !== 'all') archive.querySelector('.pub-filters').scrollIntoView({ behavior: 'auto', block: 'start' });
 })();
 
 /* ── 3. Team search ───────────────────────────── */
@@ -177,7 +139,7 @@
   });
 })();
 
-/* ── Outreach filter (blog / workshop) ───────── */
+/* Outreach filters: events and lab-authored research stories. */
 (function () {
   var btns = document.querySelectorAll('.outreach-filter-btn');
   if (!btns.length) return;
@@ -186,6 +148,11 @@
 
   function apply(val) {
     var shown = 0;
+    btns.forEach(function (b) {
+      var active = b.getAttribute('data-outreach-filter') === val;
+      b.classList.toggle('active', active);
+      b.setAttribute('aria-pressed', String(active));
+    });
     cards.forEach(function (card) {
       var match = val === 'all' || card.getAttribute('data-kind') === val;
       card.style.display = match ? '' : 'none';
@@ -196,13 +163,12 @@
 
   btns.forEach(function (btn) {
     btn.addEventListener('click', function () {
-      btns.forEach(function (b) { b.classList.remove('active'); });
-      this.classList.add('active');
       apply(this.getAttribute('data-outreach-filter'));
     });
   });
 
-  /* deep link, e.g. /outreach/?show=workshop */
+  apply('all');
+  /* Optional type selection from the URL. */
   var want = new URLSearchParams(window.location.search).get('show');
   if (want) {
     var target = document.querySelector('.outreach-filter-btn[data-outreach-filter="' + want + '"]');
@@ -292,4 +258,43 @@
       btn.classList.remove('bibtex-copied');
     }, 2000);
   }
+})();
+
+/* Gallery: native modal dialog keeps keyboard focus inside the viewer. */
+(function () {
+  var viewer = document.getElementById('galleryViewer');
+  if (!viewer || !viewer.showModal) return;
+  var photos = Array.from(document.querySelectorAll('.gallery-photo'));
+  var current = 0;
+  var opener;
+  function show(index) {
+    current = (index + photos.length) % photos.length;
+    var photo = photos[current];
+    var image = document.getElementById('galleryLargeImage');
+    image.src = photo.href;
+    image.alt = photo.dataset.galleryCaption;
+    document.getElementById('galleryCaption').textContent = photo.dataset.galleryCaption;
+    document.getElementById('galleryPosition').textContent = (current + 1) + ' / ' + photos.length;
+    document.getElementById('galleryOriginal').href = photo.href;
+  }
+  photos.forEach(function (photo, index) {
+    photo.addEventListener('click', function (event) {
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      opener = photo;
+      show(index);
+      viewer.showModal();
+    });
+  });
+  document.getElementById('galleryPrevious').addEventListener('click', function () { show(current - 1); });
+  document.getElementById('galleryNext').addEventListener('click', function () { show(current + 1); });
+  document.getElementById('galleryClose').addEventListener('click', function () { viewer.close(); });
+  viewer.addEventListener('keydown', function (event) {
+    if (event.key === 'ArrowLeft') { event.preventDefault(); show(current - 1); }
+    if (event.key === 'ArrowRight') { event.preventDefault(); show(current + 1); }
+  });
+  viewer.addEventListener('close', function () {
+    document.getElementById('galleryLargeImage').removeAttribute('src');
+    if (opener) opener.focus({ preventScroll: true });
+  });
 })();

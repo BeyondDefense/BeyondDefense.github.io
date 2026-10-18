@@ -6,7 +6,13 @@
 /* ============================================================
    DESIGN TOKENS
    ============================================================ */
-:root {
+ :root {
+  --type-page-title: clamp(2rem, 3vw, 2.65rem);
+  --type-section-title: clamp(1.35rem, 2vw, 1.65rem);
+  --type-subsection-title: 1.1rem;
+  --space-title-after: 18px;
+  --space-section-after: 20px;
+  --space-subsection-after: 12px;
   --navy:       #0B2447;
   --navy-light: #163369;
   --red:       #8a0619;
@@ -28,7 +34,7 @@
      colour on navy fills (buttons, active filter pill). */
   --surface:    #E8EDFA;
   /* Same colour as --bg, with alpha, for the frosted navbar. */
-  --nav-bg:     rgba(240,244,255,.45);
+  --nav-bg:     rgba(240,244,255,.15);
   --border:     #D9E4F0;
   --text:       #1A202C;
   --text-muted: #64748B;
@@ -83,9 +89,9 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
 }
 
-h1 { font-size: 2.1rem;  margin-bottom: 0.8rem; }
-h2 { font-size: 1.5rem;  margin-bottom: 0.65rem; }
-h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+h1 { font-size: var(--type-page-title); margin-bottom: var(--space-title-after); }
+h2 { font-size: var(--type-section-title); line-height: 1.35; margin-bottom: var(--space-section-after); }
+h3 { font-size: var(--type-subsection-title); line-height: 1.4; margin-bottom: var(--space-subsection-after); }
 h4 { font-size: 1.05rem; margin-bottom: 0.4rem; }
 
 p { margin-bottom: 1rem; font-size: 1rem; }
@@ -94,7 +100,7 @@ p { margin-bottom: 1rem; font-size: 1rem; }
 [data-theme="dark"] {
   --bg:         #060d1f;
   --surface:    #0d1b35;
-  --nav-bg:     rgba(6,13,31,.45);
+  --nav-bg:     rgba(6,13,31,.20);
   --border:     #1e3154;
   --text:       #e2e8f0;
   --text-muted: #94a3b8;
@@ -124,7 +130,7 @@ p { margin-bottom: 1rem; font-size: 1rem; }
 }
 [data-theme="dark"] .navbar-default .navbar-brand,
 [data-theme="dark"] .navbar-default .navbar-nav > .active > a { color: #fff !important; }
-[data-theme="dark"] .navbar-default .navbar-nav > li > a { color: rgba(255,255,255,.85) !important; }
+[data-theme="dark"] .navbar-default .navbar-nav > li > a { color: #f8fafc !important; }
 [data-theme="dark"] .navbar-default .navbar-toggle { border-color: rgba(255,255,255,.3); }
 [data-theme="dark"] .navbar-default .navbar-toggle .icon-bar { background-color: #fff; }
 [data-theme="dark"] .navbar-default .navbar-toggle:hover,
@@ -223,9 +229,9 @@ $nav-h: 80px;
 
 /* Nav links */
 .navbar-default .navbar-nav > li > a {
-  color: var(--text-muted) !important;
+  color: var(--text) !important;
   font-size: 0.88rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.05em;
   line-height: $nav-h;
   padding-top: 0;
@@ -311,7 +317,7 @@ $nav-h: 80px;
 [data-theme="dark"] #homeid::before { opacity: 1; }
 
 #homeid h1 {
-  font-size: 2rem;
+  font-size: var(--type-page-title);
   display: flex;
   align-items: center;
   gap: 12px;
@@ -334,15 +340,13 @@ $nav-h: 80px;
   margin-bottom: 1.1rem;
 }
 .home-hero-text {
-  flex: 1 1 0;
-  /* Floor the text column so narrower desktops shrink the image instead of
-     crushing the paragraph to a few words per line. */
-  min-width: 300px;
+  flex: 0 1 34%;
+  min-width: 0;
 }
 .home-hero-text .home-body:last-child { margin-bottom: 0; }
 .home-hero .home-cover {
-  flex: 1 1 64%;
-  max-width: 600px;
+  flex: 1 1 66%;
+  max-width: none;
   min-width: 0;
   margin: 0;
 }
@@ -354,14 +358,21 @@ $nav-h: 80px;
   #newsid { width: 28%; }
 }
 /* Fixed rail once there is room for it, so the news column stays a constant
-   410px instead of growing with the screen. Below 992px it falls back to the
+   340px instead of growing with the screen. Below 992px it falls back to the
    percentage split above, and below 768px the columns stack. */
 @media (min-width: 992px) {
-  #homeid { width: calc(100% - 410px); }
-  #newsid { width: 410px; }
+  #homeid { width: calc(100% - 340px); }
+  #newsid { width: 340px; }
+}
+/* Stack when the main column cannot comfortably fit the text and photo. */
+#homeid { container-type: inline-size; }
+@container (max-width: 700px) {
+  .home-hero { flex-direction: column; align-items: stretch; gap: 16px; }
+  .home-hero-text, .home-hero .home-cover { flex-basis: auto; }
 }
 @media (max-width: 767px) {
   .home-hero { flex-direction: column; align-items: stretch; gap: 16px; }
+  .home-hero-text, .home-hero .home-cover { flex-basis: auto; }
 }
 
 /* Homepage cover photo */
@@ -467,23 +478,15 @@ figure.fifth img:hover { opacity: 1; filter: none; }
   text-transform: uppercase;
   color: var(--text-muted);
   margin-bottom: 16px;
-  padding-bottom: 10px;
+  padding-bottom: 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
   border-bottom: none;
-  position: relative;
-}
-#newsid h4::after {
-  content: '';
-  display: block;
-  position: absolute;
-  bottom: 0; left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, var(--red), transparent);
 }
 
 #newsid p {
-  font-size: 0.94rem;
-  line-height: 1.6;
+  font-size: 0.86rem;
+  line-height: 1.55;
   padding: 10px 0;
   border-bottom: 1px solid var(--border);
   margin-bottom: 0;
@@ -491,28 +494,31 @@ figure.fifth img:hover { opacity: 1; filter: none; }
 
 #newsid p:last-of-type { border-bottom: none; }
 
+/* Inline lead-in rather than a chip on its own line: the chip idiom is what
+   .pub-tag and .outreach-meta use for filter links, and these dates aren't
+   clickable. Running it into the headline also gives back a line per item. */
 #newsid p em {
-  display: block;
+  display: inline;
   font-size: 0.7rem;
   font-style: normal;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  /* Non-interactive date label: quiet navy-tinted chip, no red. */
-  color: var(--navy);
-  background: var(--chip-bg);
-  border: 1px solid var(--chip-border);
-  border-radius: 20px;
-  padding: 2px 10px;
-  margin-bottom: 6px;
-  width: fit-content;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+#newsid p em::after {
+  /* Literal, not \00b7: a CSS hex escape is terminated by whitespace and eats
+     it, so '\00b7 ' renders with no space before the headline. */
+  content: ' · ';
+  font-weight: 400;
 }
 
 
 #newsid a.see-all {
   display: inline-block;
   margin-top: 14px;
-  font-size: 0.88rem;
+  font-size: 0.82rem;
   font-weight: 600;
   color: var(--navy);
   border-bottom: 2px solid var(--red);
@@ -528,124 +534,47 @@ figure.fifth img:hover { opacity: 1; filter: none; }
   padding: 32px 16px;
 }
 
-#gridid h1 { margin-bottom: 32px; }
 
 #gridid h2 {
-  margin-top: 44px;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: none;
-  position: relative;
+  margin: 0 0 20px;
+  padding: 0;
+  border: 0;
   clear: both;
 }
-#gridid h2::after {
-  content: '';
-  display: block;
-  position: absolute;
-  bottom: 0; left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, var(--red), transparent);
+#gridid .team-page section {
+  border-top: 1px solid var(--border);
+  padding-top: 32px;
+  margin-top: 32px;
 }
 
-/* Team grid — rows become 4-col CSS grid (scoped to team page only) */
-#gridid .team-page .row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  margin-bottom: 16px;
-  &::before, &::after { display: none; }
-  @media (max-width: 900px) { grid-template-columns: 1fr 1fr; }
-  @media (max-width: 480px) { grid-template-columns: 1fr; }
+/* Shared, continuous portrait grids for members, collaborators, and alumni. */
+#gridid .team-page {
+  .team-profile-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 28px 24px; margin-bottom: 28px; }
+  .team-faculty-grid { grid-template-columns: repeat(2, minmax(0, 240px)); }
+  .team-profile { text-align: center; padding: 12px 8px; min-width: 0; }
+  .team-photo { display: block; width: 110px; height: 110px; object-fit: cover; border-radius: 50%; margin: 0 auto 14px; }
+  .team-profile h3 { font-size: var(--type-subsection-title); line-height: 1.4; margin: 0 0 7px; }
+  .team-role, .team-duration, .team-highlight { display: block; font-size: .9rem; line-height: 1.6; }
+  .team-role { color: var(--text); }
+  .team-duration, .team-highlight { color: var(--text-muted); }
+  .team-highlight { font-style: italic; }
+  .team-history-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+  .team-history-grid h3 { font-size: var(--type-subsection-title); }
+  .team-history-grid ul { padding-left: 20px; line-height: 1.8; }
+  section { scroll-margin-top: 110px; }
+  a:focus-visible { outline: 2px solid var(--red); outline-offset: 4px; }
 }
-
-/* Group members: five across. Scoped to .row-members so the alumni rows keep
-   the default grid above. */
-#gridid .team-page .row.row-members {
-  grid-template-columns: repeat(5, 1fr);
-  @media (max-width: 1200px) { grid-template-columns: repeat(3, 1fr); }
-  @media (max-width: 900px)  { grid-template-columns: 1fr 1fr; }
-  @media (max-width: 480px)  { grid-template-columns: 1fr; }
-}
-
-#gridid .team-page .row.row-faculty {
-  grid-template-columns: repeat(2, minmax(0, 280px));
-  justify-content: center;
-}
-
-#gridid .team-page .col-sm-6 {
-  width: 100% !important;
-  float: none !important;
-  padding: 0 !important;
-}
-
-/* Vertical centered card */
-#gridid .team-page .col-sm-6.clearfix {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 14px 12px 12px !important;
-  margin: 0;
-  box-shadow: var(--shadow-sm);
-  transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
-  text-align: center;
-  display: flex !important;
-  flex-direction: column;
-  align-items: center;
-  &:hover {
-    box-shadow: 0 0 0 1px var(--red), 0 6px 28px var(--red-glow);
-    border-color: var(--red);
-    transform: translateY(-3px);
-  }
-  h4 {
-    font-size: 0.95rem;
-    font-weight: 700;
-    margin-bottom: auto;
-    padding-bottom: 4px;
-    a { color: var(--navy); }
-    a:hover { color: var(--red-dark); }
+@media (max-width: 480px) {
+  #gridid .team-page {
+    .team-profile-grid, .team-faculty-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 12px; }
+    .team-history-grid { grid-template-columns: 1fr; }
   }
 }
-
-.team-photo {
-  width: 110px !important;
-  height: 110px !important;
-  object-fit: cover;
-  border-radius: 50% !important;
-  border: 3px solid var(--border) !important;
-  margin: 0 0 8px 0 !important;
-  float: none !important;
-  box-shadow: 0 2px 10px rgba(0,0,0,.12);
+@media (max-width: 350px) {
+  #gridid .team-page .team-profile-grid { grid-template-columns: 1fr; }
 }
-
-.team-role {
-  display: block;
-  font-size: 0.78rem;
-  color: var(--text-muted);
-  margin: 0;
-  line-height: 1.4;
-}
-/* Kramdown wraps img and span.team-role in <p> tags; kill their margins */
-#gridid .team-page .col-sm-6.clearfix > p {
-  margin: 0;
-  padding: 0;
-}
-
-.team-duration {
-  display: block;
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  margin: 0;
-  line-height: 1.4;
-}
-
-.team-highlight {
-  display: block;
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  font-style: italic;
-  margin: 0;
-  line-height: 1.4;
+@media (min-width: 768px) and (max-width: 1199px) {
+  #gridid .team-page section { scroll-margin-top: 185px; }
 }
 
 .team-edu {
@@ -668,85 +597,6 @@ figure.fifth img:hover { opacity: 1; filter: none; }
     }
     p { margin: 0; font-size: 0.78rem; display: inline; }
   }
-}
-
-/* Visitors section */
-.visitors-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-top: 8px;
-}
-
-.visitors-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 20px 24px;
-  h4 {
-    font-size: 0.82rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    margin-bottom: 12px;
-  }
-  ul { list-style: none; padding: 0; margin: 0; }
-  ul li { font-size: 0.88rem; padding: 4px 0; border-bottom: 1px solid var(--border); }
-  ul li:last-child { border-bottom: none; }
-}
-
-/* Frequent Collaborators */
-.collab-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
-  margin-top: 8px;
-}
-.collab-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 16px 18px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: box-shadow var(--transition), border-color var(--transition), transform var(--transition);
-  &:hover {
-    box-shadow: 0 0 0 1px var(--red), 0 6px 28px var(--red-glow);
-    border-color: var(--red);
-    transform: translateY(-3px);
-  }
-  h4 {
-    font-size: 0.95rem;
-    font-weight: 700;
-    margin: 0 0 4px;
-    a { color: var(--navy); }
-    a:hover { color: var(--red-dark); }
-  }
-}
-.collab-photo {
-  width: 88px;
-  height: 88px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid var(--border);
-  margin: 0 0 10px 0;
-  box-shadow: 0 2px 10px rgba(0,0,0,.12);
-}
-.collab-affil {
-  display: block;
-  font-size: 0.78rem;
-  color: var(--text-muted);
-  line-height: 1.4;
-}
-.collab-note {
-  display: block;
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  font-style: italic;
-  margin-top: 4px;
-  line-height: 1.4;
 }
 
 #gridid h4 {
@@ -773,22 +623,10 @@ figure.fifth img:hover { opacity: 1; filter: none; }
    PUBLICATIONS
    ============================================================ */
 #publications { padding: 32px 16px; }
-#publications h1 { margin-bottom: 8px; }
 #publications h2 {
-  font-size: 1.1rem;
-  margin: 32px 0 16px;
-  padding-bottom: 8px;
-  border-bottom: none;
-  position: relative;
-}
-#publications h2::after {
-  content: '';
-  display: block;
-  position: absolute;
-  bottom: 0; left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, var(--red), transparent);
+  margin: 32px 0 var(--space-section-after);
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
 }
 
 #publications .well,
@@ -801,11 +639,7 @@ figure.fifth img:hover { opacity: 1; filter: none; }
   box-shadow: var(--shadow-sm);
   transition: box-shadow var(--transition), border-color var(--transition);
 }
-#publications .well:hover,
-.pub-card:hover {
-  box-shadow: 0 0 0 1px var(--red), 0 6px 28px var(--red-glow);
-  border-color: var(--red);
-}
+
 
 /* Publication title */
 pubtit, .pubtit {
@@ -848,19 +682,12 @@ pubtit, .pubtit {
   max-width: 760px;
 }
 
-#textid h1 { margin-bottom: 24px; font-size: 1.75rem; }
 #textid h2 {
-  font-size: 1.25rem;
-  margin: 32px 0 14px;
-  padding-left: 12px;
-  border-left: 4px solid var(--red);
-  border-radius: 0;
+  margin: 32px 0 var(--space-section-after);
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
 }
-#textid h3 {
-  font-size: 1.05rem;
-  color: var(--navy-light);
-  margin: 20px 0 8px;
-}
+#textid h3 { margin: 20px 0 var(--space-subsection-after); }
 #textid p { font-size: 1rem; }
 #textid ul, #textid ol {
   padding-left: 20px;
@@ -874,21 +701,12 @@ pubtit, .pubtit {
 #picid {
   padding: 32px 16px;
 }
-#picid img {
-  margin: 6px 4px 48px 4px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-sm);
-  transition: box-shadow var(--transition), transform var(--transition);
-}
-#picid img:hover {
-  box-shadow: 0 0 0 1px var(--red), 0 6px 28px var(--red-glow);
-  transform: scale(1.02);
-}
-
 /* Gallery group headings — size comes from the global h2 rule. */
 #picid h2 {
   color: var(--navy);
-  margin: 2rem 0 1rem;
+  margin: 2rem 0 var(--space-section-after);
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
 }
 #picid h2:first-of-type { margin-top: 0; }
 .gallery-grid {
@@ -949,13 +767,6 @@ pubtit, .pubtit {
   text-decoration: none !important;
   transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
-a.outreach-card:hover {
-  border-color: var(--red);
-  box-shadow: 0 0 0 1px var(--red-glow), 0 4px 14px var(--red-glow);
-  transform: translateY(-2px);
-  text-decoration: none !important;
-}
-.outreach-card--static { cursor: default; }
 /* Matches the news date chip and .pub-tag. */
 .outreach-meta {
   display: inline-block;
@@ -1237,7 +1048,6 @@ hr.section-divider {
      width, so the 84px set on body must apply here too. A smaller value
      slides the first element on the page under the fixed bar. */
   #homeid, #newsid { padding: 16px 12px; }
-  #homeid h1 { font-size: 1.5rem; }
   .member-card { flex-direction: column; align-items: center; text-align: center; }
   .member-card-body ul { text-align: left; }
   #newsid { padding-left: 0; }
@@ -1345,14 +1155,6 @@ hr.section-divider {
 /* ============================================================
    RESEARCH AREA HEX GRID
    ============================================================ */
-.research-grid {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin: 28px 0 32px;
-}
-
 .hex-wrap {
   width: 148px;
   position: relative;
@@ -1379,10 +1181,7 @@ hr.section-divider {
   transition: filter var(--transition), transform var(--transition);
 }
 
-.hex-tile:hover {
-  filter: drop-shadow(0 0 10px var(--red)) brightness(1.15);
-  transform: translateY(-4px);
-}
+
 
 .hex-tile svg {
   width: 32px;
@@ -1502,11 +1301,7 @@ hr.section-divider {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  transition: box-shadow var(--transition), border-color var(--transition);
-  &:hover {
-    border-color: var(--red);
-    box-shadow: 0 4px 16px var(--red-glow);
-  }
+
 }
 
 .full-pub-title {
@@ -1661,291 +1456,62 @@ a.pub-highlight-badge:hover {
   max-width: 100%;
 }
 
-/* ── Vacancies page ─────────────────────────────── */
-#textid:has(.vacancy-page) {
-  max-width: 100%;
+/* ── Opportunities: editorial layout, aligned with the Research page. */
+#textid:has(.vacancy-page) { max-width: 100%; }
+#textid .vacancy-page {
+  h1 { font-size: var(--type-page-title); margin-bottom: var(--space-title-after); }
+  h2 { font-size: var(--type-section-title); line-height: 1.35; margin: 0 0 var(--space-section-after); padding: 0; border: 0; }
+  h3 { font-size: var(--type-subsection-title); line-height: 1.4; margin: 22px 0 10px; color: var(--navy); }
+  p, li { line-height: 1.8; color: var(--text); }
+  a { text-underline-offset: 4px; }
+  a:focus-visible { outline: 2px solid var(--red); outline-offset: 4px; }
+  .vacancy-header { padding: 8px 0 34px; }
+  .vacancy-header > p { max-width: 850px; }
+  .vacancy-lead { font-size: 1.35rem; font-weight: 500; color: var(--navy); }
+  .vacancy-nav { display: flex; flex-wrap: wrap; gap: 8px 26px; margin-top: 25px; }
+  .vacancy-nav a { display: inline-flex; align-items: center; min-height: 44px; font-size: .92rem; border-bottom: 1px solid var(--border); }
+  .vacancy-role, .vacancy-mentorship, .vacancy-community { border-top: 1px solid var(--border); padding: 34px 0; scroll-margin-top: 110px; }
+  .vacancy-mentorship > p { max-width: 850px; }
+  .vacancy-role-columns { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 40px; margin-top: 24px; }
+  .vacancy-role-columns > div { min-width: 0; }
+  .vacancy-role-columns h3:first-child { margin-top: 0; }
+  .vacancy-application > p:first-child { margin-top: 0; }
+  .vacancy-application a { overflow-wrap: anywhere; }
+  .vacancy-email { display: inline-block; padding: 8px 0; font-weight: 500; }
+  .vacancy-mentorship { border-left: 3px solid var(--red); padding: 24px; margin: 12px 0 32px; background: var(--surface); }
+  .vacancy-mentorship h2 { font-size: var(--type-section-title); }
+  .vacancy-community { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+  .vacancy-community figure { margin: 0; }
+  .vacancy-community img { display: block; width: 100%; height: auto; border-radius: 2px; }
+  .vacancy-community figcaption { text-align: left; margin: 8px 0 0; }
 }
-.vacancy-header {
-  margin-bottom: 2rem;
-  h1 { margin-bottom: 0.5rem; }
-}
-.hiring-badge {
-  display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #fff;
-  background: #27ae60;
-  border-radius: 20px;
-  padding: 3px 12px;
-  vertical-align: middle;
-  margin-left: 10px;
-}
-.vacancy-intro {
-  font-size: 1rem;
-  color: var(--text-muted);
-  max-width: 680px;
-  margin-bottom: 0.75rem;
-}
-.trait-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 1.5rem;
-}
-.trait-pill {
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #fff;
-  background: var(--red);
-  border-radius: 20px;
-  padding: 3px 12px;
-}
-[data-theme="dark"] .trait-pill {
-  background: var(--red-soft-bg) !important;
-  color: var(--red) !important;
-  border: 1px solid var(--red-soft-border);
-}
-.vacancy-columns {
-  display: flex;
-  gap: 1.5rem;
-  align-items: flex-start;
-}
-.vacancy-roles {
-  flex: 1 1 0;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-.role-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.25rem 1.5rem;
-  transition: box-shadow 0.25s ease;
-  h3 { margin-top: 0.5rem; margin-bottom: 0.5rem; font-family: 'Exo 2', sans-serif; }
-  p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.75rem; }
-  &:hover { box-shadow: 0 0 0 2px var(--red-glow), 0 4px 18px rgba(0,0,0,.18); }
-}
-.role-card--accent {
-  border-color: rgba(247,201,72,.35);
-}
-/* Same chip treatment as .pub-tag — these are the same kind of element.
-   Previously #fff on var(--navy), which is fine in light mode but renders
-   white-on-light-blue in dark mode, where --navy flips to #93c5fd. */
-.role-tag {
-  display: inline-block;
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--navy);
-  background: var(--chip-bg);
-  border: 1px solid var(--chip-border);
-  border-radius: 20px;
-  padding: 2px 9px;
-}
-.role-checklist {
-  padding-left: 0;
-  list-style: none;
-  margin-bottom: 1rem;
-  li {
-    font-size: 0.88rem;
-    color: var(--text-muted);
-    padding: 3px 0 3px 1.5rem;
-    position: relative;
-    &::before {
-      content: '✓';
-      position: absolute;
-      left: 0;
-      color: var(--red);
-      font-weight: 700;
-    }
+[data-theme="dark"] #textid .vacancy-page .vacancy-lead { color: #e2e8f0; }
+@media (min-width: 768px) and (max-width: 1199px) {
+  #textid .vacancy-page {
+    .vacancy-role, .vacancy-mentorship { scroll-margin-top: 185px; }
   }
 }
-/* Colour, radius and hover come from the shared primary-button rule near
-   the home CTAs; only layout lives here. */
-.apply-btn {
-  display: inline-block;
-  font-size: 0.8rem;
-  font-weight: 700;
-  padding: 6px 16px;
-  text-decoration: none !important;
-}
-.apply-note {
-  font-size: 0.75rem !important;
-  color: var(--text-muted) !important;
-  margin-top: 0.5rem !important;
-}
-.vacancy-sidebar {
-  /* 240px dated from the old 1080px-capped container; on the full-width
-     layout it left the role cards at ~81% of the row. */
-  width: 380px;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-.apply-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.25rem;
-  h4 { font-family: 'Exo 2', sans-serif; margin-top: 0; margin-bottom: 0.5rem; }
-  p { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem; }
-}
-/* As .apply-btn: layout only, styling from the shared primary rule. */
-.apply-email-btn {
-  display: block;
-  text-align: center;
-  font-size: 0.82rem;
-  font-weight: 700;
-  padding: 8px 12px;
-  text-decoration: none !important;
-  word-break: break-all;
-}
-.apply-divider {
-  border-color: var(--border);
-  margin: 1rem 0;
-}
-.sidebar-info {
-  font-size: 0.82rem;
-  color: var(--text-muted);
-  p { margin-bottom: 0.6rem !important; }
-  a { color: var(--red) !important; }
-}
-.vacancy-img {
-  margin: 0;
-  img { width: 100%; border-radius: var(--radius); }
-}
-@media (max-width: 768px) {
-  .vacancy-columns { flex-direction: column; }
-  .vacancy-sidebar { width: 100%; }
+@media (max-width: 767px) {
+  #textid .vacancy-page {
+    .vacancy-role, .vacancy-community { padding-block: 28px; }
+    .vacancy-community, .vacancy-role-columns { grid-template-columns: 1fr; gap: 22px; }
+    .vacancy-mentorship { padding: 22px 18px; }
+  }
 }
 
 /* ── Research page ──────────────────────────────── */
-/* No max-width: like #publications and #gridid, this fills the 7% container.
-   The prose that needs a readable measure caps itself (.research-intro). */
+/* Research wrapper; the agenda below controls its content widths. */
 #research {
   padding: 32px 16px;
 }
-.research-hero {
-  margin-bottom: 2.5rem;
-}
-.research-intro {
-  font-size: 1.05rem;
-  color: var(--text-muted);
-  max-width: 780px;
-  line-height: 1.85;
-}
 .section-heading {
   font-family: 'Exo 2', sans-serif;
-  font-size: 1.4rem;
+  font-size: var(--type-section-title);
   color: var(--navy);
-  margin-bottom: 1.25rem;
-  padding-bottom: 0.4rem;
-  border-bottom: 2px solid transparent;
-  border-image: linear-gradient(90deg, var(--red), transparent) 1;
+  margin-bottom: var(--space-section-after);
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
 }
-.research-grid {
-  display: grid;
-  /* One row of four. Dropping to two then one keeps the cards readable once
-     the 1080px page cap stops giving each column enough room. */
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.25rem;
-  margin-bottom: 2.5rem;
-  @media (max-width: 1100px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @media (max-width: 600px) {
-    grid-template-columns: 1fr;
-  }
-}
-.research-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  transition: box-shadow 0.25s ease, transform 0.25s ease;
-  &:hover {
-    box-shadow: 0 0 0 2px var(--red-glow), 0 6px 24px rgba(0,0,0,.15);
-    transform: translateY(-3px);
-  }
-  h3 {
-    margin-top: 0.75rem;
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
-  }
-  p {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    flex: 1;
-    margin-bottom: 1rem;
-  }
-}
-.research-icon {
-  width: 48px;
-  height: 48px;
-  background: #0B2447;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.2s ease;
-  svg {
-    width: 24px;
-    height: 24px;
-    stroke: #ffffff;
-  }
-}
-[data-theme="dark"] .research-icon {
-  background: #1e3154;
-}
-.research-card:hover .research-icon {
-  background: var(--red-solid);
-}
-/* Layout only; colour, radius and hover come from the shared primary rule. */
-.research-pub-badge {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 4px 10px;
-  text-decoration: none !important;
-  margin-top: auto;
-  width: fit-content;
-}
-.project-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 2rem;
-}
-.project-chip {
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--text);
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 6px 16px;
-  transition: border-color 0.2s ease, color 0.2s ease;
-  &:hover {
-    border-color: var(--red);
-    color: var(--navy);
-  }
-}
-.research-footer {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  margin-top: 1rem;
-}
-
 /* ── Home page redesign ─────────────────────────── */
 .home-intro {
   margin-bottom: 1.75rem;
@@ -2070,15 +1636,9 @@ a.pub-highlight-badge:hover {
    Listed after the .cta-btn rules above, which are equally specific. */
 .home-ctas .cta-primary,
 .join-card .cta-primary,
-.apply-btn,
-.apply-email-btn,
-.research-pub-badge,
 .workshop-links .cta-primary,
 [data-theme="dark"] .home-ctas .cta-primary,
 [data-theme="dark"] .join-card .cta-primary,
-[data-theme="dark"] .apply-btn,
-[data-theme="dark"] .apply-email-btn,
-[data-theme="dark"] .research-pub-badge,
 [data-theme="dark"] .workshop-links .cta-primary {
   background: var(--navy) !important;
   color: var(--surface) !important;
@@ -2088,19 +1648,12 @@ a.pub-highlight-badge:hover {
 }
 .home-ctas .cta-primary:hover,
 .join-card .cta-primary:hover,
-.apply-btn:hover,
-.apply-email-btn:hover,
-.research-pub-badge:hover,
 .workshop-links .cta-primary:hover,
 [data-theme="dark"] .home-ctas .cta-primary:hover,
 [data-theme="dark"] .join-card .cta-primary:hover,
-[data-theme="dark"] .apply-btn:hover,
-[data-theme="dark"] .apply-email-btn:hover,
-[data-theme="dark"] .research-pub-badge:hover,
 [data-theme="dark"] .workshop-links .cta-primary:hover {
-  /* Same move as .home-area-card:hover .home-area-icon — navy fill goes
-     to --red-solid. Text must be literal #fff, not var(--surface): in dark
-     mode --surface is near-black and would be unreadable on the maroon. */
+  /* Action buttons retain feedback. Use white text on the burgundy fill
+     for contrast in both themes. */
   background: var(--red-solid) !important;
   border-color: var(--red-solid) !important;
   color: #fff !important;
@@ -2111,7 +1664,6 @@ a.pub-highlight-badge:hover {
 /* Research area mini-tiles */
 .home-research-areas {
   margin-bottom: 1.5rem;
-  .section-heading { font-size: 1.1rem; margin-bottom: 0.75rem; }
 }
 .home-area-grid {
   display: grid;
@@ -2138,14 +1690,7 @@ a.pub-highlight-badge:hover {
   font-weight: 600;
   color: var(--navy) !important;
   text-align: center;
-  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
-  &:hover {
-    border-color: var(--red);
-    box-shadow: 0 0 0 1px var(--red-glow), 0 4px 14px var(--red-glow);
-    transform: translateY(-2px);
-    color: var(--navy) !important;
-    text-decoration: none !important;
-  }
+
 }
 .home-area-icon {
   width: 40px;
@@ -2165,9 +1710,7 @@ a.pub-highlight-badge:hover {
 [data-theme="dark"] .home-area-icon {
   background: #1e3154;
 }
-.home-area-card:hover .home-area-icon {
-  background: var(--red-solid);
-}
+
 
 /* Join card */
 .join-card {
@@ -2175,45 +1718,212 @@ a.pub-highlight-badge:hover {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  /* Same idiom as .home-area-card: neutral surface at rest, red only on
-     hover. Keeps the solid CTA button as the single point of emphasis. */
+  /* Quiet container; the action link supplies interactive feedback. */
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 18px 22px;
   margin: 1.5rem 0;
   flex-wrap: wrap;
-  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
   h4 { color: var(--navy); margin: 0 0 4px; font-size: 1rem; }
   p  { color: var(--text-muted); font-size: 0.83rem; margin: 0; line-height: 1.5; }
-  &:hover {
-    border-color: var(--red);
-    box-shadow: 0 0 0 1px var(--red-glow), 0 4px 14px var(--red-glow);
-    transform: translateY(-2px);
-  }
+
 }
 
-/* Sponsors */
+/* Support logos: quiet, balanced spaces with natural wrapping. */
 .sponsors-logos {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 28px;
+  gap: 16px 28px;
   flex-wrap: wrap;
   padding: 12px 0 4px;
-  img {
-    height: 48px;
-    width: auto;
-    object-fit: contain;
-    margin: 0 !important;
-    border-radius: 0 !important;
-    filter: none;
-    opacity: 0.85;
-    transition: opacity 0.2s;
-    &:hover { opacity: 1; }
-  }
+  .support-logo { flex: 1 1 140px; max-width: 210px; min-width: 0; min-height: 84px; display: flex; align-items: center; justify-content: center; }
+  img { display: block; width: 170px; max-width: 100%; height: auto; object-fit: contain; margin: 0; border-radius: 0; filter: none; opacity: 1; }
+  .support-logo--nsf img { width: 70px; }
+  .support-logo--unm img { width: 175px; }
+  .support-logo--otf img { width: 170px; }
 }
-[data-theme="dark"] .sponsors-logos img { opacity: 0.9; }
 .sponsors-logos img.theme-dark { display: none; }
 [data-theme="dark"] .sponsors-logos img.theme-light { display: none; }
 [data-theme="dark"] .sponsors-logos img.theme-dark { display: block; }
+
+/* Mission and research directions within the original homepage layout. */
+#homeid .home-mission {
+  border-left: 3px solid var(--red);
+  padding: 4px 0 4px 18px;
+  margin: 22px 0;
+  h2 { font-size: 1.1rem; margin-bottom: 8px; }
+  p { font-size: 1.08rem; line-height: 1.75; margin: 0; }
+}
+.home-area-grid--2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  .home-area-card { font-size: .9rem; padding: 18px 12px; }
+  @media (max-width: 480px) { grid-template-columns: 1fr; }
+}
+.home-other-research { margin: 18px 0 0; }
+
+/* Only the title shares the icon's row, centred against it. Everything below
+   spans both columns so the prose gets the card's full width. Grid rather
+   than flex because the icon has to occupy just the first row. */
+.home-area-grid--2 .home-direction-card {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  column-gap: 14px;
+  row-gap: 12px;
+  align-items: start;
+  text-align: left;
+  > * { grid-column: 1 / -1; }
+  > .home-area-icon { grid-column: 1; grid-row: 1; align-self: center; }
+  > h3 { grid-column: 2; grid-row: 1; align-self: center; }
+  h3 { font-size: var(--type-subsection-title); line-height: 1.4; margin: 0; }
+  p { color: var(--text); font-size: .94rem; font-weight: 400; line-height: 1.7; margin: 0; }
+  .home-selected-publications { font-size: .86rem; }
+  .home-publications-label { font-style: italic; color: var(--text-muted); }
+
+  a:focus-visible { outline: 2px solid var(--red); outline-offset: 4px; }
+}
+#internet-security, #space-security { scroll-margin-top: 100px; }
+@media (min-width: 768px) and (max-width: 1199px) {
+  #internet-security, #space-security { scroll-margin-top: 180px; }
+}
+
+/* Research agenda: editorial sections with inline scholarly references. */
+#research .research-agenda {
+  max-width: none;
+  margin-inline: auto;
+  h1 { font-size: var(--type-page-title); margin-bottom: var(--space-title-after); }
+  h2 { font-size: var(--type-section-title); line-height: 1.35; margin-bottom: var(--space-section-after); }
+  h3 { font-size: var(--type-subsection-title); line-height: 1.4; font-weight: 700; margin-bottom: 12px; }
+  p { line-height: 1.8; }
+  a { text-underline-offset: 4px; }
+  a:focus-visible { outline: 2px solid var(--red); outline-offset: 4px; }
+  .agenda-intro { padding: 8px 0 34px; }
+  .agenda-intro > p { max-width: 850px; }
+  .agenda-headline { font-size: 1.35rem; font-weight: 500; color: var(--navy); margin-bottom: 20px; }
+  .agenda-nav { display: flex; flex-wrap: wrap; gap: 8px 26px; margin-top: 25px; }
+  .agenda-nav a { display: inline-flex; align-items: center; min-height: 44px; font-size: .92rem; border-bottom: 1px solid var(--border); }
+  .agenda-direction, .agenda-methods { border-top: 1px solid var(--border); padding: 40px 0; scroll-margin-top: 110px; }
+  .agenda-tagline { font-size: 1.1rem; font-weight: 500; margin-bottom: 22px; }
+  .agenda-description { max-width: 850px; margin-bottom: 28px; }
+  .agenda-question { max-width: none; border-left: 3px solid var(--red); padding: 4px 0 4px 18px; margin: 0 0 28px; }
+  .agenda-question p { margin: 0; }
+  .agenda-question .agenda-question-label { font-weight: 600; font-size: .9rem; margin-bottom: 6px; }
+
+  .agenda-themes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
+  .agenda-theme { border-top: 2px solid var(--border); padding-top: 18px; min-width: 0; }
+  .agenda-theme p { font-size: .94rem; }
+  .agenda-topics { color: var(--text-muted); }
+  .agenda-topics > span { font-weight: 500; }
+  .agenda-publications { margin-bottom: 0; }
+  .agenda-publications > span { font-style: italic; color: var(--text-muted); }
+  .agenda-publications a { display: inline-block; padding-block: 5px; }
+  .agenda-complementary { background: var(--surface); padding: 32px; margin-bottom: 32px; }
+  .agenda-complementary h2 { font-size: var(--type-section-title); }
+  .agenda-complementary .agenda-themes { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 32px; }
+  .agenda-methods > p { max-width: 850px; }
+  .agenda-participate { border-top: 1px solid var(--border); padding: 28px 0 0; }
+  .agenda-participate p { max-width: 850px; }
+  .agenda-methods ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 32px; padding-left: 20px; margin: 22px 0 0; }
+}
+[data-theme="dark"] #research .research-agenda .agenda-headline { color: #e2e8f0; }
+@media (min-width: 768px) and (max-width: 1199px) {
+  #research .research-agenda .agenda-direction,
+  #research .research-agenda .agenda-methods { scroll-margin-top: 185px; }
+}
+@media (max-width: 991px) {
+  #research .research-agenda .agenda-themes,
+  #research .research-agenda .agenda-complementary .agenda-themes { grid-template-columns: 1fr; gap: 22px; }
+}
+@media (max-width: 600px) {
+  #research .research-agenda {
+    .agenda-direction, .agenda-methods { padding-block: 28px; }
+    .agenda-complementary { padding: 24px 18px; }
+    .agenda-methods ul { grid-template-columns: 1fr; }
+    .agenda-nav { gap: 4px 20px; }
+  }
+}
+
+.home-research-link { text-align: right; margin: 12px 0 0; }
+
+/* Homepage section dividers match the editorial interior pages. */
+#homeid .section-heading {
+  border: 0;
+  border-image: none;
+  border-top: 1px solid var(--border);
+  padding: 24px 0 0;
+  margin-top: 28px;
+}
+
+/* Publication filter controls; retain the original publication presentation. */
+#gridid:has(.pub-filters) {
+  [hidden] { display: none !important; }
+  .pub-filters { scroll-margin-top: 110px; }
+  #pubReset { background: none; border: 0; color: var(--navy); text-decoration: underline; text-underline-offset: 3px; padding: 8px 0; }
+  #pubResultCount, #pubNoResults { color: var(--text-muted); }
+  .pub-tag { font-family: inherit; text-transform: none; letter-spacing: normal; font-size: .8rem; padding: 5px 11px; }
+  button:focus-visible { outline: 2px solid var(--red); outline-offset: 4px; }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  #gridid .pub-filters { scroll-margin-top: 185px; }
+}
+
+/* Outreach entries expose a heading and explicit action instead of a full-card link. */
+#textid .outreach-card .outreach-title {
+  font-size: var(--type-subsection-title);
+  line-height: 1.4;
+  border: 0;
+  padding: 0;
+  margin: 8px 0 10px;
+}
+#textid .outreach-card .outreach-desc { font-size: .94rem; margin: 10px 0; }
+#textid .outreach-card .outreach-venue { font-size: .85rem; margin: 0 0 8px; }
+.outreach-action { display: inline-block; margin-top: 8px; padding-block: 6px; font-size: .9rem; }
+.outreach-card a:focus-visible, .outreach-filter-btn:focus-visible { outline: 2px solid var(--red); outline-offset: 4px; }
+
+/* Gallery thumbnails and keyboard-accessible full-photo viewer. */
+.gallery-intro { max-width: 850px; margin-bottom: 28px; }
+.gallery-photo { display: block; border-radius: var(--radius); overflow: hidden; }
+.gallery-photo:focus-visible { outline: 3px solid var(--red); outline-offset: 4px; }
+#picid .gallery-grid img { aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); }
+#galleryViewer {
+  width: min(1100px, 94vw);
+  max-width: 94vw;
+  max-height: 92dvh;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  background: var(--bg);
+  overflow: auto;
+}
+#galleryViewer::backdrop { background: rgba(0, 0, 0, .8); }
+#galleryViewer .gallery-viewer-controls { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; }
+#galleryViewer button { background: var(--surface); color: var(--navy); border: 1px solid var(--border); border-radius: 5px; padding: 10px 12px; min-height: 44px; }
+#galleryViewer button:focus-visible, #galleryViewer a:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
+#galleryClose { margin-left: auto; }
+#galleryViewer figure { margin: 0; }
+#picid #galleryLargeImage { display: block; width: 100%; height: auto; max-height: 65dvh; object-fit: contain; margin: 0; border-radius: 0; }
+#galleryViewer figcaption { margin: 14px 0; text-align: left; font-size: .94rem; color: var(--text); }
+#galleryPosition { font-size: .85rem; color: var(--text-muted); }
+#galleryOriginal { font-size: .85rem; }
+html:has(#galleryViewer[open]) { overflow: hidden; }
+
+/* Temporary workshop announcement, in normal flow beneath the fixed navigation. */
+.workshop-banner {
+  background: #8a0619;
+  color: #fff;
+  padding: 10px 0;
+  font-size: .88rem;
+  line-height: 1.7;
+}
+.workshop-banner a, [data-theme="dark"] .workshop-banner a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  display: inline-block;
+  padding-block: 2px;
+}
+.workshop-banner a:hover, [data-theme="dark"] .workshop-banner a:hover { color: #fff; }
+.workshop-banner a:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }

@@ -1,0 +1,83 @@
+# Theme references match existing publication titles; publication records remain authoritative.
+directions:
+  - id: internet-security
+    question: "How can people securely and freely access the Internet without fear of surveillance, censorship, or retaliation?"
+    title: "Internet Freedom & Security"
+    tagline: "Enabling secure and unrestricted access to information for at-risk populations."
+    complementary: false
+    paragraphs:
+      - "Access to an open Internet is essential for communication, knowledge sharing, and individual autonomy. Yet censorship, surveillance, and vulnerabilities in privacy-enhancing technologies can expose users to significant risks, including retaliation."
+      - "Our research investigates the security and resilience of VPN technologies, Internet infrastructure, and online services. Through Internet-scale measurement, adversarial analysis, and protocol evaluation, we seek to understand how these technologies fail, how attackers and censors exploit them, and how to build stronger protections for their users."
+    themes:
+      - title: "VPN & Censorship Resistance"
+        description: "We investigate how censors detect and block VPNs, and explore mechanisms to improve their security and privacy through Internet measurement and infrastructure analysis."
+        topics: "Censorship-resistant protocols, VPN infrastructure, network measurement, infrastructure characterization, and security evaluation."
+        publications:
+          - match: "MVPNalyzer:"
+            label: "NDSS ’26"
+          - match: "Exposing Probe-Resistant"
+            label: "IEEE S&P ’27"
+      - title: "Internet Privacy & Application Security"
+        description: "We investigate privacy leakage, insecure implementations, and vulnerabilities in VPN applications, mobile services, web applications, and Internet-facing infrastructure."
+        topics: "Mobile VPN analysis, web privacy measurement, application security, privacy leakage, and Internet-scale auditing."
+        publications:
+          - match: "MVPNalyzer:"
+            label: "NDSS ’26"
+          - match: "The Tragedy of Convenience:"
+            label: "ACM CCS ’26"
+  - id: space-security
+    question: "How can spacecraft remain secure and resilient against adversaries who can compromise their software, supply chains, or sensors?"
+    title: "Space Security & Resilience"
+    tagline: "Safeguarding the infrastructure and services on which society increasingly depends."
+    complementary: false
+    paragraphs:
+      - "Space systems support essential services ranging from communications and navigation to environmental monitoring and scientific discovery. As spacecraft become increasingly interconnected, software-defined, and autonomous, they introduce new opportunities for adversarial exploitation."
+      - "Our research investigates the security of flight software, autonomy, and operational dependencies. We seek to uncover emerging attack surfaces, understand adversarial capabilities, and develop practical defenses that strengthen the resilience of space infrastructure."
+    themes:
+      - title: "Adversarial Capabilities & Threat Modeling"
+        description: "We investigate security weaknesses across flight software, onboard components, interfaces, and operational dependencies that may expose spacecraft to adversarial exploitation."
+        topics: "Flight software analysis, threat modeling, stealth, and supply-chain security."
+        publications:
+          - match: "Silent Subversion:"
+            label: "IEEE Aerospace ’26"
+          - match: "Trust Without Boundaries:"
+            label: "IEEE RISC ’26"
+      - title: "Space Autonomy & Resource-Aware Defense"
+        description: "We investigate practical defense mechanisms that account for spacecraft power, computation, communication, and operational constraints."
+        topics: "Space autonomy, onboard threat detection, and hardware-aware defensive techniques."
+        publications:
+          - match: "SpyChain:"
+            label: "arXiv"
+  - id: security-analysis
+    title: "Security Analysis & Vulnerability Discovery"
+    tagline: "Uncovering and mitigating security weaknesses in software systems."
+    complementary: true
+    paragraphs:
+      - "Our research also investigates security weaknesses across software, applications, and digital infrastructure. We develop and apply techniques for malware analysis, security auditing, and vulnerability management to understand how weaknesses emerge, how they are exploited, and how their risks can be mitigated."
+      - "This work complements our Internet and space research while addressing broader emerging challenges in software security."
+    themes:
+      - title: "Malware Analysis & Threat Intelligence"
+        description: "Investigating malicious software and emerging threats to understand exploitation techniques and develop adversarially robust defenses."
+        publications:
+          - match: "Statically Dissecting Internet of Things Malware:"
+            label: "ICICS ’20"
+          - match: "Systematically Evaluating the Robustness of ML-based"
+            label: "RAID ’22"
+          - match: "Soteria:"
+            label: "IEEE ICDCS ’20"
+          - match: "Dl-fhmc:"
+            label: "IEEE TDSC ’21"
+      - title: "Vulnerability Management & Risk Assessment"
+        description: "Investigating how vulnerabilities are characterized, prioritized, assessed, and addressed to improve security decision-making and remediation."
+        publications:
+          - match: "Cleaning the NVD:"
+            label: "IEEE TDSC ’22"
+          - match: "Understanding the Hidden Cost of Software Vulnerabilities:"
+            label: "SecureComm ’18"
+      - title: "Web & Mobile Application Security"
+        description: "Examining application vulnerabilities, insecure implementations, and privacy risks across web and mobile ecosystems."
+        publications:
+          - match: "The Tragedy of Convenience:"
+            label: "ACM CCS ’26"
+          - match: "MVPNalyzer:"
+            label: "NDSS ’26"
