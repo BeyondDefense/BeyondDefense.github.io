@@ -116,27 +116,21 @@ This workshop brings together researchers in space systems cybersecurity with go
 |---|---|
 | **7:30–8:30 AM** | Breakfast and Arrival |
 | **8:30–8:45 AM** | Welcome and Workshop Charge |
-| **8:45–9:30 AM** | **NASA:** *Securing Space 2.0* |
+| **8:45–9:30 AM** | **Kendra Cook, NASA IV&V:** *Security Challenges of Space 2.0: From Protecting Systems to Assuring Missions* |
 | **9:30–10:00 AM** | **Introductions and Capability Mapping** |
 | **10:00–10:15 AM** | Break |
-| **10:15–10:55 AM** | **AFRL:** *Autonomous Satellite Systems* |
+| **10:15–10:55 AM** | **Sean Phillips, AFRL:** *Autonomous Satellite Systems* |
 | **10:55–11:55 AM** | **Working Session I: The Next Hard Problems in Space Systems Security** |
 | **11:55–1:10 PM** | Lunch |
-| **1:10–1:50 PM** | **Idaho National Laboratory:** *Satellite Integration into Cellular Networks & Security* |
+| **1:10–1:50 PM** | **Arupjyoti Bhuyan, Idaho National Laboratory:** *Satellite Integration into Cellular Networks & Security* |
 | **1:50–3:00 PM** | **Working Session II: What Will It Take to Build Secure and Trustworthy Space Systems?** |
 | **3:00–3:15 PM** | Break |
-| **3:15–3:55 PM** | **AFRL:** *How Can Academia Help?* |
+| **3:15–3:55 PM** | **Dan Trujillo, AFRL:** *Next-Gen of Cybersecure and Resilient Space Vehicles* |
 | **3:55–4:25 PM** | **Working Session III: Where Academic Research Can Change the Security Equation?** |
 | **4:25–4:35 PM** | *Shared Research Infrastructure: What Do We Have and What Do We Need?* |
 | **4:35–4:55 PM** | *Research Priorities, Commitments, and White Paper* |
-| **4:55–5:00 PM** | **Aerospace Corporation: Closing Remarks** |
+| **4:55–5:00 PM** | **Brandon Bailey, Aerospace Corporation: Closing Remarks** |
 
-<!-- ## Participants
-We will update this soon!
-
-## Organizer
-
-- Afsah Anwar, University of New Mexico -->
 
 ## Sponsor
 

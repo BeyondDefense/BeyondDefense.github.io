@@ -10,6 +10,10 @@
   --type-page-title: clamp(2rem, 3vw, 2.65rem);
   --type-section-title: clamp(1.35rem, 2vw, 1.65rem);
   --type-subsection-title: 1.1rem;
+  --type-body: 1rem;
+  --type-secondary: .9rem;
+  --type-label: .8rem;
+  --type-publication-title: 1rem;
   --space-title-after: 18px;
   --space-section-after: 20px;
   --space-subsection-after: 12px;
@@ -37,7 +41,7 @@
   --nav-bg:     rgba(240,244,255,.15);
   --border:     #D9E4F0;
   --text:       #1A202C;
-  --text-muted: #64748B;
+  --text-muted: #596980;
   --hex-fill:   #0B2447;
   --radius:     10px;
   --shadow-sm:  0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
@@ -49,11 +53,10 @@
 /* ============================================================
    GLOBAL — type scale
    html:      15px (1rem)
-   h1:        2.1rem   — page titles
-   h2:        1.5rem   — section headers
-   h3:        1.25rem  — sub-sections
+   h1/h2:     responsive page and section title tokens
+   h3:        1.1rem   — sub-sections
    h4:        1.05rem  — card headings
-   secondary: 0.94rem  — authors, meta, bullets
+   secondary: 0.9rem  — authors, meta, bullets
    label:     0.8rem   — overlines, tags
    ============================================================ */
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap');
@@ -428,7 +431,7 @@ $nav-h: 80px;
 
 .sponsors-label {
   font-family: 'Exo 2', sans-serif;
-  font-size: 0.75rem;
+  font-size: var(--type-label);
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -473,7 +476,7 @@ figure.fifth img:hover { opacity: 1; filter: none; }
 
 #newsid h4 {
   font-family: 'Exo 2', sans-serif;
-  font-size: 0.8rem;
+  font-size: var(--type-label);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-muted);
@@ -485,7 +488,7 @@ figure.fifth img:hover { opacity: 1; filter: none; }
 }
 
 #newsid p {
-  font-size: 0.86rem;
+  font-size: var(--type-secondary);
   line-height: 1.55;
   padding: 10px 0;
   border-bottom: 1px solid var(--border);
@@ -499,7 +502,7 @@ figure.fifth img:hover { opacity: 1; filter: none; }
    clickable. Running it into the headline also gives back a line per item. */
 #newsid p em {
   display: inline;
-  font-size: 0.7rem;
+  font-size: var(--type-label);
   font-style: normal;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -645,7 +648,7 @@ figure.fifth img:hover { opacity: 1; filter: none; }
 pubtit, .pubtit {
   font-family: 'Exo 2', sans-serif;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: var(--type-publication-title);
   color: var(--navy);
   display: flex;
   align-items: flex-start;
@@ -659,7 +662,7 @@ pubtit, .pubtit {
 #gridid .well p,
 #publications p {
   margin-bottom: 4px;
-  font-size: 0.94rem;
+  font-size: var(--type-secondary);
   line-height: 1.6;
 }
 #gridid .well p em,
@@ -753,7 +756,7 @@ pubtit, .pubtit {
 .outreach-byline,
 .post-byline {
   display: block;
-  font-size: 0.78rem;
+  font-size: var(--type-secondary);
   color: var(--text-muted);
   margin-bottom: 5px;
 }
@@ -770,7 +773,7 @@ pubtit, .pubtit {
 /* Matches the news date chip and .pub-tag. */
 .outreach-meta {
   display: inline-block;
-  font-size: 0.65rem;
+  font-size: var(--type-label);
   font-weight: 700;
   letter-spacing: 0.07em;
   text-transform: uppercase;
@@ -925,7 +928,7 @@ pubtit, .pubtit {
 }
 .person-affil {
   display: block;
-  font-size: 0.72rem;
+  font-size: var(--type-label);
   color: var(--text-muted);
   line-height: 1.35;
 }
@@ -1311,10 +1314,10 @@ hr.section-divider {
   display: flex;
   align-items: flex-start;
   gap: 6px;
-  font-size: 0.98rem;
+  font-size: var(--type-publication-title);
   line-height: 1.45;
 }
-[data-theme="dark"] .full-pub-title { color: var(--text); }
+
 
 p.pub-tags, span.pub-tags {
   display: flex;
@@ -1379,14 +1382,14 @@ a.pub-highlight-badge:hover {
 
 .full-pub-authors {
   display: block;
-  font-size: 0.88rem;
+  font-size: var(--type-secondary);
   color: var(--text-muted);
   font-style: italic;
 }
 
 .full-pub-venue {
   display: block;
-  font-size: 0.88rem;
+  font-size: var(--type-secondary);
   font-weight: 600;
   color: var(--text);
 }
@@ -1561,8 +1564,8 @@ a.pub-highlight-badge:hover {
   &:hover { opacity: 1; }
 }
 .home-body {
-  font-size: 0.95rem;
-  color: var(--text-muted);
+  font-size: var(--type-body);
+  color: var(--text);
   line-height: 1.8;
   margin-bottom: 1.1rem;
 }
@@ -1726,7 +1729,7 @@ a.pub-highlight-badge:hover {
   margin: 1.5rem 0;
   flex-wrap: wrap;
   h4 { color: var(--navy); margin: 0 0 4px; font-size: 1rem; }
-  p  { color: var(--text-muted); font-size: 0.83rem; margin: 0; line-height: 1.5; }
+  p  { color: var(--text-muted); font-size: var(--type-secondary); margin: 0; line-height: 1.5; }
 
 }
 
@@ -1778,7 +1781,7 @@ a.pub-highlight-badge:hover {
   > h3 { grid-column: 2; grid-row: 1; align-self: center; }
   h3 { font-size: var(--type-subsection-title); line-height: 1.4; margin: 0; }
   p { color: var(--text); font-size: .94rem; font-weight: 400; line-height: 1.7; margin: 0; }
-  .home-selected-publications { font-size: .86rem; }
+  .home-selected-publications { font-size: var(--type-secondary); }
   .home-publications-label { font-style: italic; color: var(--text-muted); }
 
   a:focus-visible { outline: 2px solid var(--red); outline-offset: 4px; }
@@ -1877,7 +1880,7 @@ a.pub-highlight-badge:hover {
   margin: 8px 0 10px;
 }
 #textid .outreach-card .outreach-desc { font-size: .94rem; margin: 10px 0; }
-#textid .outreach-card .outreach-venue { font-size: .85rem; margin: 0 0 8px; }
+#textid .outreach-card .outreach-venue { font-size: var(--type-secondary); margin: 0 0 8px; }
 .outreach-action { display: inline-block; margin-top: 8px; padding-block: 6px; font-size: .9rem; }
 .outreach-card a:focus-visible, .outreach-filter-btn:focus-visible { outline: 2px solid var(--red); outline-offset: 4px; }
 
