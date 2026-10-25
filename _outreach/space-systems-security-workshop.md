@@ -115,7 +115,7 @@ This workshop brings together researchers in space systems cybersecurity with go
 | **Time** | **Agenda** |
 |---|---|
 | **7:30–8:30 AM** | Breakfast and Arrival |
-| **8:30–8:45 AM** | Welcome and Workshop Charge |
+| **8:30–8:45 AM** | Welcome and Workshop Charge (Donna Riley, Jim and Ellen King Dean of the School of Engineering) |
 | **8:45–9:30 AM** | **Kendra Cook, NASA IV&V:** *Security Challenges of Space 2.0: From Protecting Systems to Assuring Missions* |
 | **9:30–10:00 AM** | **Introductions and Capability Mapping** |
 | **10:00–10:15 AM** | Break |
