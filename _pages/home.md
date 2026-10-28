@@ -10,6 +10,10 @@ permalink: /
   <div class="home-hero">
     <div class="home-hero-text">
   <p class="home-body">We are a cybersecurity research group in the <a href="https://www.cs.unm.edu/">Department of Computer Science</a> at <a href="https://www.unm.edu/">The University of New Mexico</a>, led by Afsah Anwar. We uncover and defend against emerging threats to VPNs, satellites, mobile apps, and web applications through malware analysis, vulnerability research, and threat intelligence.</p>
+  <div class="home-ctas">
+    <a class="cta-btn cta-primary" href="/team/">Meet the Team</a>
+    <a class="cta-btn cta-secondary" href="/research/">Our Research</a>
+  </div>
     </div>
     <div class="home-cover">
       <picture>
@@ -39,18 +43,33 @@ permalink: /
     <p>To protect people and society by advancing the security of technologies essential to freedom, safety, and progress.</p>
   </section>
 
-  <h2 class="section-heading">Research Impact</h2>
-  <p class="home-body">Our research has delivered measurable real-world impact. Our study of SMS-delivered URLs uncovered personal-data exposure across 177 services, leading 7 providers to fix the vulnerabilities and being covered by <a href="https://arstechnica.com/security/2026/01/millions-of-people-imperiled-through-sign-in-links-sent-by-sms">Ars Technica</a>, <a href="https://www.helpnetsecurity.com/2026/01/23/sms-private-urls-data-exposure-study/">Help Net Security</a>, and <a href="https://www.techradar.com/pro/millions-of-smartphone-users-could-be-at-risk-from-the-sms-sign-in-url-issue-heres-what-you-need-to-look-out-for">TechRadar Pro</a>.</p>
-
-  <p class="home-body">Our MVPNalyzer framework analyzed free Android VPN apps, exposing widespread data leaks and security failures, with coverage from <a href="https://thehackernews.com/2026/07/study-of-281-free-android-vpn-apps.html">The Hacker News</a> and <a href="https://news.engin.umich.edu/2026/07/mobile-vpn-security-is-not-as-strong-as-advertised/">Michigan Engineering News</a>.</p>
-
-  <p class="home-body">Our analysis of flight software has discovered a <a href="https://sparta.aerospace.org/technique/DE-0012/">novel spacecraft vulnerability</a>.</p>
-
-  <p class="home-body">Our research has caught the attention of global cybersecurity authorities. We have been spotlighted by <a href="https://cert.gov.az/en/news/sms-delivered-login-links-have-created-security-risks-for-millions-of-users-9097">Azerbaijani CERT</a>, <a href="https://ctoatncsc.substack.com/p/cto-at-ncsc-summary-week-ending-february-df7">UK National Cyber Security Centre (NCSC)</a>, and NASA IV&V.</p>
-  <div class="home-ctas">
-    <a class="cta-btn cta-primary" href="/team/">Meet the Team</a>
-    <a class="cta-btn cta-secondary" href="/research/">Our Research</a>
-  </div>
+  <section class="home-impact" aria-labelledby="home-impact-title">
+    <h2 class="section-heading" id="home-impact-title">Research Impact</h2>
+    <div class="home-impact-row">
+      <h3>Security weaknesses uncovered and addressed</h3>
+      <div class="home-impact-evidence">
+        <p>Our VPN research led to <strong>more than 50 responsible disclosures</strong>. Our analysis of SMS-delivered URLs uncovered personal-data exposure across <strong>177 online services</strong>, with <strong>seven providers fixing vulnerabilities</strong> following disclosure.</p>
+        <p class="home-impact-sources"><a href="https://beyondefense.org/downloads/manuscripts/mvpnalyzer.pdf">MVPNalyzer</a> · <a href="https://arxiv.org/pdf/2601.09232">SMS URL research</a> · <a href="https://arstechnica.com/security/2026/01/millions-of-people-imperiled-through-sign-in-links-sent-by-sms/">Ars Technica</a>
+        </p>
+      </div>
+    </div>
+    <div class="home-impact-row">
+      <h3>New threats documented</h3>
+      <div class="home-impact-evidence">
+        <p>We reveal overlooked attack paths in privacy tools, online services, and spacecraft. A spacecraft attack technique identified through our research is now documented in <strong>The Aerospace Corporation’s SPARTA framework</strong>.</p>
+        <p class="home-impact-sources"><a href="{{ '/research/' | relative_url }}">Research directions</a> · <a href="https://sparta.aerospace.org/technique/DE-0012/">SPARTA</a></p>
+      </div>
+    </div>
+    <div class="home-impact-row">
+      <h3>Research reaching practitioners</h3>
+      <div class="home-impact-evidence">
+        <p>Our findings have reached security practitioners through media coverage and recognition from <strong>UK NCSC and Azerbaijani CERT</strong>. Our spacecraft research also prompted <strong>NASA IV&amp;V </strong>to contact us about the work.</p>
+        <p class="home-impact-sources"><a href="https://ctoatncsc.substack.com/p/cto-at-ncsc-summary-week-ending-february-df7">NCSC newsletter</a> · <a href="https://cert.gov.az/en/news/sms-delivered-login-links-have-created-security-risks-for-millions-of-users-9097">Azerbaijani CERT</a> · <a href="https://securityaffairs.com/183303/hacking/unverified-cots-hardware-enables-persistent-attacks-in-small-satellites-via-spychain.html">Security Affairs</a>
+         · <a href="https://beyondefense.org/downloads/manuscripts/Silent_Subversion_FINAL.pdf">Silent Subversion</a>
+         </p>
+      </div>
+    </div>
+  </section>
 </div>
 
 <div class="home-research-areas" markdown="0">

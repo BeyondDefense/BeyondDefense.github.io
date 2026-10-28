@@ -1569,6 +1569,23 @@ a.pub-highlight-badge:hover {
   line-height: 1.8;
   margin-bottom: 1.1rem;
 }
+.home-impact { margin-bottom: 24px; }
+.home-impact-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2.4fr);
+  gap: 28px;
+  padding-block: 20px;
+  border-bottom: 1px solid var(--border);
+  h3 { font-size: var(--type-subsection-title); line-height: 1.45; margin: 0; }
+}
+.home-impact-evidence {
+  min-width: 0;
+  p { font-size: var(--type-body); margin: 0; }
+  .home-impact-sources { font-size: var(--type-secondary); margin-top: 8px; }
+}
+@media (max-width: 767px) {
+  .home-impact-row { grid-template-columns: 1fr; gap: 10px; }
+}
 .home-ctas {
   display: flex;
   gap: 10px;
@@ -1911,22 +1928,3 @@ a.pub-highlight-badge:hover {
 #galleryPosition { font-size: .85rem; color: var(--text-muted); }
 #galleryOriginal { font-size: .85rem; }
 html:has(#galleryViewer[open]) { overflow: hidden; }
-
-/* Temporary workshop announcement, in normal flow beneath the fixed navigation. */
-.workshop-banner {
-  background: #8a0619;
-  color: #fff;
-  padding: 10px 0;
-  font-size: .88rem;
-  line-height: 1.7;
-}
-.workshop-banner a, [data-theme="dark"] .workshop-banner a {
-  color: #fff;
-  font-weight: 600;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  display: inline-block;
-  padding-block: 2px;
-}
-.workshop-banner a:hover, [data-theme="dark"] .workshop-banner a:hover { color: #fff; }
-.workshop-banner a:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }

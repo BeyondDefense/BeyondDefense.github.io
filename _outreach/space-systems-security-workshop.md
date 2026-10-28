@@ -148,6 +148,7 @@ This workshop brings together researchers in space systems cybersecurity with go
 | **4:25–4:35 PM** | *Shared Research Infrastructure: What Do We Have and What Do We Need?* |
 | **4:35–4:55 PM** | *Research Priorities, Commitments, and White Paper* |
 | **4:55–5:00 PM** | **Brandon Bailey, Aerospace Corporation: Closing Remarks** |
+| **5:00–7:00 PM** | Dinner |
 
 
 ## Sponsor
