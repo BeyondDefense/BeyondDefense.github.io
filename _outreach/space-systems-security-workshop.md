@@ -89,6 +89,24 @@ attendees:
     url: https://science.gmu.edu/directory/edward-oughton
   - name: Kiel Bolin Brunner
     affiliation: Deloitte
+    photo: Kiel.jpg
+    url: https://www.linkedin.com/in/kiel-brunner/
+  - name: Tim Kane
+    affiliation: University of New Mexico
+    photo: Tim.jpg
+    url: https://ece.unm.edu/faculty-staff/electrical-and-computer/tim-kane.html
+  - name: Amin Maghareh
+    affiliation: Verus Research
+    photo: 
+    url: https://www.linkedin.com/in/amin-maghareh/
+  - name: Luis Cordova
+    affiliation: QStation
+    photo: Luis.webp
+    url: https://www.linkedin.com/in/luis-cordova-96b87492/
+  - name: Pavithra Prabhakar
+    affiliation: University of New Mexico
+    photo: Pavithra.jpeg
+    url: https://cs.unm.edu/directory/faculty-profiles/pavithra-prabhakar.html
 ---
 
 Bringing together researchers, government organizations, national laboratories, and industry to define the next research challenges in space systems cybersecurity.
