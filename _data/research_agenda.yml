@@ -27,7 +27,7 @@ directions:
             label: "ACM CCS ’26"
   - id: space-security
     question: "How can spacecraft remain secure and resilient against adversaries who can compromise their software, supply chains, or sensors?"
-    title: "Space Security & Resilience"
+    title: "Space Systems Security"
     tagline: "Safeguarding the infrastructure and services on which society increasingly depends."
     complementary: false
     paragraphs:

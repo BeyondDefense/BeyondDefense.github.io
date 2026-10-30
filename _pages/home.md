@@ -104,7 +104,7 @@ permalink: /
           <path d="M3 19c3 3 10 3 14 0"/>
         </svg>
       </div>
-      <h3>Space Security &amp; Resilience</h3>
+      <h3>Space Systems Security</h3>
       <p>Communications, navigation, and other essential services depend on space infrastructure. Security weaknesses in these systems can have consequences on Earth.</p>
       <p>Our mission is to protect society’s dependence on space technologies by securing the infrastructure and services essential to safety, connectivity, and progress.</p>
       {% include home-publications.html publications=site.data.home_publications.space %}
