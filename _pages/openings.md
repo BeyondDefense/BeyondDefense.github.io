@@ -91,9 +91,9 @@ permalink: /vacancies
     <div>
       <h2 id="community-title">Lab &amp; Community</h2>
       <p>LoboSec brings students together for capture-the-flag activities and collaborative security learning.</p>
-      <p>Weekly CTF meetings are listed at Farris Engineering Center, Room 2150. Visit the <a href="https://lobosec.unm.edu">LoboSec CTF Club website</a> for current meeting information.</p>
+      <p>Weekly CTF meetings are listed at Farris Engineering Center, Room G300. Visit the <a href="https://lobosec.unm.edu">LoboSec CTF Club website</a> for current meeting information.</p>
       <h3>Location</h3>
-      <p>Beyond Defense Lab<br>Farris Engineering Center, Room 2120<br>The University of New Mexico<br>Albuquerque, NM 87131</p>
+      <p>Beyond Defense Lab<br>Farris Engineering Center, Room 2150<br>The University of New Mexico<br>Albuquerque, NM 87131</p>
     </div>
     <figure>
       <img src="{{ '/images/slider7001400/Slide2.jpg' | relative_url }}" width="4032" height="3024" loading="lazy" decoding="async" alt="Lab members working on laptops around a meeting table and in a seating area">
