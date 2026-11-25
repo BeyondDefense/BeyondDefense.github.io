@@ -13,14 +13,14 @@ permalink: /vacancies
     <p>We look for people with passion, creativity, and persistence. We work as peers in a respectful and collaborative environment.</p>
     <p>Our projects span Internet Freedom &amp; Security, Space Security &amp; Resilience, and broader security analysis. Much of our work involves static and dynamic analysis of programs, software, and applications, together with threat modeling. <a href="{{ '/research/' | relative_url }}">Explore our research →</a></p>
     <nav class="vacancy-nav" aria-label="Opportunities and community">
-      <a href="#postdoctoral">Postdoctoral researchers</a>
+      <!-- <a href="#postdoctoral">Postdoctoral researchers</a> -->
       <a href="#phd">PhD students</a>
       <a href="#unm-students">UNM students</a>
       <a href="#mentorship">Mentorship</a>
     </nav>
   </header>
 
-  <section class="vacancy-role" id="postdoctoral" aria-labelledby="postdoctoral-title">
+  <!-- <section class="vacancy-role" id="postdoctoral" aria-labelledby="postdoctoral-title">
     <h2 id="postdoctoral-title">Postdoctoral Researchers</h2>
     <p>Investigate the security of space systems through adversarial research, threat modeling, and defense development.</p>
     <div class="vacancy-role-columns">
@@ -39,7 +39,7 @@ permalink: /vacancies
     <a class="vacancy-email" href="mailto:afsah@unm.edu,gcroman@unm.edu?subject=Prospective%20Postdoc">Email about the postdoc position →</a>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <section class="vacancy-role" id="phd" aria-labelledby="phd-title">
     <h2 id="phd-title">PhD Students</h2>

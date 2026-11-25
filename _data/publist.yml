@@ -15,6 +15,9 @@
   highlight: 0
   year: 2026
   tags: space
+  highlights:
+    - type: award
+      text: Best Student Paper Award
 
 
 - title: "The Tragedy of Convenience: Cascading User-Data Leakage from SMS-delivered URLs"
