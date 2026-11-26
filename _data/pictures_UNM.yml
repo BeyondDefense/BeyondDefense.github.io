@@ -2,6 +2,9 @@
 # ("Group Activities", "Talks & Visits", "Conferences & Life in Albuquerque").
 # An entry with an unrecognised group will not be rendered.
 
+- title: Group members at UNM School of Engineering Open House 
+  image: 2026OpenHouse-41.jpg
+  group: Group Activities
 - title: Lab members during a group work session
   image: group-work-session.jpg
   group: Group Activities
@@ -20,6 +23,19 @@
 - title: Dinner with collaborators in Michigan
   image: MichDinner.jpg
   group: Group Activities
+- title: Group members at UNM School of Engineering Open House 
+  image: 2026OpenHouse-36.jpg
+  group: Group Activities
+- title: Group members at UNM School of Engineering Open House 
+  image: 2026OpenHouse-38.jpg
+  group: Group Activities
+- title: Group members at UNM School of Engineering Open House 
+  image: 2026OpenHouse-40.jpg
+  group: Group Activities
+- title: Group members at UNM School of Engineering Open House 
+  image: 2026OpenHouse-42.jpg
+  group: Group Activities
+
 
 - title: Kendra Cook (NASA IV&V) on securing mission-critical software
   image: talk-nasa-ivv.jpg
